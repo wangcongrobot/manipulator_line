@@ -33,7 +33,6 @@
 
 # file
 bin/
-data/
 eigen/
 obj/
 

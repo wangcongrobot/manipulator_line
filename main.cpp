@@ -32,7 +32,7 @@ int main()
     printf("enter main\n");
 
     sInit();
-    for(int i=0;i<5;i++)sleep(1);
+    for(int i=0; i<5; i++)sleep(1);
     //while(1){sleep(5);}
     //sleep(5);
 
@@ -88,8 +88,8 @@ int main()
     parse();
     sleep(10);
 
-printf("leave main\n");
-return 0;
+    printf("leave main\n");
+    return 0;
 }
 
 

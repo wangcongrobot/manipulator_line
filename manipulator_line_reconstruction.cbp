@@ -15,10 +15,13 @@
 					<Add option="-g" />
 					<Add option="-pthread" />
 					<Add directory="include" />
-					<Add directory="/home/siarobot/manipulator_line/manipulator_line_reconstruction/eigen" />
+					<Add directory="eigen" />
+					<Add directory="src" />
 				</Compiler>
 				<Linker>
 					<Add option="-pthread" />
+					<Add directory="include" />
+					<Add directory="eigen" />
 				</Linker>
 			</Target>
 			<Target title="Release">
@@ -39,27 +42,26 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="IK.cpp" />
-		<Unit filename="IK.h" />
-		<Unit filename="createFile.cpp" />
-		<Unit filename="createFile.h" />
-		<Unit filename="data.cpp" />
-		<Unit filename="data.h" />
+		<Unit filename="include/IK.h" />
+		<Unit filename="include/createFile.h" />
+		<Unit filename="include/data.h" />
+		<Unit filename="include/global.h" />
+		<Unit filename="include/handle.h" />
+		<Unit filename="include/motionControl.h" />
+		<Unit filename="include/parseCmd.h" />
+		<Unit filename="include/parser.h" />
+		<Unit filename="include/pthreadCreate.h" />
+		<Unit filename="include/serial.h" />
+		<Unit filename="include/timer.h" />
+		<Unit filename="include/utilities.h" />
 		<Unit filename="main.cpp" />
-		<Unit filename="motionControl.cpp" />
-		<Unit filename="motionControl.h" />
-		<Unit filename="parseCmd.cpp" />
-		<Unit filename="parseCmd.h" />
-		<Unit filename="parser.cpp" />
-		<Unit filename="parser.h" />
-		<Unit filename="pthreadCreate.cpp" />
-		<Unit filename="pthreadCreate.h" />
-		<Unit filename="serial.cpp" />
-		<Unit filename="serial.h" />
-		<Unit filename="timer.cpp" />
-		<Unit filename="timer.h" />
-		<Unit filename="utilities.cpp" />
-		<Unit filename="utilities.h" />
+		<Unit filename="src/createFile.cpp" />
+		<Unit filename="src/data.cpp" />
+		<Unit filename="src/parser.cpp" />
+		<Unit filename="src/pthreadCreate.cpp" />
+		<Unit filename="src/serial.cpp" />
+		<Unit filename="src/timer.cpp" />
+		<Unit filename="src/utilities.cpp" />
 		<Extensions>
 			<code_completion />
 			<envvars />
