@@ -57,7 +57,7 @@ int main()
 
     printf("\n-----Start IK calculation...-----\n");
     //while(1){sleep(1);}
-    jointFromIK = IK(currentJoint, 0.1, 0.2, 0.6, 100);
+    jointFromIK = IK(currentJoint, 0, -0.2, 0.6, 100);
     cout << "Number of jointFromIK: " << jointFromIK.size() << endl;
     vector<double>::iterator iter;
     for( iter=jointFromIK.begin(); iter!=(jointFromIK.begin() + 6); iter++)

@@ -107,7 +107,7 @@ void sInit()//从手初始化，开始执行时被调用一次即可
     mCmd.joint[0].pos=0x0870; //870
     mCmd.joint[1].pos=0x00b0;
     mCmd.joint[2].pos=0x0fe0;
-    mCmd.joint[3].pos=0x0b80; //835
+    mCmd.joint[3].pos=0x0980; //835
     mCmd.joint[4].pos=0x0f00;
     mCmd.joint[5].pos=0x0800;
     mCmd.joint[6].pos=0x0100;   //夹钳主手应该的位置c3b
