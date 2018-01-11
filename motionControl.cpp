@@ -98,17 +98,17 @@ void sInit()//从手初始化，开始执行时被调用一次即可
     mCmd.id=0x01;           //正常发送数据
     for(int i=0; i<6; i++)
     {
-        mCmd.joint[i].frz=0;        //每个关节解冻
+        mCmd.joint[i].frz=0;    //每个关节解冻
         mCmd.joint[i].mode=0;   //位置模式
     }
-    mCmd.joint[0].frz=0;        //每个关节解冻
+    mCmd.joint[3].frz=0;        //每个关节解冻
     mCmd.joint[6].mode=1;   //夹钳只有速度模式
     /**使机械手回归每次动作的初始点,进行解冻冻结，使下位机自动生成零漂***/
     mCmd.joint[0].pos=0x0870; //870
-    mCmd.joint[1].pos=0x05b0; //0b0
-    mCmd.joint[2].pos=0x04e0; //fe0
+    mCmd.joint[1].pos=0x03b0; //0b0
+    mCmd.joint[2].pos=0x0ae0; //fe0
     mCmd.joint[3].pos=0x0980; //980
-    mCmd.joint[4].pos=0x0800; //e00
+    mCmd.joint[4].pos=0x0a00; //e00
     mCmd.joint[5].pos=0x0800; //800
     mCmd.joint[6].pos=0x0100;   //夹钳主手应该的位置c3b
 
@@ -164,10 +164,10 @@ void getCurrentJoint()
             //cout << (double)(limitMax[i]-limitMin[i]) << endl;
             //cout << ((double)(spos->scmdPos[i]-limitMin[i])/(double)(limitMax[i]-limitMin[i])) << endl;
             //cout << (double)((spos->scmdPos[i]-limitMin[i])/(double)(limitMax[i]-limitMin[i]))*Trip[i] << endl;
-            // by wangcong
-            c = Trip[i] + L0[i] - ((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Trip[i];
             // by zyx
-            //c = L0[i]+((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Trip[i];
+            //c = Trip[i] + L0[i] - ((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Trip[i];
+            // by wangcong
+            c = L0[i]+((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Trip[i];
 
             cout << "c" << i << "= " << c << endl;
             //cout << pow(c,2) << endl;
@@ -300,9 +300,9 @@ void AngleConvert()     // 关节角度更新函数
             //cout << (sqrt(Delte[i])-L0[i])*(limitMax[i]-limitMin[i])/Trip[i] << endl;
             //cout << (ushort) ((sqrt(Delte[i])-L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) << endl;
             // by wangcong
-            //mCmd.joint[i].pos=(ushort) ((sqrt(Delte[i])-L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) ;
+            mCmd.joint[i].pos=(ushort) ((sqrt(Delte[i])-L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) ;
             //by zyx
-            mCmd.joint[i].pos=(ushort) ((Trip[i]-sqrt( Delte[i])+L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) ;
+            //mCmd.joint[i].pos=(ushort) ((Trip[i]-sqrt( Delte[i])+L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) ;
             //cout << "mCmd.joint" << i << "  " << ((Trip[i]-sqrt( Delte[i])+L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) << endl;
             //cout << mCmd.joint[i].pos << endl;
 

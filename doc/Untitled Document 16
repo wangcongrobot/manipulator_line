@@ -1,0 +1,3332 @@
+open /dev/ttyUSB0 succesfully
+Timer initial successfully!
+enter thread2
+this is thread2, g_Flag: 0, thread id is 2595936000
+leave thread2
+enter thread1
+this is thread1, g_Flag: 2, thread id is 2587543296
+enter main
+
+4d 01 70 08 b0 02 e0 0a 80 09 00 0b 00 08 00 11 14 00 00 2a f9 30 0d 0a 
+writeToSerial successfully!
+Receive 24 bytes OK!
+2213 712 2796 2502 2856 1580 0 
+c0= 264.347
+1.57106
+currentJoint0  59.889
+currentJoint 0  :1.04526
+currentJoint0  -0.111018
+c1= 265.718
+0.803841
+currentJoint1  21.4768
+currentJoint 1  :0.374841
+currentJoint1  -8.5232
+c2= 314.688
+1.73979
+currentJoint2  75.1025
+currentJoint 2  :1.31079
+currentJoint2  -14.8975
+currentJoint3  0.755447
+currentJoint3  -46.7161
+c4= 273.094
+1.79456
+currentJoint4  72.6946
+currentJoint 4  :1.26876
+currentJoint4  -17.3054
+currentJoint5  2.2896
+currentJoint5  -38.8156
+currentJoint < Angle_limitMin_r i=6
+actual currentJoint0  -0.111018
+actual currentJoint1  -8.5232
+actual currentJoint2  -14.8975
+actual currentJoint3  -46.7161
+actual currentJoint4  -17.3054
+actual currentJoint5  -38.8156
+
+
+********get current joint values successfully!**********
+
+Manipulator' current joint angle is
+-0.111018
+  -8.5232
+ -14.8975
+ -46.7161
+ -17.3054
+ -38.8156
+
+End position and attitude is
+-0.0409452   0.822666  -0.567048   0.685887
+  0.971366  -0.100157  -0.215446 -0.0987741
+ -0.234034  -0.559633  -0.795009   -1.02803
+         0          0          0          1
+
+2213 712 2796 2502 2856 1580 0 
+c0= 264.347
+1.57106
+currentJoint0  59.889
+currentJoint 0  :1.04526
+currentJoint0  -0.111018
+c1= 265.718
+0.803841
+currentJoint1  21.4768
+currentJoint 1  :0.374841
+currentJoint1  -8.5232
+c2= 314.688
+1.73979
+currentJoint2  75.1025
+currentJoint 2  :1.31079
+currentJoint2  -14.8975
+currentJoint3  0.755447
+currentJoint3  -46.7161
+c4= 273.094
+1.79456
+currentJoint4  72.6946
+currentJoint 4  :1.26876
+currentJoint4  -17.3054
+currentJoint5  2.2896
+currentJoint5  -38.8156
+currentJoint < Angle_limitMin_r i=6
+actual currentJoint0  -0.111018
+actual currentJoint1  -8.5232
+actual currentJoint2  -14.8975
+actual currentJoint3  -46.7161
+actual currentJoint4  -17.3054
+actual currentJoint5  -38.8156
+
+
+********get current joint values successfully!**********
+
+Manipulator' current joint angle is
+-0.111018
+  -8.5232
+ -14.8975
+ -46.7161
+ -17.3054
+ -38.8156
+
+End position and attitude is
+-0.0409452   0.822666  -0.567048   0.685887
+  0.971366  -0.100157  -0.215446 -0.0987741
+ -0.234034  -0.559633  -0.795009   -1.02803
+         0          0          0          1
+
+53 0 a5 8 c8 2 ec a c6 9 28 b 2c 6 0 0 0 0 0 2a 10 2e d a 
+-----Start motion control!-----
+
+-----Start IK calculation...-----
+q: 
+-0.111018
+ -8.70157
+ -14.6712
+ -46.6044
+ -17.3383
+ -38.9327
+q: 
+-0.111018
+ -8.87995
+ -14.4439
+ -46.4908
+ -17.3719
+ -39.0517
+q: 
+-0.111018
+ -9.05835
+ -14.2156
+ -46.3753
+ -17.4063
+ -39.1726
+q: 
+-0.111018
+ -9.23677
+ -13.9864
+ -46.2581
+ -17.4414
+ -39.2955
+q: 
+-0.111018
+ -9.41521
+ -13.7561
+ -46.1391
+ -17.4773
+ -39.4202
+q: 
+-0.111018
+ -9.59368
+ -13.5248
+ -46.0184
+  -17.514
+ -39.5468
+q: 
+-0.111018
+ -9.77217
+ -13.2925
+  -45.896
+ -17.5514
+ -39.6752
+q: 
+-0.111018
+  -9.9507
+ -13.0591
+ -45.7718
+ -17.5896
+ -39.8054
+q: 
+-0.111018
+ -10.1293
+ -12.8248
+  -45.646
+ -17.6285
+ -39.9374
+q: 
+-0.111018
+ -10.3079
+ -12.5894
+ -45.5186
+ -17.6683
+ -40.0712
+q: 
+-0.111018
+ -10.4865
+  -12.353
+ -45.3895
+ -17.7088
+ -40.2066
+q: 
+-0.111018
+ -10.6652
+ -12.1156
+ -45.2589
+ -17.7501
+ -40.3438
+q: 
+-0.111018
+  -10.844
+ -11.8771
+ -45.1266
+ -17.7922
+ -40.4826
+q: 
+-0.111018
+ -11.0228
+ -11.6376
+ -44.9929
+ -17.8351
+ -40.6231
+q: 
+-0.111018
+ -11.2016
+  -11.397
+ -44.8576
+ -17.8787
+ -40.7652
+q: 
+-0.111018
+ -11.3805
+ -11.1554
+ -44.7209
+ -17.9232
+  -40.909
+q: 
+-0.111018
+ -11.5595
+ -10.9127
+ -44.5827
+ -17.9686
+ -41.0542
+q: 
+-0.111018
+ -11.7386
+  -10.669
+  -44.443
+ -18.0147
+  -41.201
+q: 
+-0.111018
+ -11.9177
+ -10.4242
+  -44.302
+ -18.0616
+ -41.3494
+q: 
+-0.111018
+ -12.0969
+ -10.1783
+ -44.1596
+ -18.1094
+ -41.4992
+q: 
+-0.111018
+ -12.2761
+ -9.93137
+ -44.0158
+  -18.158
+ -41.6505
+q: 
+-0.111018
+ -12.4555
+ -9.68334
+ -43.8707
+ -18.2075
+ -41.8032
+q: 
+-0.111018
+ -12.6349
+ -9.43422
+ -43.7243
+ -18.2578
+ -41.9573
+q: 
+-0.111018
+ -12.8145
+ -9.18401
+ -43.5766
+ -18.3089
+ -42.1129
+q: 
+-0.111018
+ -12.9941
+  -8.9327
+ -43.4277
+ -18.3609
+ -42.2697
+q: 
+-0.111018
+ -13.1738
+ -8.68028
+ -43.2776
+ -18.4138
+ -42.4279
+q: 
+-0.111018
+ -13.3537
+ -8.42675
+ -43.1263
+ -18.4675
+ -42.5874
+q: 
+-0.111018
+ -13.5336
+  -8.1721
+ -42.9738
+ -18.5221
+ -42.7482
+q: 
+-0.111018
+ -13.7136
+ -7.91633
+ -42.8202
+ -18.5776
+ -42.9102
+q: 
+-0.111018
+ -13.8938
+ -7.65943
+ -42.6655
+ -18.6339
+ -43.0735
+q: 
+-0.111018
+ -14.0741
+ -7.40138
+ -42.5097
+ -18.6912
+  -43.238
+q: 
+-0.111018
+ -14.2545
+  -7.1422
+ -42.3528
+ -18.7493
+ -43.4036
+q: 
+-0.111018
+  -14.435
+ -6.88186
+ -42.1949
+ -18.8084
+ -43.5703
+q: 
+-0.111018
+ -14.6157
+ -6.62036
+  -42.036
+ -18.8683
+ -43.7382
+q: 
+-0.111018
+ -14.7965
+  -6.3577
+ -41.8762
+ -18.9292
+ -43.9072
+q: 
+-0.111018
+ -14.9774
+ -6.09386
+ -41.7153
+  -18.991
+ -44.0773
+q: 
+-0.111018
+ -15.1585
+ -5.82884
+ -41.5536
+ -19.0538
+ -44.2484
+q: 
+-0.111018
+ -15.3397
+ -5.56263
+ -41.3909
+ -19.1174
+ -44.4205
+q: 
+-0.111018
+ -15.5211
+ -5.29523
+ -41.2274
+  -19.182
+ -44.5936
+q: 
+-0.111018
+ -15.7027
+ -5.02662
+ -41.0631
+ -19.2476
+ -44.7676
+q: 
+-0.111018
+ -15.8844
+ -4.75679
+ -40.8979
+ -19.3141
+ -44.9426
+q: 
+-0.111018
+ -16.0662
+ -4.48574
+ -40.7319
+ -19.3816
+ -45.1185
+q: 
+-0.111018
+ -16.2483
+ -4.21346
+ -40.5651
+ -19.4501
+ -45.2954
+q: 
+-0.111018
+ -16.4305
+ -3.93993
+ -40.3976
+ -19.5195
+  -45.473
+q: 
+-0.111018
+ -16.6129
+ -3.66516
+ -40.2294
+ -19.5899
+ -45.6515
+q: 
+-0.111018
+ -16.7956
+ -3.38913
+ -40.0605
+ -19.6613
+ -45.8309
+q: 
+-0.111018
+ -16.9784
+ -3.11183
+ -39.8909
+ -19.7338
+  -46.011
+q: 
+-0.111018
+ -17.1614
+ -2.83325
+ -39.7207
+ -19.8072
+ -46.1919
+q: 
+-0.111018
+ -17.3446
+ -2.55338
+ -39.5498
+ -19.8816
+ -46.3736
+q: 
+-0.111018
+  -17.528
+ -2.27221
+ -39.3783
+ -19.9571
+ -46.5559
+q: 
+-0.111018
+ -17.7116
+ -1.98973
+ -39.2063
+ -20.0336
+  -46.739
+q: 
+-0.111018
+ -17.8955
+ -1.70592
+ -39.0337
+ -20.1111
+ -46.9227
+q: 
+-0.111018
+ -18.0795
+ -1.42079
+ -38.8606
+ -20.1897
+ -47.1071
+q: 
+-0.111018
+ -18.2639
+ -1.13431
+  -38.687
+ -20.2694
+ -47.2922
+q: 
+-0.111018
+ -18.4484
+-0.846481
+ -38.5129
+ -20.3501
+ -47.4778
+q: 
+-0.111018
+ -18.6332
+-0.557281
+ -38.3383
+ -20.4319
+  -47.664
+q: 
+-0.111018
+ -18.8183
+-0.266702
+ -38.1634
+ -20.5148
+ -47.8508
+q: 
+-0.111018
+ -19.0036
+0.0252679
+ -37.9879
+ -20.5987
+ -48.0382
+q: 
+-0.111018
+ -19.1891
+ 0.318643
+ -37.8121
+ -20.6838
+  -48.226
+q: 
+-0.111018
+  -19.375
+ 0.613435
+  -37.636
+   -20.77
+ -48.4144
+q: 
+-0.111018
+ -19.5611
+ 0.909658
+ -37.4594
+ -20.8573
+ -48.6032
+q: 
+-0.111018
+ -19.7475
+  1.20733
+ -37.2826
+ -20.9457
+ -48.7926
+q: 
+-0.111018
+ -19.9342
+  1.50645
+ -37.1054
+ -21.0353
+ -48.9823
+q: 
+-0.111018
+ -20.1211
+  1.80705
+  -36.928
+  -21.126
+ -49.1725
+q: 
+-0.111018
+ -20.3084
+  2.10914
+ -36.7503
+ -21.2179
+ -49.3631
+q: 
+-0.111018
+  -20.496
+  2.41272
+ -36.5723
+ -21.3109
+  -49.554
+q: 
+-0.111018
+ -20.6839
+  2.71783
+ -36.3941
+ -21.4052
+ -49.7454
+q: 
+-0.111018
+ -20.8722
+  3.02447
+ -36.2157
+ -21.5006
+ -49.9371
+q: 
+-0.111018
+ -21.0607
+  3.33266
+ -36.0371
+ -21.5972
+ -50.1291
+q: 
+-0.111018
+ -21.2496
+  3.64242
+ -35.8583
+  -21.695
+ -50.3214
+q: 
+-0.111018
+ -21.4389
+  3.95375
+ -35.6794
+ -21.7941
+  -50.514
+q: 
+-0.111018
+ -21.6285
+  4.26669
+ -35.5004
+ -21.8944
+ -50.7069
+q: 
+-0.111018
+ -21.8185
+  4.58125
+ -35.3212
+ -21.9959
+ -50.9001
+q: 
+-0.111018
+ -22.0088
+  4.89745
+ -35.1419
+ -22.0987
+ -51.0935
+q: 
+-0.111018
+ -22.1995
+   5.2153
+ -34.9626
+ -22.2028
+ -51.2872
+q: 
+-0.111018
+ -22.3906
+  5.53482
+ -34.7831
+ -22.3082
+  -51.481
+q: 
+-0.111018
+ -22.5821
+  5.85604
+ -34.6037
+ -22.4148
+ -51.6751
+q: 
+-0.111018
+  -22.774
+  6.17897
+ -34.4242
+ -22.5228
+ -51.8693
+q: 
+-0.111018
+ -22.9664
+  6.50364
+ -34.2447
+ -22.6321
+ -52.0637
+q: 
+-0.111018
+ -23.1591
+  6.83006
+ -34.0651
+ -22.7427
+ -52.2583
+q: 
+-0.111018
+ -23.3523
+  7.15826
+ -33.8856
+ -22.8546
+  -52.453
+q: 
+-0.111018
+ -23.5459
+  7.48826
+ -33.7061
+  -22.968
+ -52.6479
+q: 
+-0.111018
+   -23.74
+  7.82009
+ -33.5267
+ -23.0827
+ -52.8429
+q: 
+-0.111018
+ -23.9345
+  8.15376
+ -33.3473
+ -23.1988
+ -53.0379
+q: 
+-0.111018
+ -24.1296
+  8.48931
+  -33.168
+ -23.3163
+ -53.2331
+q: 
+-0.111018
+ -24.3251
+  8.82675
+ -32.9888
+ -23.4352
+ -53.4284
+q: 
+-0.111018
+ -24.5211
+  9.16611
+ -32.8096
+ -23.5556
+ -53.6237
+q: 
+-0.111018
+ -24.7176
+  9.50741
+ -32.6306
+ -23.6774
+ -53.8191
+q: 
+-0.111018
+ -24.9146
+   9.8507
+ -32.4517
+ -23.8007
+ -54.0145
+q: 
+-0.111018
+ -25.1121
+   10.196
+ -32.2729
+ -23.9255
+   -54.21
+q: 
+-0.111018
+ -25.3102
+  10.5433
+ -32.0943
+ -24.0518
+ -54.4055
+q: 
+-0.111018
+ -25.5088
+  10.8927
+ -31.9159
+ -24.1797
+ -54.6011
+q: 
+-0.111018
+  -25.708
+  11.2441
+ -31.7375
+  -24.309
+ -54.7966
+q: 
+-0.111018
+ -25.9078
+  11.5977
+ -31.5594
+   -24.44
+ -54.9922
+q: 
+-0.111018
+ -26.1082
+  11.9535
+ -31.3815
+ -24.5725
+ -55.1877
+q: 
+-0.111018
+ -26.3091
+  12.3114
+ -31.2037
+ -24.7066
+ -55.3833
+q: 
+-0.111018
+ -26.5107
+  12.6716
+ -31.0262
+ -24.8424
+ -55.5788
+q: 
+-0.111018
+  -26.713
+   13.034
+ -30.8489
+ -24.9798
+ -55.7743
+q: 
+-0.111018
+ -26.9158
+  13.3987
+ -30.6718
+ -25.1188
+ -55.9698
+q: 
+-0.111018
+ -27.1194
+  13.7657
+ -30.4949
+ -25.2596
+ -56.1652
+Number of jointFromIK: 600
+-0.111018
+-8.5232
+-14.8975
+-46.7161
+-17.3054
+-38.8156
+100
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -8.5232
+Joint_AngleSet_r2 -- -14.8975
+Joint_AngleSet_r3 -- -46.7161
+Joint_AngleSet_r4 -- -17.3054
+Joint_AngleSet_r5 -- -38.8156
+Joint_Angle[i] 59.889
+Joint_Angle[i] 21.4768
+Joint_Angle[i] 75.1025
+Joint_Angle[i] 43.2839
+Joint_Angle[i] 72.6946
+Joint_Angle[i] 131.184
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  711
+mCmd.joint[i].pos  2796
+mCmd.joint[i].pos  2502
+mCmd.joint[i].pos  2856
+mCmd.joint[i].pos  1580
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 c7 02 ec 0a c6 09 28 0b 2c 06 3b 1c 14 00 00 2a 2e 33 0d 0a 
+writeToSerial successfully!
+Receive 24 bytes OK!
+Num0 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -8.70157
+Joint_AngleSet_r2 -- -14.6712
+Joint_AngleSet_r3 -- -46.6044
+Joint_AngleSet_r4 -- -17.3383
+Joint_AngleSet_r5 -- -38.9327
+Joint_Angle[i] 59.889
+Joint_Angle[i] 21.2984
+Joint_Angle[i] 75.3288
+Joint_Angle[i] 43.3956
+Joint_Angle[i] 72.6617
+Joint_Angle[i] 131.067
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  706
+mCmd.joint[i].pos  2803
+mCmd.joint[i].pos  2503
+mCmd.joint[i].pos  2854
+mCmd.joint[i].pos  1578
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 c2 02 f3 0a c7 09 26 0b 2a 06 3b 1c 14 00 00 2a 3d 33 0d 0a 
+writeToSerial successfully!
+Num1 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -8.87995
+Joint_AngleSet_r2 -- -14.4439
+Joint_AngleSet_r3 -- -46.4908
+Joint_AngleSet_r4 -- -17.3719
+Joint_AngleSet_r5 -- -39.0517
+Joint_Angle[i] 59.889
+Joint_Angle[i] 21.1201
+Joint_Angle[i] 75.5561
+Joint_Angle[i] 43.5092
+Joint_Angle[i] 72.6281
+Joint_Angle[i] 130.948
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  701
+mCmd.joint[i].pos  2812
+mCmd.joint[i].pos  2504
+mCmd.joint[i].pos  2853
+mCmd.joint[i].pos  1577
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 bd 02 fc 0a c8 09 25 0b 29 06 3b 1c 14 00 00 2a 42 33 0d 0a 
+writeToSerial successfully!
+Num2 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -9.05835
+Joint_AngleSet_r2 -- -14.2156
+Joint_AngleSet_r3 -- -46.3753
+Joint_AngleSet_r4 -- -17.4063
+Joint_AngleSet_r5 -- -39.1726
+Joint_Angle[i] 59.889
+Joint_Angle[i] 20.9417
+Joint_Angle[i] 75.7844
+Joint_Angle[i] 43.6247
+Joint_Angle[i] 72.5937
+Joint_Angle[i] 130.827
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  695
+mCmd.joint[i].pos  2820
+mCmd.joint[i].pos  2505
+mCmd.joint[i].pos  2852
+mCmd.joint[i].pos  1575
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 b7 02 04 0b c9 09 24 0b 27 06 3b 1c 14 00 00 2a be 32 0d 0a 
+writeToSerial successfully!
+Num3 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -9.23677
+Joint_AngleSet_r2 -- -13.9864
+Joint_AngleSet_r3 -- -46.2581
+Joint_AngleSet_r4 -- -17.4414
+Joint_AngleSet_r5 -- -39.2955
+Joint_Angle[i] 59.889
+Joint_Angle[i] 20.7632
+Joint_Angle[i] 76.0136
+Joint_Angle[i] 43.7419
+Joint_Angle[i] 72.5586
+Joint_Angle[i] 130.705
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  690
+mCmd.joint[i].pos  2828
+mCmd.joint[i].pos  2506
+mCmd.joint[i].pos  2851
+mCmd.joint[i].pos  1574
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 b2 02 0c 0b ca 09 23 0b 26 06 3b 1c 14 00 00 2a b6 32 0d 0a 
+writeToSerial successfully!
+Num4 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -9.41521
+Joint_AngleSet_r2 -- -13.7561
+Joint_AngleSet_r3 -- -46.1391
+Joint_AngleSet_r4 -- -17.4773
+Joint_AngleSet_r5 -- -39.4202
+Joint_Angle[i] 59.889
+Joint_Angle[i] 20.5848
+Joint_Angle[i] 76.2439
+Joint_Angle[i] 43.8609
+Joint_Angle[i] 72.5227
+Joint_Angle[i] 130.58
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  684
+mCmd.joint[i].pos  2836
+mCmd.joint[i].pos  2508
+mCmd.joint[i].pos  2850
+mCmd.joint[i].pos  1572
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 ac 02 14 0b cc 09 22 0b 24 06 3b 1c 14 00 00 2a b5 32 0d 0a 
+writeToSerial successfully!
+Num5 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -9.59368
+Joint_AngleSet_r2 -- -13.5248
+Joint_AngleSet_r3 -- -46.0184
+Joint_AngleSet_r4 -- -17.514
+Joint_AngleSet_r5 -- -39.5468
+Joint_Angle[i] 59.889
+Joint_Angle[i] 20.4063
+Joint_Angle[i] 76.4752
+Joint_Angle[i] 43.9816
+Joint_Angle[i] 72.486
+Joint_Angle[i] 130.453
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  679
+mCmd.joint[i].pos  2844
+mCmd.joint[i].pos  2509
+mCmd.joint[i].pos  2848
+mCmd.joint[i].pos  1571
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 a7 02 1c 0b cd 09 20 0b 23 06 3b 1c 14 00 00 2a b2 32 0d 0a 
+writeToSerial successfully!
+Num6 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -9.77217
+Joint_AngleSet_r2 -- -13.2925
+Joint_AngleSet_r3 -- -45.896
+Joint_AngleSet_r4 -- -17.5514
+Joint_AngleSet_r5 -- -39.6752
+Joint_Angle[i] 59.889
+Joint_Angle[i] 20.2278
+Joint_Angle[i] 76.7075
+Joint_Angle[i] 44.104
+Joint_Angle[i] 72.4486
+Joint_Angle[i] 130.325
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  674
+mCmd.joint[i].pos  2852
+mCmd.joint[i].pos  2510
+mCmd.joint[i].pos  2847
+mCmd.joint[i].pos  1569
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 a2 02 24 0b ce 09 1f 0b 21 06 3b 1c 14 00 00 2a b1 32 0d 0a 
+writeToSerial successfully!
+Num7 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -9.9507
+Joint_AngleSet_r2 -- -13.0591
+Joint_AngleSet_r3 -- -45.7718
+Joint_AngleSet_r4 -- -17.5896
+Joint_AngleSet_r5 -- -39.8054
+Joint_Angle[i] 59.889
+Joint_Angle[i] 20.0493
+Joint_Angle[i] 76.9409
+Joint_Angle[i] 44.2282
+Joint_Angle[i] 72.4104
+Joint_Angle[i] 130.195
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  668
+mCmd.joint[i].pos  2860
+mCmd.joint[i].pos  2511
+mCmd.joint[i].pos  2846
+mCmd.joint[i].pos  1568
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 9c 02 2c 0b cf 09 1e 0b 20 06 3b 1c 14 00 00 2a 86 32 0d 0a 
+writeToSerial successfully!
+Num8 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -10.1293
+Joint_AngleSet_r2 -- -12.8248
+Joint_AngleSet_r3 -- -45.646
+Joint_AngleSet_r4 -- -17.6285
+Joint_AngleSet_r5 -- -39.9374
+Joint_Angle[i] 59.889
+Joint_Angle[i] 19.8707
+Joint_Angle[i] 77.1752
+Joint_Angle[i] 44.354
+Joint_Angle[i] 72.3715
+Joint_Angle[i] 130.063
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  663
+mCmd.joint[i].pos  2868
+mCmd.joint[i].pos  2513
+mCmd.joint[i].pos  2845
+mCmd.joint[i].pos  1566
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 97 02 34 0b d1 09 1d 0b 1e 06 3b 1c 14 00 00 2a b6 32 0d 0a 
+writeToSerial successfully!
+Num9 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -10.3079
+Joint_AngleSet_r2 -- -12.5894
+Joint_AngleSet_r3 -- -45.5186
+Joint_AngleSet_r4 -- -17.6683
+Joint_AngleSet_r5 -- -40.0712
+Joint_Angle[i] 59.889
+Joint_Angle[i] 19.6921
+Joint_Angle[i] 77.4106
+Joint_Angle[i] 44.4814
+Joint_Angle[i] 72.3317
+Joint_Angle[i] 129.929
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  658
+mCmd.joint[i].pos  2877
+mCmd.joint[i].pos  2514
+mCmd.joint[i].pos  2843
+mCmd.joint[i].pos  1564
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 92 02 3d 0b d2 09 1b 0b 1c 06 3b 1c 14 00 00 2a bd 32 0d 0a 
+writeToSerial successfully!
+Num10 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -10.4865
+Joint_AngleSet_r2 -- -12.353
+Joint_AngleSet_r3 -- -45.3895
+Joint_AngleSet_r4 -- -17.7088
+Joint_AngleSet_r5 -- -40.2066
+Joint_Angle[i] 59.889
+Joint_Angle[i] 19.5135
+Joint_Angle[i] 77.647
+Joint_Angle[i] 44.6105
+Joint_Angle[i] 72.2912
+Joint_Angle[i] 129.793
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  653
+mCmd.joint[i].pos  2885
+mCmd.joint[i].pos  2515
+mCmd.joint[i].pos  2842
+mCmd.joint[i].pos  1563
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 8d 02 45 0b d3 09 1a 0b 1b 06 3b 1c 14 00 00 2a dd 32 0d 0a 
+writeToSerial successfully!
+Num11 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -10.6652
+Joint_AngleSet_r2 -- -12.1156
+Joint_AngleSet_r3 -- -45.2589
+Joint_AngleSet_r4 -- -17.7501
+Joint_AngleSet_r5 -- -40.3438
+Joint_Angle[i] 59.889
+Joint_Angle[i] 19.3348
+Joint_Angle[i] 77.8844
+Joint_Angle[i] 44.7411
+Joint_Angle[i] 72.2499
+Joint_Angle[i] 129.656
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  647
+mCmd.joint[i].pos  2893
+mCmd.joint[i].pos  2517
+mCmd.joint[i].pos  2840
+mCmd.joint[i].pos  1561
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 87 02 4d 0b d5 09 18 0b 19 06 3b 1c 14 00 00 2a d9 32 0d 0a 
+writeToSerial successfully!
+Num12 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -10.844
+Joint_AngleSet_r2 -- -11.8771
+Joint_AngleSet_r3 -- -45.1266
+Joint_AngleSet_r4 -- -17.7922
+Joint_AngleSet_r5 -- -40.4826
+Joint_Angle[i] 59.889
+Joint_Angle[i] 19.156
+Joint_Angle[i] 78.1229
+Joint_Angle[i] 44.8734
+Joint_Angle[i] 72.2078
+Joint_Angle[i] 129.517
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  642
+mCmd.joint[i].pos  2901
+mCmd.joint[i].pos  2518
+mCmd.joint[i].pos  2839
+mCmd.joint[i].pos  1559
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 82 02 55 0b d6 09 17 0b 17 06 3b 1c 14 00 00 2a c6 32 0d 0a 
+writeToSerial successfully!
+Num13 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -11.0228
+Joint_AngleSet_r2 -- -11.6376
+Joint_AngleSet_r3 -- -44.9929
+Joint_AngleSet_r4 -- -17.8351
+Joint_AngleSet_r5 -- -40.6231
+Joint_Angle[i] 59.889
+Joint_Angle[i] 18.9772
+Joint_Angle[i] 78.3624
+Joint_Angle[i] 45.0071
+Joint_Angle[i] 72.1649
+Joint_Angle[i] 129.377
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  637
+mCmd.joint[i].pos  2910
+mCmd.joint[i].pos  2520
+mCmd.joint[i].pos  2838
+mCmd.joint[i].pos  1558
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 7d 02 5e 0b d8 09 16 0b 16 06 3b 1c 14 00 00 2a 3c 32 0d 0a 
+writeToSerial successfully!
+Num14 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -11.2016
+Joint_AngleSet_r2 -- -11.397
+Joint_AngleSet_r3 -- -44.8576
+Joint_AngleSet_r4 -- -17.8787
+Joint_AngleSet_r5 -- -40.7652
+Joint_Angle[i] 59.889
+Joint_Angle[i] 18.7984
+Joint_Angle[i] 78.603
+Joint_Angle[i] 45.1424
+Joint_Angle[i] 72.1213
+Joint_Angle[i] 129.235
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  631
+mCmd.joint[i].pos  2918
+mCmd.joint[i].pos  2521
+mCmd.joint[i].pos  2836
+mCmd.joint[i].pos  1556
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 77 02 66 0b d9 09 14 0b 14 06 3b 1c 14 00 00 2a 0f 32 0d 0a 
+writeToSerial successfully!
+Num15 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -11.3805
+Joint_AngleSet_r2 -- -11.1554
+Joint_AngleSet_r3 -- -44.7209
+Joint_AngleSet_r4 -- -17.9232
+Joint_AngleSet_r5 -- -40.909
+Joint_Angle[i] 59.889
+Joint_Angle[i] 18.6195
+Joint_Angle[i] 78.8446
+Joint_Angle[i] 45.2791
+Joint_Angle[i] 72.0768
+Joint_Angle[i] 129.091
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  626
+mCmd.joint[i].pos  2926
+mCmd.joint[i].pos  2522
+mCmd.joint[i].pos  2835
+mCmd.joint[i].pos  1554
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 72 02 6e 0b da 09 13 0b 12 06 3b 1c 14 00 00 2a 00 32 0d 0a 
+writeToSerial successfully!
+Num16 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -11.5595
+Joint_AngleSet_r2 -- -10.9127
+Joint_AngleSet_r3 -- -44.5827
+Joint_AngleSet_r4 -- -17.9686
+Joint_AngleSet_r5 -- -41.0542
+Joint_Angle[i] 59.889
+Joint_Angle[i] 18.4405
+Joint_Angle[i] 79.0873
+Joint_Angle[i] 45.4173
+Joint_Angle[i] 72.0314
+Joint_Angle[i] 128.946
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  621
+mCmd.joint[i].pos  2935
+mCmd.joint[i].pos  2524
+mCmd.joint[i].pos  2833
+mCmd.joint[i].pos  1553
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 6d 02 77 0b dc 09 11 0b 11 06 3b 1c 14 00 00 2a 01 32 0d 0a 
+writeToSerial successfully!
+Num17 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -11.7386
+Joint_AngleSet_r2 -- -10.669
+Joint_AngleSet_r3 -- -44.443
+Joint_AngleSet_r4 -- -18.0147
+Joint_AngleSet_r5 -- -41.201
+Joint_Angle[i] 59.889
+Joint_Angle[i] 18.2614
+Joint_Angle[i] 79.331
+Joint_Angle[i] 45.557
+Joint_Angle[i] 71.9853
+Joint_Angle[i] 128.799
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  616
+mCmd.joint[i].pos  2943
+mCmd.joint[i].pos  2525
+mCmd.joint[i].pos  2831
+mCmd.joint[i].pos  1551
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 68 02 7f 0b dd 09 0f 0b 0f 06 3b 1c 14 00 00 2a 0d 32 0d 0a 
+writeToSerial successfully!
+Num18 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -11.9177
+Joint_AngleSet_r2 -- -10.4242
+Joint_AngleSet_r3 -- -44.302
+Joint_AngleSet_r4 -- -18.0616
+Joint_AngleSet_r5 -- -41.3494
+Joint_Angle[i] 59.889
+Joint_Angle[i] 18.0823
+Joint_Angle[i] 79.5758
+Joint_Angle[i] 45.698
+Joint_Angle[i] 71.9384
+Joint_Angle[i] 128.651
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  611
+mCmd.joint[i].pos  2952
+mCmd.joint[i].pos  2527
+mCmd.joint[i].pos  2830
+mCmd.joint[i].pos  1549
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 63 02 88 0b df 09 0e 0b 0d 06 3b 1c 14 00 00 2a f0 32 0d 0a 
+writeToSerial successfully!
+Num19 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -12.0969
+Joint_AngleSet_r2 -- -10.1783
+Joint_AngleSet_r3 -- -44.1596
+Joint_AngleSet_r4 -- -18.1094
+Joint_AngleSet_r5 -- -41.4992
+Joint_Angle[i] 59.889
+Joint_Angle[i] 17.9031
+Joint_Angle[i] 79.8217
+Joint_Angle[i] 45.8404
+Joint_Angle[i] 71.8906
+Joint_Angle[i] 128.501
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  605
+mCmd.joint[i].pos  2960
+mCmd.joint[i].pos  2528
+mCmd.joint[i].pos  2828
+mCmd.joint[i].pos  1547
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 5d 02 90 0b e0 09 0c 0b 0b 06 3b 1c 14 00 00 2a ed 32 0d 0a 
+writeToSerial successfully!
+Num20 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -12.2761
+Joint_AngleSet_r2 -- -9.93137
+Joint_AngleSet_r3 -- -44.0158
+Joint_AngleSet_r4 -- -18.158
+Joint_AngleSet_r5 -- -41.6505
+Joint_Angle[i] 59.889
+Joint_Angle[i] 17.7239
+Joint_Angle[i] 80.0686
+Joint_Angle[i] 45.9842
+Joint_Angle[i] 71.842
+Joint_Angle[i] 128.35
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  600
+mCmd.joint[i].pos  2968
+mCmd.joint[i].pos  2530
+mCmd.joint[i].pos  2827
+mCmd.joint[i].pos  1545
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 58 02 98 0b e2 09 0b 0b 09 06 3b 1c 14 00 00 2a e7 32 0d 0a 
+writeToSerial successfully!
+Num21 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -12.4555
+Joint_AngleSet_r2 -- -9.68334
+Joint_AngleSet_r3 -- -43.8707
+Joint_AngleSet_r4 -- -18.2075
+Joint_AngleSet_r5 -- -41.8032
+Joint_Angle[i] 59.889
+Joint_Angle[i] 17.5445
+Joint_Angle[i] 80.3167
+Joint_Angle[i] 46.1293
+Joint_Angle[i] 71.7925
+Joint_Angle[i] 128.197
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  595
+mCmd.joint[i].pos  2977
+mCmd.joint[i].pos  2531
+mCmd.joint[i].pos  2825
+mCmd.joint[i].pos  1544
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 53 02 a1 0b e3 09 09 0b 08 06 3b 1c 14 00 00 2a d7 32 0d 0a 
+writeToSerial successfully!
+Num22 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -12.6349
+Joint_AngleSet_r2 -- -9.43422
+Joint_AngleSet_r3 -- -43.7243
+Joint_AngleSet_r4 -- -18.2578
+Joint_AngleSet_r5 -- -41.9573
+Joint_Angle[i] 59.889
+Joint_Angle[i] 17.3651
+Joint_Angle[i] 80.5658
+Joint_Angle[i] 46.2757
+Joint_Angle[i] 71.7422
+Joint_Angle[i] 128.043
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  590
+mCmd.joint[i].pos  2985
+mCmd.joint[i].pos  2533
+mCmd.joint[i].pos  2823
+mCmd.joint[i].pos  1542
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 4e 02 a9 0b e5 09 07 0b 06 06 3b 1c 14 00 00 2a c4 32 0d 0a 
+writeToSerial successfully!
+Num23 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -12.8145
+Joint_AngleSet_r2 -- -9.18401
+Joint_AngleSet_r3 -- -43.5766
+Joint_AngleSet_r4 -- -18.3089
+Joint_AngleSet_r5 -- -42.1129
+Joint_Angle[i] 59.889
+Joint_Angle[i] 17.1855
+Joint_Angle[i] 80.816
+Joint_Angle[i] 46.4234
+Joint_Angle[i] 71.6911
+Joint_Angle[i] 127.887
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  585
+mCmd.joint[i].pos  2994
+mCmd.joint[i].pos  2534
+mCmd.joint[i].pos  2821
+mCmd.joint[i].pos  1540
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 49 02 b2 0b e6 09 05 0b 04 06 3b 1c 14 00 00 2a db 32 0d 0a 
+writeToSerial successfully!
+Num24 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -12.9941
+Joint_AngleSet_r2 -- -8.9327
+Joint_AngleSet_r3 -- -43.4277
+Joint_AngleSet_r4 -- -18.3609
+Joint_AngleSet_r5 -- -42.2697
+Joint_Angle[i] 59.889
+Joint_Angle[i] 17.0059
+Joint_Angle[i] 81.0673
+Joint_Angle[i] 46.5723
+Joint_Angle[i] 71.6391
+Joint_Angle[i] 127.73
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  580
+mCmd.joint[i].pos  3002
+mCmd.joint[i].pos  2536
+mCmd.joint[i].pos  2820
+mCmd.joint[i].pos  1538
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 44 02 ba 0b e8 09 04 0b 02 06 3b 1c 14 00 00 2a d7 32 0d 0a 
+writeToSerial successfully!
+Num25 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -13.1738
+Joint_AngleSet_r2 -- -8.68028
+Joint_AngleSet_r3 -- -43.2776
+Joint_AngleSet_r4 -- -18.4138
+Joint_AngleSet_r5 -- -42.4279
+Joint_Angle[i] 59.889
+Joint_Angle[i] 16.8262
+Joint_Angle[i] 81.3197
+Joint_Angle[i] 46.7224
+Joint_Angle[i] 71.5862
+Joint_Angle[i] 127.572
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  575
+mCmd.joint[i].pos  3011
+mCmd.joint[i].pos  2538
+mCmd.joint[i].pos  2818
+mCmd.joint[i].pos  1536
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 3f 02 c3 0b ea 09 02 0b 00 06 3b 1c 14 00 00 2a d3 32 0d 0a 
+writeToSerial successfully!
+Num26 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -13.3537
+Joint_AngleSet_r2 -- -8.42675
+Joint_AngleSet_r3 -- -43.1263
+Joint_AngleSet_r4 -- -18.4675
+Joint_AngleSet_r5 -- -42.5874
+Joint_Angle[i] 59.889
+Joint_Angle[i] 16.6463
+Joint_Angle[i] 81.5733
+Joint_Angle[i] 46.8737
+Joint_Angle[i] 71.5325
+Joint_Angle[i] 127.413
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  570
+mCmd.joint[i].pos  3020
+mCmd.joint[i].pos  2539
+mCmd.joint[i].pos  2816
+mCmd.joint[i].pos  1534
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 3a 02 cc 0b eb 09 00 0b fe 05 3b 1c 14 00 00 2a 24 31 0d 0a 
+writeToSerial successfully!
+Num27 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -13.5336
+Joint_AngleSet_r2 -- -8.1721
+Joint_AngleSet_r3 -- -42.9738
+Joint_AngleSet_r4 -- -18.5221
+Joint_AngleSet_r5 -- -42.7482
+Joint_Angle[i] 59.889
+Joint_Angle[i] 16.4664
+Joint_Angle[i] 81.8279
+Joint_Angle[i] 47.0262
+Joint_Angle[i] 71.4779
+Joint_Angle[i] 127.252
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  564
+mCmd.joint[i].pos  3028
+mCmd.joint[i].pos  2541
+mCmd.joint[i].pos  2814
+mCmd.joint[i].pos  1532
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 34 02 d4 0b ed 09 fe 0a fc 05 3b 1c 14 00 00 2a c8 30 0d 0a 
+writeToSerial successfully!
+Num28 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -13.7136
+Joint_AngleSet_r2 -- -7.91633
+Joint_AngleSet_r3 -- -42.8202
+Joint_AngleSet_r4 -- -18.5776
+Joint_AngleSet_r5 -- -42.9102
+Joint_Angle[i] 59.889
+Joint_Angle[i] 16.2864
+Joint_Angle[i] 82.0837
+Joint_Angle[i] 47.1798
+Joint_Angle[i] 71.4224
+Joint_Angle[i] 127.09
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  559
+mCmd.joint[i].pos  3037
+mCmd.joint[i].pos  2542
+mCmd.joint[i].pos  2812
+mCmd.joint[i].pos  1530
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 2f 02 dd 0b ee 09 fc 0a fa 05 3b 1c 14 00 00 2a dd 30 0d 0a 
+writeToSerial successfully!
+Num29 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -13.8938
+Joint_AngleSet_r2 -- -7.65943
+Joint_AngleSet_r3 -- -42.6655
+Joint_AngleSet_r4 -- -18.6339
+Joint_AngleSet_r5 -- -43.0735
+Joint_Angle[i] 59.889
+Joint_Angle[i] 16.1062
+Joint_Angle[i] 82.3406
+Joint_Angle[i] 47.3345
+Joint_Angle[i] 71.3661
+Joint_Angle[i] 126.926
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  554
+mCmd.joint[i].pos  3046
+mCmd.joint[i].pos  2544
+mCmd.joint[i].pos  2810
+mCmd.joint[i].pos  1528
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 2a 02 e6 0b f0 09 fa 0a f8 05 3b 1c 14 00 00 2a f9 30 0d 0a 
+writeToSerial successfully!
+Num30 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -14.0741
+Joint_AngleSet_r2 -- -7.40138
+Joint_AngleSet_r3 -- -42.5097
+Joint_AngleSet_r4 -- -18.6912
+Joint_AngleSet_r5 -- -43.238
+Joint_Angle[i] 59.889
+Joint_Angle[i] 15.9259
+Joint_Angle[i] 82.5986
+Joint_Angle[i] 47.4903
+Joint_Angle[i] 71.3088
+Joint_Angle[i] 126.762
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  549
+mCmd.joint[i].pos  3054
+mCmd.joint[i].pos  2546
+mCmd.joint[i].pos  2808
+mCmd.joint[i].pos  1526
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 25 02 ee 0b f2 09 f8 0a f6 05 3b 1c 14 00 00 2a f0 30 0d 0a 
+writeToSerial successfully!
+Num31 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -14.2545
+Joint_AngleSet_r2 -- -7.1422
+Joint_AngleSet_r3 -- -42.3528
+Joint_AngleSet_r4 -- -18.7493
+Joint_AngleSet_r5 -- -43.4036
+Joint_Angle[i] 59.889
+Joint_Angle[i] 15.7455
+Joint_Angle[i] 82.8578
+Joint_Angle[i] 47.6472
+Joint_Angle[i] 71.2507
+Joint_Angle[i] 126.596
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  544
+mCmd.joint[i].pos  3063
+mCmd.joint[i].pos  2547
+mCmd.joint[i].pos  2806
+mCmd.joint[i].pos  1524
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 20 02 f7 0b f3 09 f6 0a f4 05 3b 1c 14 00 00 2a e1 30 0d 0a 
+writeToSerial successfully!
+Num32 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -14.435
+Joint_AngleSet_r2 -- -6.88186
+Joint_AngleSet_r3 -- -42.1949
+Joint_AngleSet_r4 -- -18.8084
+Joint_AngleSet_r5 -- -43.5703
+Joint_Angle[i] 59.889
+Joint_Angle[i] 15.565
+Joint_Angle[i] 83.1181
+Joint_Angle[i] 47.8051
+Joint_Angle[i] 71.1916
+Joint_Angle[i] 126.43
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  539
+mCmd.joint[i].pos  3072
+mCmd.joint[i].pos  2549
+mCmd.joint[i].pos  2804
+mCmd.joint[i].pos  1522
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 1b 02 00 0c f5 09 f4 0a f2 05 3b 1c 14 00 00 2a 2f 37 0d 0a 
+writeToSerial successfully!
+Num33 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -14.6157
+Joint_AngleSet_r2 -- -6.62036
+Joint_AngleSet_r3 -- -42.036
+Joint_AngleSet_r4 -- -18.8683
+Joint_AngleSet_r5 -- -43.7382
+Joint_Angle[i] 59.889
+Joint_Angle[i] 15.3843
+Joint_Angle[i] 83.3796
+Joint_Angle[i] 47.964
+Joint_Angle[i] 71.1317
+Joint_Angle[i] 126.262
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  534
+mCmd.joint[i].pos  3080
+mCmd.joint[i].pos  2551
+mCmd.joint[i].pos  2802
+mCmd.joint[i].pos  1520
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 16 02 08 0c f7 09 f2 0a f0 05 3b 1c 14 00 00 2a 2c 37 0d 0a 
+writeToSerial successfully!
+Num34 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -14.7965
+Joint_AngleSet_r2 -- -6.3577
+Joint_AngleSet_r3 -- -41.8762
+Joint_AngleSet_r4 -- -18.9292
+Joint_AngleSet_r5 -- -43.9072
+Joint_Angle[i] 59.889
+Joint_Angle[i] 15.2035
+Joint_Angle[i] 83.6423
+Joint_Angle[i] 48.1238
+Joint_Angle[i] 71.0708
+Joint_Angle[i] 126.093
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  529
+mCmd.joint[i].pos  3089
+mCmd.joint[i].pos  2552
+mCmd.joint[i].pos  2800
+mCmd.joint[i].pos  1518
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 11 02 11 0c f8 09 f0 0a ee 05 3b 1c 14 00 00 2a 21 37 0d 0a 
+writeToSerial successfully!
+Num35 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -14.9774
+Joint_AngleSet_r2 -- -6.09386
+Joint_AngleSet_r3 -- -41.7153
+Joint_AngleSet_r4 -- -18.991
+Joint_AngleSet_r5 -- -44.0773
+Joint_Angle[i] 59.889
+Joint_Angle[i] 15.0226
+Joint_Angle[i] 83.9061
+Joint_Angle[i] 48.2847
+Joint_Angle[i] 71.009
+Joint_Angle[i] 125.923
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  524
+mCmd.joint[i].pos  3098
+mCmd.joint[i].pos  2554
+mCmd.joint[i].pos  2798
+mCmd.joint[i].pos  1516
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 0c 02 1a 0c fa 09 ee 0a ec 05 3b 1c 14 00 00 2a 29 37 0d 0a 
+writeToSerial successfully!
+Num36 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -15.1585
+Joint_AngleSet_r2 -- -5.82884
+Joint_AngleSet_r3 -- -41.5536
+Joint_AngleSet_r4 -- -19.0538
+Joint_AngleSet_r5 -- -44.2484
+Joint_Angle[i] 59.889
+Joint_Angle[i] 14.8415
+Joint_Angle[i] 84.1712
+Joint_Angle[i] 48.4464
+Joint_Angle[i] 70.9462
+Joint_Angle[i] 125.752
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  519
+mCmd.joint[i].pos  3107
+mCmd.joint[i].pos  2556
+mCmd.joint[i].pos  2796
+mCmd.joint[i].pos  1514
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 07 02 23 0c fc 09 ec 0a ea 05 3b 1c 14 00 00 2a 19 37 0d 0a 
+writeToSerial successfully!
+Num37 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -15.3397
+Joint_AngleSet_r2 -- -5.56263
+Joint_AngleSet_r3 -- -41.3909
+Joint_AngleSet_r4 -- -19.1174
+Joint_AngleSet_r5 -- -44.4205
+Joint_Angle[i] 59.889
+Joint_Angle[i] 14.6603
+Joint_Angle[i] 84.4374
+Joint_Angle[i] 48.6091
+Joint_Angle[i] 70.8826
+Joint_Angle[i] 125.58
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  514
+mCmd.joint[i].pos  3115
+mCmd.joint[i].pos  2557
+mCmd.joint[i].pos  2794
+mCmd.joint[i].pos  1512
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 02 02 2b 0c fd 09 ea 0a e8 05 3b 1c 14 00 00 2a 11 37 0d 0a 
+writeToSerial successfully!
+Num38 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -15.5211
+Joint_AngleSet_r2 -- -5.29523
+Joint_AngleSet_r3 -- -41.2274
+Joint_AngleSet_r4 -- -19.182
+Joint_AngleSet_r5 -- -44.5936
+Joint_Angle[i] 59.889
+Joint_Angle[i] 14.4789
+Joint_Angle[i] 84.7048
+Joint_Angle[i] 48.7726
+Joint_Angle[i] 70.818
+Joint_Angle[i] 125.406
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  509
+mCmd.joint[i].pos  3124
+mCmd.joint[i].pos  2559
+mCmd.joint[i].pos  2792
+mCmd.joint[i].pos  1510
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 fd 01 34 0c ff 09 e8 0a e6 05 3b 1c 14 00 00 2a ff 34 0d 0a 
+writeToSerial successfully!
+Num39 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -15.7027
+Joint_AngleSet_r2 -- -5.02662
+Joint_AngleSet_r3 -- -41.0631
+Joint_AngleSet_r4 -- -19.2476
+Joint_AngleSet_r5 -- -44.7676
+Joint_Angle[i] 59.889
+Joint_Angle[i] 14.2973
+Joint_Angle[i] 84.9734
+Joint_Angle[i] 48.9369
+Joint_Angle[i] 70.7524
+Joint_Angle[i] 125.232
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  505
+mCmd.joint[i].pos  3133
+mCmd.joint[i].pos  2561
+mCmd.joint[i].pos  2789
+mCmd.joint[i].pos  1508
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 f9 01 3d 0c 01 0a e5 0a e4 05 3b 1c 14 00 00 2a 03 37 0d 0a 
+writeToSerial successfully!
+Num40 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -15.8844
+Joint_AngleSet_r2 -- -4.75679
+Joint_AngleSet_r3 -- -40.8979
+Joint_AngleSet_r4 -- -19.3141
+Joint_AngleSet_r5 -- -44.9426
+Joint_Angle[i] 59.889
+Joint_Angle[i] 14.1156
+Joint_Angle[i] 85.2432
+Joint_Angle[i] 49.1021
+Joint_Angle[i] 70.6859
+Joint_Angle[i] 125.057
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  500
+mCmd.joint[i].pos  3142
+mCmd.joint[i].pos  2563
+mCmd.joint[i].pos  2787
+mCmd.joint[i].pos  1506
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 f4 01 46 0c 03 0a e3 0a e2 05 3b 1c 14 00 00 2a 77 37 0d 0a 
+writeToSerial successfully!
+Num41 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -16.0662
+Joint_AngleSet_r2 -- -4.48574
+Joint_AngleSet_r3 -- -40.7319
+Joint_AngleSet_r4 -- -19.3816
+Joint_AngleSet_r5 -- -45.1185
+Joint_Angle[i] 59.889
+Joint_Angle[i] 13.9338
+Joint_Angle[i] 85.5143
+Joint_Angle[i] 49.2681
+Joint_Angle[i] 70.6184
+Joint_Angle[i] 124.881
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  495
+mCmd.joint[i].pos  3151
+mCmd.joint[i].pos  2564
+mCmd.joint[i].pos  2785
+mCmd.joint[i].pos  1504
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 ef 01 4f 0c 04 0a e1 0a e0 05 3b 1c 14 00 00 2a 62 37 0d 0a 
+writeToSerial successfully!
+Num42 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -16.2483
+Joint_AngleSet_r2 -- -4.21346
+Joint_AngleSet_r3 -- -40.5651
+Joint_AngleSet_r4 -- -19.4501
+Joint_AngleSet_r5 -- -45.2954
+Joint_Angle[i] 59.889
+Joint_Angle[i] 13.7517
+Joint_Angle[i] 85.7865
+Joint_Angle[i] 49.4349
+Joint_Angle[i] 70.5499
+Joint_Angle[i] 124.705
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  490
+mCmd.joint[i].pos  3160
+mCmd.joint[i].pos  2566
+mCmd.joint[i].pos  2782
+mCmd.joint[i].pos  1501
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 ea 01 58 0c 06 0a de 0a dd 05 3b 1c 14 00 00 2a 70 37 0d 0a 
+writeToSerial successfully!
+Num43 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -16.4305
+Joint_AngleSet_r2 -- -3.93993
+Joint_AngleSet_r3 -- -40.3976
+Joint_AngleSet_r4 -- -19.5195
+Joint_AngleSet_r5 -- -45.473
+Joint_Angle[i] 59.889
+Joint_Angle[i] 13.5695
+Joint_Angle[i] 86.0601
+Joint_Angle[i] 49.6024
+Joint_Angle[i] 70.4805
+Joint_Angle[i] 124.527
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  485
+mCmd.joint[i].pos  3169
+mCmd.joint[i].pos  2568
+mCmd.joint[i].pos  2780
+mCmd.joint[i].pos  1499
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 e5 01 61 0c 08 0a dc 0a db 05 3b 1c 14 00 00 2a 4c 37 0d 0a 
+writeToSerial successfully!
+Num44 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -16.6129
+Joint_AngleSet_r2 -- -3.66516
+Joint_AngleSet_r3 -- -40.2294
+Joint_AngleSet_r4 -- -19.5899
+Joint_AngleSet_r5 -- -45.6515
+Joint_Angle[i] 59.889
+Joint_Angle[i] 13.3871
+Joint_Angle[i] 86.3348
+Joint_Angle[i] 49.7706
+Joint_Angle[i] 70.4101
+Joint_Angle[i] 124.348
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  480
+mCmd.joint[i].pos  3178
+mCmd.joint[i].pos  2570
+mCmd.joint[i].pos  2778
+mCmd.joint[i].pos  1497
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 e0 01 6a 0c 0a 0a da 0a d9 05 3b 1c 14 00 00 2a 44 37 0d 0a 
+writeToSerial successfully!
+Num45 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -16.7956
+Joint_AngleSet_r2 -- -3.38913
+Joint_AngleSet_r3 -- -40.0605
+Joint_AngleSet_r4 -- -19.6613
+Joint_AngleSet_r5 -- -45.8309
+Joint_Angle[i] 59.889
+Joint_Angle[i] 13.2044
+Joint_Angle[i] 86.6109
+Joint_Angle[i] 49.9395
+Joint_Angle[i] 70.3387
+Joint_Angle[i] 124.169
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  475
+mCmd.joint[i].pos  3187
+mCmd.joint[i].pos  2571
+mCmd.joint[i].pos  2775
+mCmd.joint[i].pos  1495
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 db 01 73 0c 0b 0a d7 0a d7 05 3b 1c 14 00 00 2a 64 37 0d 0a 
+writeToSerial successfully!
+Num46 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -16.9784
+Joint_AngleSet_r2 -- -3.11183
+Joint_AngleSet_r3 -- -39.8909
+Joint_AngleSet_r4 -- -19.7338
+Joint_AngleSet_r5 -- -46.011
+Joint_Angle[i] 59.889
+Joint_Angle[i] 13.0216
+Joint_Angle[i] 86.8882
+Joint_Angle[i] 50.1091
+Joint_Angle[i] 70.2662
+Joint_Angle[i] 123.989
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  470
+mCmd.joint[i].pos  3196
+mCmd.joint[i].pos  2573
+mCmd.joint[i].pos  2773
+mCmd.joint[i].pos  1493
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 d6 01 7c 0c 0d 0a d5 0a d5 05 3b 1c 14 00 00 2a 60 37 0d 0a 
+writeToSerial successfully!
+Num47 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -17.1614
+Joint_AngleSet_r2 -- -2.83325
+Joint_AngleSet_r3 -- -39.7207
+Joint_AngleSet_r4 -- -19.8072
+Joint_AngleSet_r5 -- -46.1919
+Joint_Angle[i] 59.889
+Joint_Angle[i] 12.8386
+Joint_Angle[i] 87.1668
+Joint_Angle[i] 50.2793
+Joint_Angle[i] 70.1928
+Joint_Angle[i] 123.808
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  466
+mCmd.joint[i].pos  3205
+mCmd.joint[i].pos  2575
+mCmd.joint[i].pos  2770
+mCmd.joint[i].pos  1491
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 d2 01 85 0c 0f 0a d2 0a d3 05 3b 1c 14 00 00 2a 9e 37 0d 0a 
+writeToSerial successfully!
+Num48 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -17.3446
+Joint_AngleSet_r2 -- -2.55338
+Joint_AngleSet_r3 -- -39.5498
+Joint_AngleSet_r4 -- -19.8816
+Joint_AngleSet_r5 -- -46.3736
+Joint_Angle[i] 59.889
+Joint_Angle[i] 12.6554
+Joint_Angle[i] 87.4466
+Joint_Angle[i] 50.4502
+Joint_Angle[i] 70.1184
+Joint_Angle[i] 123.626
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  461
+mCmd.joint[i].pos  3214
+mCmd.joint[i].pos  2577
+mCmd.joint[i].pos  2768
+mCmd.joint[i].pos  1488
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 cd 01 8e 0c 11 0a d0 0a d0 05 3b 1c 14 00 00 2a 95 37 0d 0a 
+writeToSerial successfully!
+Num49 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -17.528
+Joint_AngleSet_r2 -- -2.27221
+Joint_AngleSet_r3 -- -39.3783
+Joint_AngleSet_r4 -- -19.9571
+Joint_AngleSet_r5 -- -46.5559
+Joint_Angle[i] 59.889
+Joint_Angle[i] 12.472
+Joint_Angle[i] 87.7278
+Joint_Angle[i] 50.6217
+Joint_Angle[i] 70.0429
+Joint_Angle[i] 123.444
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  456
+mCmd.joint[i].pos  3223
+mCmd.joint[i].pos  2578
+mCmd.joint[i].pos  2765
+mCmd.joint[i].pos  1486
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 c8 01 97 0c 12 0a cd 0a ce 05 3b 1c 14 00 00 2a 89 37 0d 0a 
+writeToSerial successfully!
+Num50 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -17.7116
+Joint_AngleSet_r2 -- -1.98973
+Joint_AngleSet_r3 -- -39.2063
+Joint_AngleSet_r4 -- -20.0336
+Joint_AngleSet_r5 -- -46.739
+Joint_Angle[i] 59.889
+Joint_Angle[i] 12.2884
+Joint_Angle[i] 88.0103
+Joint_Angle[i] 50.7937
+Joint_Angle[i] 69.9664
+Joint_Angle[i] 123.261
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  451
+mCmd.joint[i].pos  3232
+mCmd.joint[i].pos  2580
+mCmd.joint[i].pos  2762
+mCmd.joint[i].pos  1484
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 c3 01 a0 0c 14 0a ca 0a cc 05 3b 1c 14 00 00 2a b6 37 0d 0a 
+writeToSerial successfully!
+Num51 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -17.8955
+Joint_AngleSet_r2 -- -1.70592
+Joint_AngleSet_r3 -- -39.0337
+Joint_AngleSet_r4 -- -20.1111
+Joint_AngleSet_r5 -- -46.9227
+Joint_Angle[i] 59.889
+Joint_Angle[i] 12.1045
+Joint_Angle[i] 88.2941
+Joint_Angle[i] 50.9663
+Joint_Angle[i] 69.8889
+Joint_Angle[i] 123.077
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  446
+mCmd.joint[i].pos  3241
+mCmd.joint[i].pos  2582
+mCmd.joint[i].pos  2760
+mCmd.joint[i].pos  1482
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 be 01 a9 0c 16 0a c8 0a ca 05 3b 1c 14 00 00 2a c4 37 0d 0a 
+writeToSerial successfully!
+Num52 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -18.0795
+Joint_AngleSet_r2 -- -1.42079
+Joint_AngleSet_r3 -- -38.8606
+Joint_AngleSet_r4 -- -20.1897
+Joint_AngleSet_r5 -- -47.1071
+Joint_Angle[i] 59.889
+Joint_Angle[i] 11.9205
+Joint_Angle[i] 88.5792
+Joint_Angle[i] 51.1394
+Joint_Angle[i] 69.8103
+Joint_Angle[i] 122.893
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  442
+mCmd.joint[i].pos  3250
+mCmd.joint[i].pos  2584
+mCmd.joint[i].pos  2757
+mCmd.joint[i].pos  1480
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 ba 01 b2 0c 18 0a c5 0a c8 05 3b 1c 14 00 00 2a da 37 0d 0a 
+writeToSerial successfully!
+Num53 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -18.2639
+Joint_AngleSet_r2 -- -1.13431
+Joint_AngleSet_r3 -- -38.687
+Joint_AngleSet_r4 -- -20.2694
+Joint_AngleSet_r5 -- -47.2922
+Joint_Angle[i] 59.889
+Joint_Angle[i] 11.7361
+Joint_Angle[i] 88.8657
+Joint_Angle[i] 51.313
+Joint_Angle[i] 69.7306
+Joint_Angle[i] 122.708
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  437
+mCmd.joint[i].pos  3259
+mCmd.joint[i].pos  2586
+mCmd.joint[i].pos  2754
+mCmd.joint[i].pos  1477
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 b5 01 bb 0c 1a 0a c2 0a c5 05 3b 1c 14 00 00 2a d4 37 0d 0a 
+writeToSerial successfully!
+Num54 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -18.4484
+Joint_AngleSet_r2 -- -0.846481
+Joint_AngleSet_r3 -- -38.5129
+Joint_AngleSet_r4 -- -20.3501
+Joint_AngleSet_r5 -- -47.4778
+Joint_Angle[i] 59.889
+Joint_Angle[i] 11.5516
+Joint_Angle[i] 89.1535
+Joint_Angle[i] 51.4871
+Joint_Angle[i] 69.6499
+Joint_Angle[i] 122.522
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  432
+mCmd.joint[i].pos  3268
+mCmd.joint[i].pos  2588
+mCmd.joint[i].pos  2752
+mCmd.joint[i].pos  1475
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 b0 01 c4 0c 1c 0a c0 0a c3 05 3b 1c 14 00 00 2a ac 37 0d 0a 
+writeToSerial successfully!
+Num55 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -18.6332
+Joint_AngleSet_r2 -- -0.557281
+Joint_AngleSet_r3 -- -38.3383
+Joint_AngleSet_r4 -- -20.4319
+Joint_AngleSet_r5 -- -47.664
+Joint_Angle[i] 59.889
+Joint_Angle[i] 11.3668
+Joint_Angle[i] 89.4427
+Joint_Angle[i] 51.6617
+Joint_Angle[i] 69.5681
+Joint_Angle[i] 122.336
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  427
+mCmd.joint[i].pos  3277
+mCmd.joint[i].pos  2589
+mCmd.joint[i].pos  2749
+mCmd.joint[i].pos  1473
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 ab 01 cd 0c 1d 0a bd 0a c1 05 3b 1c 14 00 00 2a c0 37 0d 0a 
+writeToSerial successfully!
+Num56 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -18.8183
+Joint_AngleSet_r2 -- -0.266702
+Joint_AngleSet_r3 -- -38.1634
+Joint_AngleSet_r4 -- -20.5148
+Joint_AngleSet_r5 -- -47.8508
+Joint_Angle[i] 59.889
+Joint_Angle[i] 11.1817
+Joint_Angle[i] 89.7333
+Joint_Angle[i] 51.8366
+Joint_Angle[i] 69.4852
+Joint_Angle[i] 122.149
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  423
+mCmd.joint[i].pos  3286
+mCmd.joint[i].pos  2591
+mCmd.joint[i].pos  2746
+mCmd.joint[i].pos  1471
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 a7 01 d6 0c 1f 0a ba 0a bf 05 3b 1c 14 00 00 2a ac 37 0d 0a 
+writeToSerial successfully!
+Num57 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -19.0036
+Joint_AngleSet_r2 -- 0.0252679
+Joint_AngleSet_r3 -- -37.9879
+Joint_AngleSet_r4 -- -20.5987
+Joint_AngleSet_r5 -- -48.0382
+Joint_Angle[i] 59.889
+Joint_Angle[i] 10.9964
+Joint_Angle[i] 90.0253
+Joint_Angle[i] 52.0121
+Joint_Angle[i] 69.4013
+Joint_Angle[i] 121.962
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  418
+mCmd.joint[i].pos  3296
+mCmd.joint[i].pos  2593
+mCmd.joint[i].pos  2743
+mCmd.joint[i].pos  1468
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 a2 01 e0 0c 21 0a b7 0a bc 05 3b 1c 14 00 00 2a af 37 0d 0a 
+writeToSerial successfully!
+Num58 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -19.1891
+Joint_AngleSet_r2 -- 0.318643
+Joint_AngleSet_r3 -- -37.8121
+Joint_AngleSet_r4 -- -20.6838
+Joint_AngleSet_r5 -- -48.226
+Joint_Angle[i] 59.889
+Joint_Angle[i] 10.8109
+Joint_Angle[i] 90.3186
+Joint_Angle[i] 52.1879
+Joint_Angle[i] 69.3162
+Joint_Angle[i] 121.774
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  413
+mCmd.joint[i].pos  3305
+mCmd.joint[i].pos  2595
+mCmd.joint[i].pos  2740
+mCmd.joint[i].pos  1466
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 9d 01 e9 0c 23 0a b4 0a ba 05 3b 1c 14 00 00 2a 9e 37 0d 0a 
+writeToSerial successfully!
+Num59 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -19.375
+Joint_AngleSet_r2 -- 0.613435
+Joint_AngleSet_r3 -- -37.636
+Joint_AngleSet_r4 -- -20.77
+Joint_AngleSet_r5 -- -48.4144
+Joint_Angle[i] 59.889
+Joint_Angle[i] 10.625
+Joint_Angle[i] 90.6134
+Joint_Angle[i] 52.364
+Joint_Angle[i] 69.23
+Joint_Angle[i] 121.586
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  409
+mCmd.joint[i].pos  3314
+mCmd.joint[i].pos  2597
+mCmd.joint[i].pos  2737
+mCmd.joint[i].pos  1464
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 99 01 f2 0c 25 0a b1 0a b8 05 3b 1c 14 00 00 2a 80 37 0d 0a 
+writeToSerial successfully!
+Num60 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -19.5611
+Joint_AngleSet_r2 -- 0.909658
+Joint_AngleSet_r3 -- -37.4594
+Joint_AngleSet_r4 -- -20.8573
+Joint_AngleSet_r5 -- -48.6032
+Joint_Angle[i] 59.889
+Joint_Angle[i] 10.4389
+Joint_Angle[i] 90.9097
+Joint_Angle[i] 52.5406
+Joint_Angle[i] 69.1427
+Joint_Angle[i] 121.397
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  404
+mCmd.joint[i].pos  3323
+mCmd.joint[i].pos  2599
+mCmd.joint[i].pos  2734
+mCmd.joint[i].pos  1462
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 94 01 fb 0c 27 0a ae 0a b6 05 3b 1c 14 00 00 2a 97 37 0d 0a 
+writeToSerial successfully!
+Num61 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -19.7475
+Joint_AngleSet_r2 -- 1.20733
+Joint_AngleSet_r3 -- -37.2826
+Joint_AngleSet_r4 -- -20.9457
+Joint_AngleSet_r5 -- -48.7926
+Joint_Angle[i] 59.889
+Joint_Angle[i] 10.2525
+Joint_Angle[i] 91.2073
+Joint_Angle[i] 52.7174
+Joint_Angle[i] 69.0543
+Joint_Angle[i] 121.207
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  399
+mCmd.joint[i].pos  3332
+mCmd.joint[i].pos  2600
+mCmd.joint[i].pos  2731
+mCmd.joint[i].pos  1459
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 8f 01 04 0d 28 0a ab 0a b3 05 3b 1c 14 00 00 2a 7c 36 0d 0a 
+writeToSerial successfully!
+Num62 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -19.9342
+Joint_AngleSet_r2 -- 1.50645
+Joint_AngleSet_r3 -- -37.1054
+Joint_AngleSet_r4 -- -21.0353
+Joint_AngleSet_r5 -- -48.9823
+Joint_Angle[i] 59.889
+Joint_Angle[i] 10.0658
+Joint_Angle[i] 91.5065
+Joint_Angle[i] 52.8946
+Joint_Angle[i] 68.9647
+Joint_Angle[i] 121.018
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  395
+mCmd.joint[i].pos  3342
+mCmd.joint[i].pos  2602
+mCmd.joint[i].pos  2728
+mCmd.joint[i].pos  1457
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 8b 01 0e 0d 2a 0a a8 0a b1 05 3b 1c 14 00 00 2a 71 36 0d 0a 
+writeToSerial successfully!
+Num63 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -20.1211
+Joint_AngleSet_r2 -- 1.80705
+Joint_AngleSet_r3 -- -36.928
+Joint_AngleSet_r4 -- -21.126
+Joint_AngleSet_r5 -- -49.1725
+Joint_Angle[i] 59.889
+Joint_Angle[i] 9.87887
+Joint_Angle[i] 91.8071
+Joint_Angle[i] 53.072
+Joint_Angle[i] 68.874
+Joint_Angle[i] 120.828
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  390
+mCmd.joint[i].pos  3351
+mCmd.joint[i].pos  2604
+mCmd.joint[i].pos  2725
+mCmd.joint[i].pos  1455
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 86 01 17 0d 2c 0a a5 0a af 05 3b 1c 14 00 00 2a 70 36 0d 0a 
+writeToSerial successfully!
+Num64 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -20.3084
+Joint_AngleSet_r2 -- 2.10914
+Joint_AngleSet_r3 -- -36.7503
+Joint_AngleSet_r4 -- -21.2179
+Joint_AngleSet_r5 -- -49.3631
+Joint_Angle[i] 59.889
+Joint_Angle[i] 9.69159
+Joint_Angle[i] 92.1091
+Joint_Angle[i] 53.2497
+Joint_Angle[i] 68.7821
+Joint_Angle[i] 120.637
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  385
+mCmd.joint[i].pos  3360
+mCmd.joint[i].pos  2606
+mCmd.joint[i].pos  2722
+mCmd.joint[i].pos  1452
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 81 01 20 0d 2e 0a a2 0a ac 05 3b 1c 14 00 00 2a 46 36 0d 0a 
+writeToSerial successfully!
+Num65 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -20.496
+Joint_AngleSet_r2 -- 2.41272
+Joint_AngleSet_r3 -- -36.5723
+Joint_AngleSet_r4 -- -21.3109
+Joint_AngleSet_r5 -- -49.554
+Joint_Angle[i] 59.889
+Joint_Angle[i] 9.50399
+Joint_Angle[i] 92.4127
+Joint_Angle[i] 53.4277
+Joint_Angle[i] 68.6891
+Joint_Angle[i] 120.446
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  381
+mCmd.joint[i].pos  3369
+mCmd.joint[i].pos  2608
+mCmd.joint[i].pos  2718
+mCmd.joint[i].pos  1450
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 7d 01 29 0d 30 0a 9e 0a aa 05 3b 1c 14 00 00 2a 97 36 0d 0a 
+writeToSerial successfully!
+Num66 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -20.6839
+Joint_AngleSet_r2 -- 2.71783
+Joint_AngleSet_r3 -- -36.3941
+Joint_AngleSet_r4 -- -21.4052
+Joint_AngleSet_r5 -- -49.7454
+Joint_Angle[i] 59.889
+Joint_Angle[i] 9.31608
+Joint_Angle[i] 92.7178
+Joint_Angle[i] 53.6059
+Joint_Angle[i] 68.5948
+Joint_Angle[i] 120.255
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  376
+mCmd.joint[i].pos  3379
+mCmd.joint[i].pos  2610
+mCmd.joint[i].pos  2715
+mCmd.joint[i].pos  1448
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 78 01 33 0d 32 0a 9b 0a a8 05 3b 1c 14 00 00 2a 8d 36 0d 0a 
+writeToSerial successfully!
+Num67 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -20.8722
+Joint_AngleSet_r2 -- 3.02447
+Joint_AngleSet_r3 -- -36.2157
+Joint_AngleSet_r4 -- -21.5006
+Joint_AngleSet_r5 -- -49.9371
+Joint_Angle[i] 59.889
+Joint_Angle[i] 9.12785
+Joint_Angle[i] 93.0245
+Joint_Angle[i] 53.7843
+Joint_Angle[i] 68.4994
+Joint_Angle[i] 120.063
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  372
+mCmd.joint[i].pos  3388
+mCmd.joint[i].pos  2612
+mCmd.joint[i].pos  2712
+mCmd.joint[i].pos  1446
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 74 01 3c 0d 34 0a 98 0a a6 05 3b 1c 14 00 00 2a 85 36 0d 0a 
+writeToSerial successfully!
+Num68 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -21.0607
+Joint_AngleSet_r2 -- 3.33266
+Joint_AngleSet_r3 -- -36.0371
+Joint_AngleSet_r4 -- -21.5972
+Joint_AngleSet_r5 -- -50.1291
+Joint_Angle[i] 59.889
+Joint_Angle[i] 8.93928
+Joint_Angle[i] 93.3327
+Joint_Angle[i] 53.9629
+Joint_Angle[i] 68.4028
+Joint_Angle[i] 119.871
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  367
+mCmd.joint[i].pos  3397
+mCmd.joint[i].pos  2614
+mCmd.joint[i].pos  2708
+mCmd.joint[i].pos  1443
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 6f 01 45 0d 36 0a 94 0a a3 05 3b 1c 14 00 00 2a ec 36 0d 0a 
+writeToSerial successfully!
+Num69 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -21.2496
+Joint_AngleSet_r2 -- 3.64242
+Joint_AngleSet_r3 -- -35.8583
+Joint_AngleSet_r4 -- -21.695
+Joint_AngleSet_r5 -- -50.3214
+Joint_Angle[i] 59.889
+Joint_Angle[i] 8.75038
+Joint_Angle[i] 93.6424
+Joint_Angle[i] 54.1417
+Joint_Angle[i] 68.305
+Joint_Angle[i] 119.679
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  362
+mCmd.joint[i].pos  3407
+mCmd.joint[i].pos  2615
+mCmd.joint[i].pos  2705
+mCmd.joint[i].pos  1441
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 6a 01 4f 0d 37 0a 91 0a a1 05 3b 1c 14 00 00 2a e5 36 0d 0a 
+writeToSerial successfully!
+Num70 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -21.4389
+Joint_AngleSet_r2 -- 3.95375
+Joint_AngleSet_r3 -- -35.6794
+Joint_AngleSet_r4 -- -21.7941
+Joint_AngleSet_r5 -- -50.514
+Joint_Angle[i] 59.889
+Joint_Angle[i] 8.56112
+Joint_Angle[i] 93.9538
+Joint_Angle[i] 54.3206
+Joint_Angle[i] 68.2059
+Joint_Angle[i] 119.486
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  358
+mCmd.joint[i].pos  3416
+mCmd.joint[i].pos  2617
+mCmd.joint[i].pos  2702
+mCmd.joint[i].pos  1439
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 66 01 58 0d 39 0a 8e 0a 9f 05 3b 1c 14 00 00 2a d1 36 0d 0a 
+writeToSerial successfully!
+Num71 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -21.6285
+Joint_AngleSet_r2 -- 4.26669
+Joint_AngleSet_r3 -- -35.5004
+Joint_AngleSet_r4 -- -21.8944
+Joint_AngleSet_r5 -- -50.7069
+Joint_Angle[i] 59.889
+Joint_Angle[i] 8.37152
+Joint_Angle[i] 94.2667
+Joint_Angle[i] 54.4996
+Joint_Angle[i] 68.1056
+Joint_Angle[i] 119.293
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  353
+mCmd.joint[i].pos  3425
+mCmd.joint[i].pos  2619
+mCmd.joint[i].pos  2698
+mCmd.joint[i].pos  1436
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 61 01 61 0d 3b 0a 8a 0a 9c 05 3b 1c 14 00 00 2a ea 36 0d 0a 
+writeToSerial successfully!
+Num72 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -21.8185
+Joint_AngleSet_r2 -- 4.58125
+Joint_AngleSet_r3 -- -35.3212
+Joint_AngleSet_r4 -- -21.9959
+Joint_AngleSet_r5 -- -50.9001
+Joint_Angle[i] 59.889
+Joint_Angle[i] 8.18155
+Joint_Angle[i] 94.5813
+Joint_Angle[i] 54.6788
+Joint_Angle[i] 68.0041
+Joint_Angle[i] 119.1
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  349
+mCmd.joint[i].pos  3435
+mCmd.joint[i].pos  2621
+mCmd.joint[i].pos  2695
+mCmd.joint[i].pos  1434
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 5d 01 6b 0d 3d 0a 87 0a 9a 05 3b 1c 14 00 00 2a d1 36 0d 0a 
+writeToSerial successfully!
+Num73 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -22.0088
+Joint_AngleSet_r2 -- 4.89745
+Joint_AngleSet_r3 -- -35.1419
+Joint_AngleSet_r4 -- -22.0987
+Joint_AngleSet_r5 -- -51.0935
+Joint_Angle[i] 59.889
+Joint_Angle[i] 7.9912
+Joint_Angle[i] 94.8974
+Joint_Angle[i] 54.8581
+Joint_Angle[i] 67.9013
+Joint_Angle[i] 118.906
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  344
+mCmd.joint[i].pos  3444
+mCmd.joint[i].pos  2623
+mCmd.joint[i].pos  2691
+mCmd.joint[i].pos  1432
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 58 01 74 0d 3f 0a 83 0a 98 05 3b 1c 14 00 00 2a cf 36 0d 0a 
+writeToSerial successfully!
+Num74 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -22.1995
+Joint_AngleSet_r2 -- 5.2153
+Joint_AngleSet_r3 -- -34.9626
+Joint_AngleSet_r4 -- -22.2028
+Joint_AngleSet_r5 -- -51.2872
+Joint_Angle[i] 59.889
+Joint_Angle[i] 7.80048
+Joint_Angle[i] 95.2153
+Joint_Angle[i] 55.0374
+Joint_Angle[i] 67.7972
+Joint_Angle[i] 118.713
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  340
+mCmd.joint[i].pos  3454
+mCmd.joint[i].pos  2625
+mCmd.joint[i].pos  2687
+mCmd.joint[i].pos  1429
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 54 01 7e 0d 41 0a 7f 0a 95 05 3b 1c 14 00 00 2a 46 36 0d 0a 
+writeToSerial successfully!
+Num75 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -22.3906
+Joint_AngleSet_r2 -- 5.53482
+Joint_AngleSet_r3 -- -34.7831
+Joint_AngleSet_r4 -- -22.3082
+Joint_AngleSet_r5 -- -51.481
+Joint_Angle[i] 59.889
+Joint_Angle[i] 7.60937
+Joint_Angle[i] 95.5348
+Joint_Angle[i] 55.2169
+Joint_Angle[i] 67.6918
+Joint_Angle[i] 118.519
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  335
+mCmd.joint[i].pos  3463
+mCmd.joint[i].pos  2627
+mCmd.joint[i].pos  2684
+mCmd.joint[i].pos  1427
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 4f 01 87 0d 43 0a 7c 0a 93 05 3b 1c 14 00 00 2a a3 36 0d 0a 
+writeToSerial successfully!
+Num76 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -22.5821
+Joint_AngleSet_r2 -- 5.85604
+Joint_AngleSet_r3 -- -34.6037
+Joint_AngleSet_r4 -- -22.4148
+Joint_AngleSet_r5 -- -51.6751
+Joint_Angle[i] 59.889
+Joint_Angle[i] 7.41787
+Joint_Angle[i] 95.856
+Joint_Angle[i] 55.3963
+Joint_Angle[i] 67.5852
+Joint_Angle[i] 118.325
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  331
+mCmd.joint[i].pos  3473
+mCmd.joint[i].pos  2629
+mCmd.joint[i].pos  2680
+mCmd.joint[i].pos  1425
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 4b 01 91 0d 45 0a 78 0a 91 05 3b 1c 14 00 00 2a b1 36 0d 0a 
+writeToSerial successfully!
+Num77 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -22.774
+Joint_AngleSet_r2 -- 6.17897
+Joint_AngleSet_r3 -- -34.4242
+Joint_AngleSet_r4 -- -22.5228
+Joint_AngleSet_r5 -- -51.8693
+Joint_Angle[i] 59.889
+Joint_Angle[i] 7.22596
+Joint_Angle[i] 96.179
+Joint_Angle[i] 55.5758
+Joint_Angle[i] 67.4772
+Joint_Angle[i] 118.131
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  326
+mCmd.joint[i].pos  3482
+mCmd.joint[i].pos  2630
+mCmd.joint[i].pos  2676
+mCmd.joint[i].pos  1422
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 46 01 9a 0d 46 0a 74 0a 8e 05 3b 1c 14 00 00 2a a7 36 0d 0a 
+writeToSerial successfully!
+Num78 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -22.9664
+Joint_AngleSet_r2 -- 6.50364
+Joint_AngleSet_r3 -- -34.2447
+Joint_AngleSet_r4 -- -22.6321
+Joint_AngleSet_r5 -- -52.0637
+Joint_Angle[i] 59.889
+Joint_Angle[i] 7.03363
+Joint_Angle[i] 96.5036
+Joint_Angle[i] 55.7553
+Joint_Angle[i] 67.3679
+Joint_Angle[i] 117.936
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  322
+mCmd.joint[i].pos  3491
+mCmd.joint[i].pos  2632
+mCmd.joint[i].pos  2672
+mCmd.joint[i].pos  1420
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 42 01 a3 0d 48 0a 70 0a 8c 05 3b 1c 14 00 00 2a 92 36 0d 0a 
+writeToSerial successfully!
+Num79 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -23.1591
+Joint_AngleSet_r2 -- 6.83006
+Joint_AngleSet_r3 -- -34.0651
+Joint_AngleSet_r4 -- -22.7427
+Joint_AngleSet_r5 -- -52.2583
+Joint_Angle[i] 59.889
+Joint_Angle[i] 6.84088
+Joint_Angle[i] 96.8301
+Joint_Angle[i] 55.9349
+Joint_Angle[i] 67.2573
+Joint_Angle[i] 117.742
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  318
+mCmd.joint[i].pos  3501
+mCmd.joint[i].pos  2634
+mCmd.joint[i].pos  2669
+mCmd.joint[i].pos  1418
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 3e 01 ad 0d 4a 0a 6d 0a 8a 05 3b 1c 14 00 00 2a f9 36 0d 0a 
+writeToSerial successfully!
+Num80 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -23.3523
+Joint_AngleSet_r2 -- 7.15826
+Joint_AngleSet_r3 -- -33.8856
+Joint_AngleSet_r4 -- -22.8546
+Joint_AngleSet_r5 -- -52.453
+Joint_Angle[i] 59.889
+Joint_Angle[i] 6.6477
+Joint_Angle[i] 97.1583
+Joint_Angle[i] 56.1144
+Joint_Angle[i] 67.1454
+Joint_Angle[i] 117.547
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  313
+mCmd.joint[i].pos  3510
+mCmd.joint[i].pos  2636
+mCmd.joint[i].pos  2665
+mCmd.joint[i].pos  1415
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 39 01 b6 0d 4c 0a 69 0a 87 05 3b 1c 14 00 00 2a ea 36 0d 0a 
+writeToSerial successfully!
+Num81 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -23.5459
+Joint_AngleSet_r2 -- 7.48826
+Joint_AngleSet_r3 -- -33.7061
+Joint_AngleSet_r4 -- -22.968
+Joint_AngleSet_r5 -- -52.6479
+Joint_Angle[i] 59.889
+Joint_Angle[i] 6.45407
+Joint_Angle[i] 97.4883
+Joint_Angle[i] 56.2939
+Joint_Angle[i] 67.032
+Joint_Angle[i] 117.352
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  309
+mCmd.joint[i].pos  3520
+mCmd.joint[i].pos  2638
+mCmd.joint[i].pos  2661
+mCmd.joint[i].pos  1413
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 35 01 c0 0d 4e 0a 65 0a 85 05 3b 1c 14 00 00 2a 9c 36 0d 0a 
+writeToSerial successfully!
+Num82 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -23.74
+Joint_AngleSet_r2 -- 7.82009
+Joint_AngleSet_r3 -- -33.5267
+Joint_AngleSet_r4 -- -23.0827
+Joint_AngleSet_r5 -- -52.8429
+Joint_Angle[i] 59.889
+Joint_Angle[i] 6.25999
+Joint_Angle[i] 97.8201
+Joint_Angle[i] 56.4733
+Joint_Angle[i] 66.9173
+Joint_Angle[i] 117.157
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  304
+mCmd.joint[i].pos  3529
+mCmd.joint[i].pos  2640
+mCmd.joint[i].pos  2657
+mCmd.joint[i].pos  1411
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 30 01 c9 0d 50 0a 61 0a 83 05 3b 1c 14 00 00 2a 8c 36 0d 0a 
+writeToSerial successfully!
+Num83 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -23.9345
+Joint_AngleSet_r2 -- 8.15376
+Joint_AngleSet_r3 -- -33.3473
+Joint_AngleSet_r4 -- -23.1988
+Joint_AngleSet_r5 -- -53.0379
+Joint_Angle[i] 59.889
+Joint_Angle[i] 6.06545
+Joint_Angle[i] 98.1538
+Joint_Angle[i] 56.6527
+Joint_Angle[i] 66.8012
+Joint_Angle[i] 116.962
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  300
+mCmd.joint[i].pos  3539
+mCmd.joint[i].pos  2642
+mCmd.joint[i].pos  2653
+mCmd.joint[i].pos  1408
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 2c 01 d3 0d 52 0a 5d 0a 80 05 3b 1c 14 00 00 2a b7 36 0d 0a 
+writeToSerial successfully!
+Num84 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -24.1296
+Joint_AngleSet_r2 -- 8.48931
+Joint_AngleSet_r3 -- -33.168
+Joint_AngleSet_r4 -- -23.3163
+Joint_AngleSet_r5 -- -53.2331
+Joint_Angle[i] 59.889
+Joint_Angle[i] 5.87044
+Joint_Angle[i] 98.4893
+Joint_Angle[i] 56.832
+Joint_Angle[i] 66.6837
+Joint_Angle[i] 116.767
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  296
+mCmd.joint[i].pos  3548
+mCmd.joint[i].pos  2644
+mCmd.joint[i].pos  2649
+mCmd.joint[i].pos  1406
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 28 01 dc 0d 54 0a 59 0a 7e 05 3b 1c 14 00 00 2a 40 36 0d 0a 
+writeToSerial successfully!
+Num85 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -24.3251
+Joint_AngleSet_r2 -- 8.82675
+Joint_AngleSet_r3 -- -32.9888
+Joint_AngleSet_r4 -- -23.4352
+Joint_AngleSet_r5 -- -53.4284
+Joint_Angle[i] 59.889
+Joint_Angle[i] 5.67494
+Joint_Angle[i] 98.8267
+Joint_Angle[i] 57.0112
+Joint_Angle[i] 66.5648
+Joint_Angle[i] 116.572
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  291
+mCmd.joint[i].pos  3558
+mCmd.joint[i].pos  2645
+mCmd.joint[i].pos  2644
+mCmd.joint[i].pos  1404
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 23 01 e6 0d 55 0a 54 0a 7c 05 3b 1c 14 00 00 2a 7f 36 0d 0a 
+writeToSerial successfully!
+Num86 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -24.5211
+Joint_AngleSet_r2 -- 9.16611
+Joint_AngleSet_r3 -- -32.8096
+Joint_AngleSet_r4 -- -23.5556
+Joint_AngleSet_r5 -- -53.6237
+Joint_Angle[i] 59.889
+Joint_Angle[i] 5.47895
+Joint_Angle[i] 99.1661
+Joint_Angle[i] 57.1904
+Joint_Angle[i] 66.4444
+Joint_Angle[i] 116.376
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  287
+mCmd.joint[i].pos  3568
+mCmd.joint[i].pos  2647
+mCmd.joint[i].pos  2640
+mCmd.joint[i].pos  1401
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 1f 01 f0 0d 57 0a 50 0a 79 05 3b 1c 14 00 00 2a 56 36 0d 0a 
+writeToSerial successfully!
+Num87 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -24.7176
+Joint_AngleSet_r2 -- 9.50741
+Joint_AngleSet_r3 -- -32.6306
+Joint_AngleSet_r4 -- -23.6774
+Joint_AngleSet_r5 -- -53.8191
+Joint_Angle[i] 59.889
+Joint_Angle[i] 5.28245
+Joint_Angle[i] 99.5074
+Joint_Angle[i] 57.3694
+Joint_Angle[i] 66.3226
+Joint_Angle[i] 116.181
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  283
+mCmd.joint[i].pos  3577
+mCmd.joint[i].pos  2649
+mCmd.joint[i].pos  2636
+mCmd.joint[i].pos  1399
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 1b 01 f9 0d 59 0a 4c 0a 77 05 3b 1c 14 00 00 2a 47 36 0d 0a 
+writeToSerial successfully!
+Num88 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -24.9146
+Joint_AngleSet_r2 -- 9.8507
+Joint_AngleSet_r3 -- -32.4517
+Joint_AngleSet_r4 -- -23.8007
+Joint_AngleSet_r5 -- -54.0145
+Joint_Angle[i] 59.889
+Joint_Angle[i] 5.08543
+Joint_Angle[i] 99.8507
+Joint_Angle[i] 57.5483
+Joint_Angle[i] 66.1993
+Joint_Angle[i] 115.985
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  278
+mCmd.joint[i].pos  3587
+mCmd.joint[i].pos  2651
+mCmd.joint[i].pos  2632
+mCmd.joint[i].pos  1396
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 16 01 03 0e 5b 0a 48 0a 74 05 3b 1c 14 00 00 2a b5 35 0d 0a 
+writeToSerial successfully!
+Num89 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -25.1121
+Joint_AngleSet_r2 -- 10.196
+Joint_AngleSet_r3 -- -32.2729
+Joint_AngleSet_r4 -- -23.9255
+Joint_AngleSet_r5 -- -54.21
+Joint_Angle[i] 59.889
+Joint_Angle[i] 4.88789
+Joint_Angle[i] 100.196
+Joint_Angle[i] 57.7271
+Joint_Angle[i] 66.0745
+Joint_Angle[i] 115.79
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  274
+mCmd.joint[i].pos  3596
+mCmd.joint[i].pos  2653
+mCmd.joint[i].pos  2627
+mCmd.joint[i].pos  1394
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 12 01 0c 0e 5d 0a 43 0a 72 05 3b 1c 14 00 00 2a b5 35 0d 0a 
+writeToSerial successfully!
+Num90 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -25.3102
+Joint_AngleSet_r2 -- 10.5433
+Joint_AngleSet_r3 -- -32.0943
+Joint_AngleSet_r4 -- -24.0518
+Joint_AngleSet_r5 -- -54.4055
+Joint_Angle[i] 59.889
+Joint_Angle[i] 4.68981
+Joint_Angle[i] 100.543
+Joint_Angle[i] 57.9057
+Joint_Angle[i] 65.9482
+Joint_Angle[i] 115.594
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  270
+mCmd.joint[i].pos  3606
+mCmd.joint[i].pos  2655
+mCmd.joint[i].pos  2623
+mCmd.joint[i].pos  1392
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 0e 01 16 0e 5f 0a 3f 0a 70 05 3b 1c 14 00 00 2a cf 35 0d 0a 
+writeToSerial successfully!
+Num91 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -25.5088
+Joint_AngleSet_r2 -- 10.8927
+Joint_AngleSet_r3 -- -31.9159
+Joint_AngleSet_r4 -- -24.1797
+Joint_AngleSet_r5 -- -54.6011
+Joint_Angle[i] 59.889
+Joint_Angle[i] 4.49117
+Joint_Angle[i] 100.893
+Joint_Angle[i] 58.0841
+Joint_Angle[i] 65.8203
+Joint_Angle[i] 115.399
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  265
+mCmd.joint[i].pos  3615
+mCmd.joint[i].pos  2657
+mCmd.joint[i].pos  2618
+mCmd.joint[i].pos  1389
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 09 01 1f 0e 61 0a 3a 0a 6d 05 3b 1c 14 00 00 2a e7 35 0d 0a 
+writeToSerial successfully!
+Num92 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -25.708
+Joint_AngleSet_r2 -- 11.2441
+Joint_AngleSet_r3 -- -31.7375
+Joint_AngleSet_r4 -- -24.309
+Joint_AngleSet_r5 -- -54.7966
+Joint_Angle[i] 59.889
+Joint_Angle[i] 4.29197
+Joint_Angle[i] 101.244
+Joint_Angle[i] 58.2625
+Joint_Angle[i] 65.691
+Joint_Angle[i] 115.203
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  261
+mCmd.joint[i].pos  3625
+mCmd.joint[i].pos  2659
+mCmd.joint[i].pos  2614
+mCmd.joint[i].pos  1387
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 05 01 29 0e 63 0a 36 0a 6b 05 3b 1c 14 00 00 2a d5 35 0d 0a 
+writeToSerial successfully!
+Num93 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -25.9078
+Joint_AngleSet_r2 -- 11.5977
+Joint_AngleSet_r3 -- -31.5594
+Joint_AngleSet_r4 -- -24.44
+Joint_AngleSet_r5 -- -54.9922
+Joint_Angle[i] 59.889
+Joint_Angle[i] 4.09219
+Joint_Angle[i] 101.598
+Joint_Angle[i] 58.4406
+Joint_Angle[i] 65.56
+Joint_Angle[i] 115.008
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  257
+mCmd.joint[i].pos  3635
+mCmd.joint[i].pos  2660
+mCmd.joint[i].pos  2609
+mCmd.joint[i].pos  1385
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 01 01 33 0e 64 0a 31 0a 69 05 3b 1c 14 00 00 2a c9 35 0d 0a 
+writeToSerial successfully!
+Num94 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -26.1082
+Joint_AngleSet_r2 -- 11.9535
+Joint_AngleSet_r3 -- -31.3815
+Joint_AngleSet_r4 -- -24.5725
+Joint_AngleSet_r5 -- -55.1877
+Joint_Angle[i] 59.889
+Joint_Angle[i] 3.89182
+Joint_Angle[i] 101.953
+Joint_Angle[i] 58.6185
+Joint_Angle[i] 65.4275
+Joint_Angle[i] 114.812
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  253
+mCmd.joint[i].pos  3644
+mCmd.joint[i].pos  2662
+mCmd.joint[i].pos  2604
+mCmd.joint[i].pos  1382
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 fd 00 3c 0e 66 0a 2c 0a 66 05 3b 1c 14 00 00 2a 2a 34 0d 0a 
+writeToSerial successfully!
+Num95 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -26.3091
+Joint_AngleSet_r2 -- 12.3114
+Joint_AngleSet_r3 -- -31.2037
+Joint_AngleSet_r4 -- -24.7066
+Joint_AngleSet_r5 -- -55.3833
+Joint_Angle[i] 59.889
+Joint_Angle[i] 3.69085
+Joint_Angle[i] 102.311
+Joint_Angle[i] 58.7963
+Joint_Angle[i] 65.2934
+Joint_Angle[i] 114.617
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  248
+mCmd.joint[i].pos  3654
+mCmd.joint[i].pos  2664
+mCmd.joint[i].pos  2600
+mCmd.joint[i].pos  1380
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 f8 00 46 0e 68 0a 28 0a 64 05 3b 1c 14 00 00 2a 5d 34 0d 0a 
+writeToSerial successfully!
+Num96 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -26.5107
+Joint_AngleSet_r2 -- 12.6716
+Joint_AngleSet_r3 -- -31.0262
+Joint_AngleSet_r4 -- -24.8424
+Joint_AngleSet_r5 -- -55.5788
+Joint_Angle[i] 59.889
+Joint_Angle[i] 3.48926
+Joint_Angle[i] 102.672
+Joint_Angle[i] 58.9738
+Joint_Angle[i] 65.1576
+Joint_Angle[i] 114.421
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  244
+mCmd.joint[i].pos  3664
+mCmd.joint[i].pos  2666
+mCmd.joint[i].pos  2595
+mCmd.joint[i].pos  1378
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 f4 00 50 0e 6a 0a 23 0a 62 05 3b 1c 14 00 00 2a 48 34 0d 0a 
+writeToSerial successfully!
+Num97 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -26.713
+Joint_AngleSet_r2 -- 13.034
+Joint_AngleSet_r3 -- -30.8489
+Joint_AngleSet_r4 -- -24.9798
+Joint_AngleSet_r5 -- -55.7743
+Joint_Angle[i] 59.889
+Joint_Angle[i] 3.28704
+Joint_Angle[i] 103.034
+Joint_Angle[i] 59.1511
+Joint_Angle[i] 65.0202
+Joint_Angle[i] 114.226
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  240
+mCmd.joint[i].pos  3673
+mCmd.joint[i].pos  2668
+mCmd.joint[i].pos  2590
+mCmd.joint[i].pos  1375
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 f0 00 59 0e 6c 0a 1e 0a 5f 05 3b 1c 14 00 00 2a 43 34 0d 0a 
+writeToSerial successfully!
+Num98 IK send successfully!
+Joint_AngleSet_r0 -- -0.111018
+Joint_AngleSet_r1 -- -26.9158
+Joint_AngleSet_r2 -- 13.3987
+Joint_AngleSet_r3 -- -30.6718
+Joint_AngleSet_r4 -- -25.1188
+Joint_AngleSet_r5 -- -55.9698
+Joint_Angle[i] 59.889
+Joint_Angle[i] 3.08417
+Joint_Angle[i] 103.399
+Joint_Angle[i] 59.3282
+Joint_Angle[i] 64.8812
+Joint_Angle[i] 114.03
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2213
+mCmd.joint[i].pos  236
+mCmd.joint[i].pos  3683
+mCmd.joint[i].pos  2670
+mCmd.joint[i].pos  2585
+mCmd.joint[i].pos  1373
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 a5 08 ec 00 63 0e 6e 0a 19 0a 5d 05 3b 1c 14 00 00 2a 62 34 0d 0a 
+writeToSerial successfully!
+Num99 IK send successfully!
+motion control successfully!
+leave main
+
+Process returned 0 (0x0)   execution time : 14.003 s
+Press ENTER to continue.
+
+s

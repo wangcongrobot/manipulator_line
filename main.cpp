@@ -57,12 +57,12 @@ int main()
 
     printf("\n-----Start IK calculation...-----\n");
     //while(1){sleep(1);}
-    jointFromIK = IK(currentJoint, -0.3, 0, 0, 100);
+    jointFromIK = IK(currentJoint, 0, 0, 0.5, 100);
     cout << "Number of jointFromIK: " << jointFromIK.size() << endl;
     vector<double>::iterator iter;
     for( iter=jointFromIK.begin(); iter!=(jointFromIK.begin() + 6); iter++)
     {
-        cout << *iter*180/Pi << endl;
+        cout << *iter * 180 / Pi << endl;
     }
     sleep(5);
     int IK_num=jointFromIK.size()/6; //10
