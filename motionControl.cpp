@@ -164,7 +164,11 @@ void getCurrentJoint()
             //cout << (double)(limitMax[i]-limitMin[i]) << endl;
             //cout << ((double)(spos->scmdPos[i]-limitMin[i])/(double)(limitMax[i]-limitMin[i])) << endl;
             //cout << (double)((spos->scmdPos[i]-limitMin[i])/(double)(limitMax[i]-limitMin[i]))*Trip[i] << endl;
-            c = L0[i]+((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Trip[i];
+            // by wangcong
+            c = Trip[i] + L0[i] - ((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Trip[i];
+            // by zyx
+            //c = L0[i]+((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Trip[i];
+
             cout << "c" << i << "= " << c << endl;
             //cout << pow(c,2) << endl;
             //cout << pow(Frame[i],2) << endl;
@@ -295,7 +299,10 @@ void AngleConvert()     // 关节角度更新函数
             //cout << (sqrt(Delte[i])-L0[i])*(limitMax[i]-limitMin[i]) << endl;
             //cout << (sqrt(Delte[i])-L0[i])*(limitMax[i]-limitMin[i])/Trip[i] << endl;
             //cout << (ushort) ((sqrt(Delte[i])-L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) << endl;
-            mCmd.joint[i].pos=(ushort) ((sqrt(Delte[i])-L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) ;
+            // by wangcong
+            //mCmd.joint[i].pos=(ushort) ((sqrt(Delte[i])-L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) ;
+            //by zyx
+            mCmd.joint[i].pos=(ushort) ((Trip[i]-sqrt( Delte[i])+L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) ;
             //cout << "mCmd.joint" << i << "  " << ((Trip[i]-sqrt( Delte[i])+L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) << endl;
             //cout << mCmd.joint[i].pos << endl;
 
