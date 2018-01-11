@@ -5,7 +5,8 @@ void sendCtrl();
 void Run();
 void sInit();
 void getCurrentJoint();
-int motionControl();
+void test_getCurrentJoint();
+void motionControl();
 void AngleConvert();     // 关节角度更新函数
 void parse();
 

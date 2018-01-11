@@ -15,7 +15,7 @@ unsigned char  ARM_flag0=1;   //机械臂一次不动标志
 //signed short limitMax[7]= {0x0fff,0x0fff,0x0fff,0x0fff,0x0fff,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2018.01.04 for test in lab
 
 signed short limitMin[7]= {0x00e0,0x00b0,0x0150,0x0800,0x01f0,0x000,0x000}; //从手的7个极限位置，相对小的一方
-signed short limitMax[7]= {0x0f70,0x0f30,0x0fe0,0x0f60,0x0ff0,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2017.12.25
+signed short limitMax[7]= {0x0f70,0x0f30,0x0fe0,0x0f60,0x0ff0,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2018.01.09
     //shortest limitMin[7]= {0x00e0,0x00b0,0x0150,0x0800,0x01f0,0x000,0x000}; //从手的7个极限位置，相对小的一方
     //longest  limitMax[7]= {0x0f70,0x0f30,0x0fe0,0x0f60,0x0ff0,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2017.12.25
 
@@ -36,7 +36,7 @@ double Angle_limitMin[7]= {-60,-30,-90,-90,-30,-170,0x0010 };
 double Angle_limitMax[7]= { 60, 90, 30, 90, 90,170,0x0fff };
 
 // i=4 ??? -Pi/6
-double Angle_limitMin_r[7]= {-Pi/3,-Pi/6,-Pi/2,-Pi/3,-Pi/2,-Pi*170.0/180.0,0x0001 };
+double Angle_limitMin_r[7]= {-Pi/3,-Pi/6,-Pi/2,-Pi/2,-Pi/2,-Pi*170.0/180.0,0x0001 };
 double Angle_limitMax_r[7]= { Pi/3, Pi/2, Pi/6, Pi/2, Pi/6, Pi*170.0/180.0,0x0fff };
 
 double Joint_Angle[7]= {0};
@@ -131,11 +131,23 @@ void sInit()//从手初始化，开始执行时被调用一次即可
 void getCurrentJoint()
 {
     double c;
+    //double q0[7] = {1831,293,3437,2512,3630,1953,0};
     for(int i=0; i<7; i++)
     {
         cout << spos->scmdPos[i] << " ";
     }
     cout << endl;
+        for(int i=0; i<7; i++)
+    {
+        //spos->scmdPos[i] = q0[i];
+    }
+    //cout << endl;
+    for(int i=0; i<7; i++)
+    {
+        //cout << spos->scmdPos[i] << " ";
+    }
+    //cout << endl;
+
     for(int i=0; i<7; i++)                      //关节角度更新，只有前六个关节有反馈
     {
         if((i==0) || (i==1) ||(i==2) || (i==4))
@@ -331,7 +343,7 @@ void AngleConvert()     // 关节角度更新函数
     printf("AngleConvert successfully!\n");
 }
 
-int motionControl()
+void motionControl()
 {
     /*
         printf("\n\n-----Start IK calculation...-----\n\n");
@@ -427,4 +439,108 @@ void sendCtrl()
 void Run()
 {
 
+}
+
+
+
+// FK
+void test_getCurrentJoint()
+{
+    double c;
+    //double q0[7] = {1831,293,3437,2512,3630,1953,0};
+    double q0[7] = {2048,10,4000,2448,4000,2048,0};
+    for(int i=0; i<7; i++)
+    {
+        cout << q0[i] << " ";
+    }
+    cout << endl;
+
+    for(int i=0; i<7; i++)                      //关节角度更新，只有前六个关节有反馈
+    {
+        if((i==0) || (i==1) ||(i==2) || (i==4))
+        {
+            //设定关节角时，直线缸长度的平方 (余弦定理）
+            //Delte[i]=pow(Frame[i], 2)+pow(Conect_rod[i], 2) -2*Frame[i]*Conect_rod[i]*cos(Theta[i]+Joint_Angle[i]);
+            //cout << Delte[i] << endl;
+            //convert to hex
+            //mCmd.joint[i].pos=(ushort) ((Trip[i]-sqrt( Delte[i])+L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) ;
+            //cout << "mCmd.joint" << i << "  " << ((Trip[i]-sqrt( Delte[i])+L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) << endl;
+            //cout << mCmd.joint[i].pos << endl;
+            //cout << spos->scmdPos[i] << endl;
+            //cout << (int)(spos->scmdPos[i]-limitMin[i]) << endl;
+            cout << (double)(limitMax[i]-limitMin[i]) << endl;
+            cout << ((double)(q0[i]-limitMin[i])/(double)(limitMax[i]-limitMin[i])) << endl;
+            cout << (double)((q0[i]-limitMin[i])/(double)(limitMax[i]-limitMin[i]))*Trip[i] << endl;
+            c = L0[i]+((double)(q0[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Trip[i];
+            cout << "c" << i << "= " << c << endl;
+            cout << pow(c,2) << endl;
+            cout << pow(Frame[i],2) << endl;
+            cout << pow(Conect_rod[i],2) << endl;
+            cout << acos((pow(Frame[i],2)+pow(Conect_rod[i],2)-pow(c,2))/(2*Frame[i]*Conect_rod[i])) << endl;
+            //0~Pi
+            currentJoint[i] = acos((pow(Frame[i],2)+pow(Conect_rod[i],2)-pow(c,2))/(2*Frame[i]*Conect_rod[i])) - Theta[i];
+            cout << "currentJoint" << i << "  " << currentJoint[i]*180/Pi << endl;
+            cout << "currentJoint " << i << "  :" << currentJoint[i] << endl;
+            currentJoint[i] += Angle_limitMin_r[i];
+            cout << "currentJoint" << i << "  " << currentJoint[i]*180/Pi << endl;
+        }
+        else if(i==3)
+        {
+            //mCmd.joint[i].pos=(ushort)(Joint_Angle[i]*(limitMax[i]-limitMin[i])/Pi+limitMin[i]);
+            cout << (double)(q0[i]-limitMin[i]) << endl;
+            cout << ((double)(limitMax[i]-limitMin[i])) << endl;
+            cout << ((double)(q0[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i])) << endl;
+            currentJoint[i] = ((double)(q0[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Pi;
+            cout << "currentJoint" << i << "  " << currentJoint[i] << endl;
+            currentJoint[i] += Angle_limitMin_r[i];
+            cout << "currentJoint" << i << "  " << currentJoint[i]*180/Pi << endl;
+        }
+        else if (i==6)
+        {
+
+            //mCmd.joint[i].pos= Joint_Angle[6];   //以0x0c3b为基准，大于这个值闭合，小于张开
+            currentJoint[i]=q0[i];
+            cout << "currentJoint" << i << "  " << currentJoint[i] << endl;
+        }
+        else // (i==5)
+        {
+            //mCmd.joint[i].pos=(ushort)(Joint_Angle[i]*(limitMax[i]-limitMin[i])/(5.93411945678)+limitMin[i]);     //i=5时
+            cout << ((double)(q0[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i])) << endl;
+            cout << ((double)(q0[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*(170.0/180.0*Pi*2) << endl;
+
+            currentJoint[i]=((double)(q0[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*(170.0/180.0*Pi*2);
+            cout << "currentJoint" << i << "  " << currentJoint[i] << endl;
+            currentJoint[i] += Angle_limitMin_r[i];
+            cout << "currentJoint" << i << "  " << currentJoint[i]*180/Pi << endl;
+        }
+        if(currentJoint[i] - Angle_limitMin_r[i] <= EPSINON)
+        {
+            currentJoint[i] =Angle_limitMin_r[i];
+            cout << "currentJoint" << " < " << "Angle_limitMin_r i=" << i << endl;
+        }
+        else if(currentJoint[i] - Angle_limitMax_r[i] >= EPSINON)
+        {
+            currentJoint[i]=Angle_limitMax_r[i];
+            cout << "currentJoint" << " > " << "Angle_limitMax_r i=" << i << endl;
+        }
+    }
+
+    // convert
+    //currentJoint[0] -= Pi / 3;
+    //currentJoint[1] -= Pi / 6;
+    //currentJoint[2] -= Pi / 2;
+    //currentJoint[3] -= Pi / 2;
+    //currentJoint[4] -= Pi / 2; //Pi/6 ???
+    //currentJoint[5] -= Pi * 170 /180; //第六个关节340连续旋转
+    //currentJoint[6]  = currentJoint[6];
+
+    for(int i=0; i<6; i++)
+    {
+        cout << "actual currentJoint" << i << "  " << currentJoint[i]*180/Pi << endl;
+        //cout << "actual currentJoint" << i << "  " << currentJoint[i] << endl;
+    }
+    printf("\n\n********get current joint values successfully!**********\n\n");
+    get_current_joint_flag=1;
+    //printf("get_current_joint_flag=1\n");
+    test(currentJoint);
 }

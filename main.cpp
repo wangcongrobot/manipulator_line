@@ -13,6 +13,8 @@ unsigned char com0SendBuf[64];  //接收与发送缓冲区
 
 int main()
 {
+    //test_getCurrentJoint();
+    //while(1){sleep(5);}
     initSerial();
     initTimer();
     createFile();
@@ -32,7 +34,9 @@ int main()
     printf("enter main\n");
 
     sInit();
-    for(int i=0; i<5; i++)sleep(1);
+
+    getCurrentJoint();
+    for(int i=0; i<5; i++)sleep(3);
     //while(1){sleep(5);}
     //sleep(5);
 
@@ -40,7 +44,7 @@ int main()
     //getCurrentJoint();
     //while(1){sleep(1);}
     parse();
-
+    //while(1){sleep(1);}
     while(get_current_joint_flag==0)  // wait for get current joint
     {
         sleep(1);
@@ -53,7 +57,7 @@ int main()
 
     printf("\n-----Start IK calculation...-----\n");
     //while(1){sleep(1);}
-    jointFromIK = IK(currentJoint, 0, 0, 0.2, 50);
+    jointFromIK = IK(currentJoint, 0.1, 0.2, 0.6, 100);
     cout << "Number of jointFromIK: " << jointFromIK.size() << endl;
     vector<double>::iterator iter;
     for( iter=jointFromIK.begin(); iter!=(jointFromIK.begin() + 6); iter++)
@@ -63,6 +67,7 @@ int main()
     sleep(5);
     int IK_num=jointFromIK.size()/6; //10
     cout << IK_num << endl;
+    //while(1){sleep(1);}
     //return 0;
     for(int j=0; j<IK_num; j++)
     {
@@ -80,6 +85,7 @@ int main()
         //NewEnd_Pose=0; //禁止更新关节信息，直到新的逆解结果更新
         memcpy(com0SendBuf,&mCmd,sizeof(MCMD));    //把新的关节控制信息传给串口数据数组
         writeToSerial(com0SendBuf,24);
+        for(int i=0; i<5; i++)usleep(10000);
         //SendEN=1;     //发送数据
         printf("Num%d IK send successfully!\n", j);
     }

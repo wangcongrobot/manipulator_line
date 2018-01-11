@@ -10,7 +10,7 @@ std::vector<double> IK(double q_current[], double x, double y, double z, int ste
 
     Parser parser;
     Eigen::Matrix4d transformation = parser.Foward(qPre); // current position and orientation
-    int number1 = step_num, number2 = 10;
+    int number1 = step_num, number2 = 1;
     double distanceX = x;
     double distanceY = y;
     double distanceZ = z;
