@@ -105,11 +105,11 @@ void sInit()//从手初始化，开始执行时被调用一次即可
     mCmd.joint[6].mode=1;   //夹钳只有速度模式
     /**使机械手回归每次动作的初始点,进行解冻冻结，使下位机自动生成零漂***/
     mCmd.joint[0].pos=0x0870; //870
-    mCmd.joint[1].pos=0x00b0;
-    mCmd.joint[2].pos=0x0fe0;
-    mCmd.joint[3].pos=0x0980; //835
-    mCmd.joint[4].pos=0x0f00;
-    mCmd.joint[5].pos=0x0800;
+    mCmd.joint[1].pos=0x05b0; //0b0
+    mCmd.joint[2].pos=0x04e0; //fe0
+    mCmd.joint[3].pos=0x0980; //980
+    mCmd.joint[4].pos=0x0800; //e00
+    mCmd.joint[5].pos=0x0800; //800
     mCmd.joint[6].pos=0x0100;   //夹钳主手应该的位置c3b
 
     // sInit:{0x0870,0x00b0,0x0fe0,0x0b80,0x0f00,0x0800,0x0100}
