@@ -14,10 +14,10 @@ unsigned char  ARM_flag0=1;   //机械臂一次不动标志
 //signed short limitMin[7]= {0x0000,0x0000,0x0000,0x0000,0x0000,0x000,0x010}; //从手的7个极限位置，相对小的一方
 //signed short limitMax[7]= {0x0fff,0x0fff,0x0fff,0x0fff,0x0fff,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2018.01.04 for test in lab
 
-signed short limitMin[7]= {0x00e0,0x00b0,0x0150,0x0800,0x01f0,0x000,0x000}; //从手的7个极限位置，相对小的一方
-signed short limitMax[7]= {0x0f70,0x0f30,0x0fe0,0x0f60,0x0ff0,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2018.01.09
-    //shortest limitMin[7]= {0x00e0,0x00b0,0x0150,0x0800,0x01f0,0x000,0x000}; //从手的7个极限位置，相对小的一方
-    //longest  limitMax[7]= {0x0f70,0x0f30,0x0fe0,0x0f60,0x0ff0,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2017.12.25
+signed short limitMin[7]= {0x0200,0x0100,0x0150,0x0750,0x01f0,0x000,0x000}; //从手的7个极限位置，相对小的一方
+signed short limitMax[7]= {0x0fff,0x0ff0,0x0fe0,0x0f60,0x0ff0,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2018.01.09
+//shortest limitMin[7]= {0x00e0,0x00b0,0x0150,0x0800,0x01f0,0x000,0x000}; //从手的7个极限位置，相对小的一方
+//longest  limitMax[7]= {0x0f70,0x0f30,0x0fe0,0x0f60,0x0ff0,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2017.12.25
 
 
 /////************2015年10月30号更改参数(第1、2、3、5关节)***********************/////////
@@ -35,9 +35,9 @@ double Joint_AngleSet_r[7]= {  0, Pi/2, -Pi/3,  0, Pi/2,-Pi*170.0/180.0, 0x0c3b}
 double Angle_limitMin[7]= {-60,-30,-90,-90,-30,-170,0x0010 };
 double Angle_limitMax[7]= { 60, 90, 30, 90, 90,170,0x0fff };
 
-// i=4 ??? -Pi/6
-double Angle_limitMin_r[7]= {-Pi/3,-Pi/6,-Pi/2,-Pi/2,-Pi/2,-Pi*170.0/180.0,0x0001 };
-double Angle_limitMax_r[7]= { Pi/3, Pi/2, Pi/6, Pi/2, Pi/6, Pi*170.0/180.0,0x0fff };
+// i=4 ??? -Pi/6                  same with matlab
+double Angle_limitMin_r[7]= {-Pi/3, -Pi/6,-Pi/2,-Pi/2,-Pi/6,-Pi*170.0/180.0,0x0001 };
+double Angle_limitMax_r[7]= { Pi/3,  Pi/2, Pi/6, Pi/2, Pi/2, Pi*170.0/180.0,0x0fff };
 
 double Joint_Angle[7]= {0};
 
@@ -104,19 +104,17 @@ void sInit()//从手初始化，开始执行时被调用一次即可
     mCmd.joint[3].frz=0;        //每个关节解冻
     mCmd.joint[6].mode=1;   //夹钳只有速度模式
     /**使机械手回归每次动作的初始点,进行解冻冻结，使下位机自动生成零漂***/
-    mCmd.joint[0].pos=0x0870; //870
-    mCmd.joint[1].pos=0x03b0; //0b0
-    mCmd.joint[2].pos=0x0ae0; //fe0
-    mCmd.joint[3].pos=0x0980; //980
-    mCmd.joint[4].pos=0x0a00; //e00
+    mCmd.joint[0].pos=0x0900; //870
+    mCmd.joint[1].pos=0x01b0; //0b0
+    mCmd.joint[2].pos=0x0ff0; //fe0
+    mCmd.joint[3].pos=0x0b00; //980
+    mCmd.joint[4].pos=0x0f00; //e00
     mCmd.joint[5].pos=0x0800; //800
     mCmd.joint[6].pos=0x0100;   //夹钳主手应该的位置c3b
 
     // sInit:{0x0870,0x00b0,0x0fe0,0x0b80,0x0f00,0x0800,0x0100}
-    //shortest limitMin[7]= {0x00e0,0x00b0,0x0150,0x0800,0x01f0,0x000,0x000}; //从手的7个极限位置，相对小的一方
+    //shortest limitMin[7]= {0x00e0,0x00b0,0x0300,0x0800,0x01f0,0x000,0x000}; //从手的7个极限位置，相对小的一方
     //longest  limitMax[7]= {0x0f70,0x0f30,0x0fe0,0x0f60,0x0ff0,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2017.12.25
-
-
 
     memcpy(com0SendBuf,&mCmd,sizeof(MCMD));
     writeToSerial(com0SendBuf,sizeof(MCMD)) ;
@@ -137,7 +135,7 @@ void getCurrentJoint()
         cout << spos->scmdPos[i] << " ";
     }
     cout << endl;
-        for(int i=0; i<7; i++)
+    for(int i=0; i<7; i++)
     {
         //spos->scmdPos[i] = q0[i];
     }
@@ -177,16 +175,16 @@ void getCurrentJoint()
             //0~Pi
             currentJoint[i] = acos((pow(Frame[i],2)+pow(Conect_rod[i],2)-pow(c,2))/(2*Frame[i]*Conect_rod[i])) - Theta[i];
             cout << "currentJoint" << i << "  " << currentJoint[i]*180/Pi << endl;
-            cout << "currentJoint " << i << "  :" << currentJoint[i] << endl;
-            currentJoint[i] += Angle_limitMin_r[i];
-            cout << "currentJoint" << i << "  " << currentJoint[i]*180/Pi << endl;
+            //cout << "currentJoint " << i << "  :" << currentJoint[i] << endl;
+            //currentJoint[i] += Angle_limitMin_r[i];
+            //cout << "currentJoint" << i << "  " << currentJoint[i]*180/Pi << endl;
         }
         else if(i==3)
         {
             //mCmd.joint[i].pos=(ushort)(Joint_Angle[i]*(limitMax[i]-limitMin[i])/Pi+limitMin[i]);
             currentJoint[i] = ((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Pi;
-            cout << "currentJoint" << i << "  " << currentJoint[i] << endl;
-            currentJoint[i] += Angle_limitMin_r[i];
+            //cout << "currentJoint" << i << "  " << currentJoint[i] << endl;
+            //currentJoint[i] += Angle_limitMin_r[i];
             cout << "currentJoint" << i << "  " << currentJoint[i]*180/Pi << endl;
         }
         else if (i==6)
@@ -194,7 +192,7 @@ void getCurrentJoint()
 
             //mCmd.joint[i].pos= Joint_Angle[6];   //以0x0c3b为基准，大于这个值闭合，小于张开
             currentJoint[i]=spos->scmdPos[i];
-            //cout << "currentJoint" << i << "  " << currentJoint[i] << endl;
+            cout << "currentJoint" << i << "  " << currentJoint[i]*180/Pi << endl;
         }
         else // (i==5)
         {
@@ -203,10 +201,23 @@ void getCurrentJoint()
             //cout << ((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*(170.0/180.0*Pi*2) << endl;
 
             currentJoint[i]=((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*(170.0/180.0*Pi*2);
-            cout << "currentJoint" << i << "  " << currentJoint[i] << endl;
-            currentJoint[i] += Angle_limitMin_r[i];
+            //cout << "currentJoint" << i << "  " << currentJoint[i] << endl;
+            //currentJoint[i] += Angle_limitMin_r[i];
             cout << "currentJoint" << i << "  " << currentJoint[i]*180/Pi << endl;
         }
+    }
+    // convert -Pi/3+0.276954082, Pi/2,-Pi/2,-Pi/2,-Pi/2,-Pi*170.0/180.0
+    currentJoint[0] += -Pi/4;
+    currentJoint[1]  =  Pi/2-currentJoint[1]-0.22677;
+    currentJoint[2]  =  -currentJoint[2] + 0.366333333; // 21du
+    currentJoint[3]  = 0.738432056-currentJoint[3]; //50
+    currentJoint[4] += -Pi/2; //Pi/6 ???
+    currentJoint[5] += Angle_limitMin_r[5]; //第六个关节340连续旋转
+    currentJoint[6]  = currentJoint[6];
+    for(int i=0; i<6; i++)
+    {
+        cout << "currentJoint += Angle_limitMin_r[i]" << i << "  " << currentJoint[i]*180/Pi << endl;
+
         if(currentJoint[i] - Angle_limitMin_r[i] <= EPSINON)
         {
             currentJoint[i] =Angle_limitMin_r[i];
@@ -218,15 +229,6 @@ void getCurrentJoint()
             cout << "currentJoint" << " > " << "Angle_limitMax_r i=" << i << endl;
         }
     }
-
-    // convert
-    //currentJoint[0] -= Pi / 3;
-    //currentJoint[1] -= Pi / 6;
-    //currentJoint[2] -= Pi / 2;
-    //currentJoint[3] -= Pi / 2;
-    //currentJoint[4] -= Pi / 2; //Pi/6 ???
-    //currentJoint[5] -= Pi * 170 /180; //第六个关节340连续旋转
-    //currentJoint[6]  = currentJoint[6];
 
     for(int i=0; i<6; i++)
     {
@@ -267,19 +269,34 @@ void AngleConvert()     // 关节角度更新函数
     // 弧度-->feifushu
     for(int i=0; i<6; i++)
     {
-        Joint_Angle[i] = Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i];
+        //Joint_Angle[i] = Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i];
         //cout << "(Joint_AngleSet_r[i] * DM[i])" << (Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i]) << endl;
         //cout << "(Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i])" << (Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i]) << endl;
         //cout << "(Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i])" << (Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i]) << endl;
 
     }
+    Joint_Angle[0] +=  Pi/4;
+    Joint_Angle[1]  =  Pi/2-Joint_AngleSet_r[1]-0.22677;
+    Joint_Angle[2]  =  0.366333333-Joint_AngleSet_r[2]; // 21du
+    Joint_Angle[3]  = 0.738432056-Joint_AngleSet_r[3]; //50
+    Joint_Angle[4] += Pi/2; //Pi/6 ???
+    Joint_Angle[5] -= Angle_limitMin_r[5]; //第六个关节340连续旋转
+    Joint_Angle[6]  = Joint_AngleSet_r[6];
+
+    //currentJoint[0]  = currentJoint[0]-Pi/4;
+    //currentJoint[1]  =  Pi/2-currentJoint[1];
+    //currentJoint[2]  =  -currentJoint[2] + 0.366333333; // 21du
+    //currentJoint[3]  = 0.738432056-currentJoint[3]; //50
+    //currentJoint[4]  = currentJoint[4]-Pi/2; //Pi/6 ???
+    //currentJoint[5]  = currentJoint[5]+Angle_limitMin_r[5]; //第六个关节340连续旋转
+    //currentJoint[6]  = currentJoint[6];
     //Joint_Angle[0]=Joint_AngleSet_r[0]*DM[0]+Pi /3;
     //Joint_Angle[1]=Joint_AngleSet_r[1]*DM[1]+Pi /6;
     //Joint_Angle[2]=Joint_AngleSet_r[2]*DM[2]+Pi /2;
     //Joint_Angle[3]=Joint_AngleSet_r[3]*DM[3]+Pi /2;
     //Joint_Angle[4]=Joint_AngleSet_r[4]*DM[4]+Pi /2;
     //Joint_Angle[5]=Joint_AngleSet_r[5]*DM[5]+Pi * 170 /180; //   170               //第六个关节340连续旋转
-    Joint_Angle[6]=Joint_AngleSet_r[6];      //Joint_AngleSet[6]以0x0c3b为基准，小于这个值张开，大于于闭合
+    //Joint_Angle[6]=Joint_AngleSet_r[6];      //Joint_AngleSet[6]以0x0c3b为基准，小于这个值张开，大于于闭合
 
     //double c;
     for(int i=0; i<7; i++)
@@ -434,7 +451,7 @@ void sendCtrl()
         TIMER_FLAG=0;
         Angle_En=1;      //记录500毫秒时间标志位
     }
-*/
+    */
     if(SendEN==1)
     {
         writeToSerial(com0SendBuf,24) ;
