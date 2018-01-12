@@ -135,16 +135,6 @@ void getCurrentJoint()
         cout << spos->scmdPos[i] << " ";
     }
     cout << endl;
-    for(int i=0; i<7; i++)
-    {
-        //spos->scmdPos[i] = q0[i];
-    }
-    //cout << endl;
-    for(int i=0; i<7; i++)
-    {
-        //cout << spos->scmdPos[i] << " ";
-    }
-    //cout << endl;
 
     for(int i=0; i<7; i++)                      //关节角度更新，只有前六个关节有反馈
     {
@@ -269,12 +259,12 @@ void AngleConvert()     // 关节角度更新函数
     // 弧度-->feifushu
     for(int i=0; i<6; i++)
     {
-        //Joint_Angle[i] = Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i];
-        //cout << "(Joint_AngleSet_r[i] * DM[i])" << (Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i]) << endl;
-        //cout << "(Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i])" << (Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i]) << endl;
-        //cout << "(Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i])" << (Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i]) << endl;
-
+        Joint_Angle[i] = Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i];
+        cout << "(Joint_AngleSet_r[i] * DM[i])" << (Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i]) << endl;
+        cout << "(Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i])" << (Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i]) << endl;
+        cout << "(Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i])" << (Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i]) << endl;
     }
+    /*
     Joint_Angle[0] +=  Pi/4;
     Joint_Angle[1]  =  Pi/2-Joint_AngleSet_r[1]-0.22677;
     Joint_Angle[2]  =  0.366333333-Joint_AngleSet_r[2]; // 21du
@@ -282,7 +272,7 @@ void AngleConvert()     // 关节角度更新函数
     Joint_Angle[4] += Pi/2; //Pi/6 ???
     Joint_Angle[5] -= Angle_limitMin_r[5]; //第六个关节340连续旋转
     Joint_Angle[6]  = Joint_AngleSet_r[6];
-
+*/
     //currentJoint[0]  = currentJoint[0]-Pi/4;
     //currentJoint[1]  =  Pi/2-currentJoint[1];
     //currentJoint[2]  =  -currentJoint[2] + 0.366333333; // 21du

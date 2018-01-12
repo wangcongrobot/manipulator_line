@@ -1,0 +1,766 @@
+warning: GDB: Failed to set controlling terminal: Operation not permitted
+open /dev/ttyUSB0 succesfully
+Timer initial successfully!
+enter thread2
+this is thread2, g_Flag: 0, thread id is 4143245056
+leave thread2
+enter thread1
+this is thread1, g_Flag: 2, thread id is 4134852352
+enter main
+
+4d 01 00 09 b0 01 f0 0f 00 0b 00 0f 00 08 00 11 14 00 00 2a 19 31 0d 0a 
+writeToSerial successfully!
+Receive 24 bytes OK!
+1507 103 2897 1867 2932 1613 0 
+c0= 246.439
+1.12518
+currentJoint0  34.3418
+c1= 248.199
+0.257475
+currentJoint1  -9.82765
+c2= 317.262
+1.79007
+currentJoint2  77.9837
+currentJoint3  -0.436047
+c4= 274.578
+1.83406
+currentJoint4  74.9576
+currentJoint5  133.924
+currentJoint6  0
+currentJoint += Angle_limitMin_r[i]0  -10.6582
+currentJoint += Angle_limitMin_r[i]1  86.8347
+currentJoint += Angle_limitMin_r[i]2  -56.9943
+currentJoint += Angle_limitMin_r[i]3  42.7451
+currentJoint += Angle_limitMin_r[i]4  -15.0424
+currentJoint += Angle_limitMin_r[i]5  -36.0757
+actual currentJoint0  -10.6582
+actual currentJoint1  86.8347
+actual currentJoint2  -56.9943
+actual currentJoint3  42.7451
+actual currentJoint4  -15.0424
+actual currentJoint5  -36.0757
+
+
+********get current joint values successfully!**********
+
+Manipulator' current joint angle is
+-10.6582
+ 86.8347
+-56.9943
+ 42.7451
+-15.0424
+-36.0757
+
+End position and attitude is
+  0.913916  -0.218067   0.342351   0.660033
+ -0.271047  -0.955694   0.114818 -0.0435544
+  0.302145  -0.197727   -0.93253   0.139315
+         0          0          0          1
+
+1507 103 2897 1867 2932 1613 0 
+c0= 246.439
+1.12518
+currentJoint0  34.3418
+c1= 248.199
+0.257475
+currentJoint1  -9.82765
+c2= 317.262
+1.79007
+currentJoint2  77.9837
+currentJoint3  -0.436047
+c4= 274.578
+1.83406
+currentJoint4  74.9576
+currentJoint5  133.924
+currentJoint6  0
+currentJoint += Angle_limitMin_r[i]0  -10.6582
+currentJoint += Angle_limitMin_r[i]1  86.8347
+currentJoint += Angle_limitMin_r[i]2  -56.9943
+currentJoint += Angle_limitMin_r[i]3  42.7451
+currentJoint += Angle_limitMin_r[i]4  -15.0424
+currentJoint += Angle_limitMin_r[i]5  -36.0757
+actual currentJoint0  -10.6582
+actual currentJoint1  86.8347
+actual currentJoint2  -56.9943
+actual currentJoint3  42.7451
+actual currentJoint4  -15.0424
+actual currentJoint5  -36.0757
+
+
+********get current joint values successfully!**********
+
+Manipulator' current joint angle is
+-10.6582
+ 86.8347
+-56.9943
+ 42.7451
+-15.0424
+-36.0757
+
+End position and attitude is
+  0.913916  -0.218067   0.342351   0.660033
+ -0.271047  -0.955694   0.114818 -0.0435544
+  0.302145  -0.197727   -0.93253   0.139315
+         0          0          0          1
+
+53 0 e3 5 67 0 51 b 4b 7 74 b 4d 6 0 0 0 0 0 2a f4 2e d a 
+-----Start motion control!-----
+
+-----Start IK calculation...-----
+q: 
+-10.6582
+ 88.5367
+-54.3921
+ 33.8604
+-18.4308
+-26.8037
+q: 
+-10.6582
+ 90.0453
+-51.7595
+ 28.0672
+-21.9869
+-20.6342
+q: 
+-10.6582
+ 91.3741
+-49.0945
+ 24.0813
+-25.5767
+-16.2809
+q: 
+-10.6582
+ 92.5353
+-46.3947
+ 21.2071
+-29.1414
+-13.0464
+q: 
+-10.6582
+ 93.5403
+-43.6577
+ 19.0542
+-32.6555
+-10.5388
+q: 
+-10.6582
+ 94.3989
+-40.8805
+  17.392
+-36.1095
+-8.52562
+q: 
+-10.6582
+ 95.1203
+-38.0599
+  16.077
+-39.5018
+-6.86206
+q: 
+-10.6582
+ 95.7123
+-35.1923
+ 15.0163
+ -42.835
+-5.45362
+q: 
+-10.6582
+  96.182
+-32.2736
+ 14.1472
+-46.1144
+-4.23618
+q: 
+-10.6582
+ 96.5352
+-29.2992
+ 13.4262
+-49.3462
+-3.16468
+Number of jointFromIK: 60
+-10.6582
+86.8347
+-56.9943
+42.7451
+-15.0424
+-36.0757
+10
+Joint_AngleSet_r0 -- -10.6582
+Joint_AngleSet_r1 -- 86.8347
+Joint_AngleSet_r2 -- -56.9943
+Joint_AngleSet_r3 -- 42.7451
+Joint_AngleSet_r4 -- -15.0424
+Joint_AngleSet_r5 -- -36.0757
+Joint_Angle[i] 45
+Joint_Angle[i] -9.82765
+Joint_Angle[i] 77.9837
+Joint_Angle[i] -0.436047
+Joint_Angle[i] 90
+Joint_Angle[i] 170
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  1885
+mCmd.joint[i].pos  256
+mCmd.joint[i].pos  2897
+mCmd.joint[i].pos  1872
+mCmd.joint[i].pos  3402
+mCmd.joint[i].pos  2047
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 5d 07 00 01 51 0b 50 07 4a 0d ff 07 3b 1c 14 00 00 2a 8b 37 0d 0a 
+writeToSerial successfully!
+Receive 24 bytes OK!
+1885 256 2897 1872 3402 2047 0 
+c0= 253.824
+1.31105
+currentJoint0  44.9918
+c1= 252
+0.429039
+currentJoint1  0.00225711
+c2= 317.262
+1.79007
+currentJoint2  77.9837
+currentJoint3  0
+c4= 283.758
+2.09657
+currentJoint4  89.9987
+currentJoint5  169.958
+currentJoint6  0
+currentJoint += Angle_limitMin_r[i]0  -0.00820301
+currentJoint += Angle_limitMin_r[i]1  77.0048
+currentJoint += Angle_limitMin_r[i]2  -56.9943
+currentJoint += Angle_limitMin_r[i]3  42.309
+currentJoint += Angle_limitMin_r[i]4  -0.00134308
+currentJoint += Angle_limitMin_r[i]5  -0.041514
+actual currentJoint0  -0.00820301
+actual currentJoint1  77.0048
+actual currentJoint2  -56.9943
+actual currentJoint3  42.309
+actual currentJoint4  -0.00134308
+actual currentJoint5  -0.041514
+
+
+********get current joint values successfully!**********
+
+Manipulator' current joint angle is
+-0.00820301
+    77.0048
+   -56.9943
+     42.309
+-0.00134308
+  -0.041514
+
+End position and attitude is
+     0.69525    -0.632095     0.342176     0.758063
+   -0.672693    -0.739922 -3.32102e-05 -0.000101431
+    0.253204    -0.230156    -0.939636    0.0558047
+           0            0            0            1
+
+Num0 IK send successfully!
+Joint_AngleSet_r0 -- -10.6582
+Joint_AngleSet_r1 -- 88.5367
+Joint_AngleSet_r2 -- -54.3921
+Joint_AngleSet_r3 -- 33.8604
+Joint_AngleSet_r4 -- -18.4308
+Joint_AngleSet_r5 -- -26.8037
+Joint_Angle[i] 90
+Joint_Angle[i] -11.5297
+Joint_Angle[i] 75.3815
+Joint_Angle[i] 8.44868
+Joint_Angle[i] 180
+Joint_Angle[i] 340
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  3417
+mCmd.joint[i].pos  256
+mCmd.joint[i].pos  2805
+mCmd.joint[i].pos  1968
+mCmd.joint[i].pos  4080
+mCmd.joint[i].pos  4094
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 59 0d 00 01 f5 0a b0 07 f0 0f fe 0f 3b 1c 14 00 00 2a 70 36 0d 0a 
+writeToSerial successfully!
+1885 256 2897 1872 3402 2047 0 
+c0= 253.824
+1.31105
+currentJoint0  44.9918
+c1= 252
+0.429039
+currentJoint1  0.00225711
+c2= 317.262
+1.79007
+currentJoint2  77.9837
+currentJoint3  0
+c4= 283.758
+2.09657
+currentJoint4  89.9987
+currentJoint5  169.958
+currentJoint6  0
+currentJoint += Angle_limitMin_r[i]0  -0.00820301
+currentJoint += Angle_limitMin_r[i]1  77.0048
+currentJoint += Angle_limitMin_r[i]2  -56.9943
+currentJoint += Angle_limitMin_r[i]3  42.309
+currentJoint += Angle_limitMin_r[i]4  -0.00134308
+currentJoint += Angle_limitMin_r[i]5  -0.041514
+actual currentJoint0  -0.00820301
+actual currentJoint1  77.0048
+actual currentJoint2  -56.9943
+actual currentJoint3  42.309
+actual currentJoint4  -0.00134308
+actual currentJoint5  -0.041514
+
+
+********get current joint values successfully!**********
+
+Manipulator' current joint angle is
+-0.00820301
+    77.0048
+   -56.9943
+     42.309
+-0.00134308
+  -0.041514
+
+End position and attitude is
+     0.69525    -0.632095     0.342176     0.758063
+   -0.672693    -0.739922 -3.32102e-05 -0.000101431
+    0.253204    -0.230156    -0.939636    0.0558047
+           0            0            0            1
+
+Num1 IK send successfully!
+Joint_AngleSet_r0 -- -10.6582
+Joint_AngleSet_r1 -- 90.0453
+Joint_AngleSet_r2 -- -51.7595
+Joint_AngleSet_r3 -- 28.0672
+Joint_AngleSet_r4 -- -21.9869
+Joint_AngleSet_r5 -- -20.6342
+Joint_AngleSet_r 90 >= Angle_limitMax_r 90 i=1
+Joint_Angle[i] 135
+Joint_Angle[i] -12.993
+Joint_Angle[i] 72.7489
+Joint_Angle[i] 14.2418
+Joint_Angle[i] 270
+Joint_Angle[i] 510
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  512
+mCmd.joint[i].pos  256
+mCmd.joint[i].pos  2712
+mCmd.joint[i].pos  2035
+mCmd.joint[i].pos  1334
+mCmd.joint[i].pos  2046
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 00 02 00 01 98 0a f3 07 36 05 fe 07 3b 1c 14 00 00 2a c1 3b 0d 0a 
+writeToSerial successfully!
+1885 256 2897 1872 3402 2047 0 
+c0= 253.824
+1.31105
+currentJoint0  44.9918
+c1= 252
+0.429039
+currentJoint1  0.00225711
+c2= 317.262
+1.79007
+currentJoint2  77.9837
+currentJoint3  0
+c4= 283.758
+2.09657
+currentJoint4  89.9987
+currentJoint5  169.958
+currentJoint6  0
+currentJoint += Angle_limitMin_r[i]0  -0.00820301
+currentJoint += Angle_limitMin_r[i]1  77.0048
+currentJoint += Angle_limitMin_r[i]2  -56.9943
+currentJoint += Angle_limitMin_r[i]3  42.309
+currentJoint += Angle_limitMin_r[i]4  -0.00134308
+currentJoint += Angle_limitMin_r[i]5  -0.041514
+actual currentJoint0  -0.00820301
+actual currentJoint1  77.0048
+actual currentJoint2  -56.9943
+actual currentJoint3  42.309
+actual currentJoint4  -0.00134308
+actual currentJoint5  -0.041514
+
+
+********get current joint values successfully!**********
+
+Manipulator' current joint angle is
+-0.00820301
+    77.0048
+   -56.9943
+     42.309
+-0.00134308
+  -0.041514
+
+End position and attitude is
+     0.69525    -0.632095     0.342176     0.758063
+   -0.672693    -0.739922 -3.32102e-05 -0.000101431
+    0.253204    -0.230156    -0.939636    0.0558047
+           0            0            0            1
+
+Num2 IK send successfully!
+Joint_AngleSet_r0 -- -10.6582
+Joint_AngleSet_r1 -- 91.3741
+Joint_AngleSet_r2 -- -49.0945
+Joint_AngleSet_r3 -- 24.0813
+Joint_AngleSet_r4 -- -25.5767
+Joint_AngleSet_r5 -- -16.2809
+Joint_AngleSet_r 90 >= Angle_limitMax_r 90 i=1
+Joint_Angle[i] 180
+Joint_Angle[i] -12.993
+Joint_Angle[i] 70.0838
+Joint_Angle[i] 18.2277
+Joint_Angle[i] 360
+Joint_Angle[i] 680
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  4095
+mCmd.joint[i].pos  256
+mCmd.joint[i].pos  2616
+mCmd.joint[i].pos  2081
+mCmd.joint[i].pos  496
+mCmd.joint[i].pos  4093
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 ff 0f 00 01 38 0a 21 08 f0 01 fd 0f 3b 1c 14 00 00 2a 89 35 0d 0a 
+writeToSerial successfully!
+1885 256 2897 1872 3402 2047 0 
+c0= 253.824
+1.31105
+currentJoint0  44.9918
+c1= 252
+0.429039
+currentJoint1  0.00225711
+c2= 317.262
+1.79007
+currentJoint2  77.9837
+currentJoint3  0
+c4= 283.758
+2.09657
+currentJoint4  89.9987
+currentJoint5  169.958
+currentJoint6  0
+currentJoint += Angle_limitMin_r[i]0  -0.00820301
+currentJoint += Angle_limitMin_r[i]1  77.0048
+currentJoint += Angle_limitMin_r[i]2  -56.9943
+currentJoint += Angle_limitMin_r[i]3  42.309
+currentJoint += Angle_limitMin_r[i]4  -0.00134308
+currentJoint += Angle_limitMin_r[i]5  -0.041514
+actual currentJoint0  -0.00820301
+actual currentJoint1  77.0048
+actual currentJoint2  -56.9943
+actual currentJoint3  42.309
+actual currentJoint4  -0.00134308
+actual currentJoint5  -0.041514
+
+
+********get current joint values successfully!**********
+
+Manipulator' current joint angle is
+-0.00820301
+    77.0048
+   -56.9943
+     42.309
+-0.00134308
+  -0.041514
+
+End position and attitude is
+     0.69525    -0.632095     0.342176     0.758063
+   -0.672693    -0.739922 -3.32102e-05 -0.000101431
+    0.253204    -0.230156    -0.939636    0.0558047
+           0            0            0            1
+
+Num3 IK send successfully!
+Joint_AngleSet_r0 -- -10.6582
+Joint_AngleSet_r1 -- 92.5353
+Joint_AngleSet_r2 -- -46.3947
+Joint_AngleSet_r3 -- 21.2071
+Joint_AngleSet_r4 -- -29.1414
+Joint_AngleSet_r5 -- -13.0464
+Joint_AngleSet_r 90 >= Angle_limitMax_r 90 i=1
+Joint_Angle[i] 225
+Joint_Angle[i] -12.993
+Joint_Angle[i] 67.3841
+Joint_Angle[i] 21.1019
+Joint_Angle[i] 450
+Joint_Angle[i] 850
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  2940
+mCmd.joint[i].pos  256
+mCmd.joint[i].pos  2517
+mCmd.joint[i].pos  2113
+mCmd.joint[i].pos  3402
+mCmd.joint[i].pos  2045
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 7c 0b 00 01 d5 09 41 08 4a 0d fd 07 3b 1c 14 00 00 2a 3d 36 0d 0a 
+writeToSerial successfully!
+1885 256 2897 1872 3402 2047 0 
+c0= 253.824
+1.31105
+currentJoint0  44.9918
+c1= 252
+0.429039
+currentJoint1  0.00225711
+c2= 317.262
+1.79007
+currentJoint2  77.9837
+currentJoint3  0
+c4= 283.758
+2.09657
+currentJoint4  89.9987
+currentJoint5  169.958
+currentJoint6  0
+currentJoint += Angle_limitMin_r[i]0  -0.00820301
+currentJoint += Angle_limitMin_r[i]1  77.0048
+currentJoint += Angle_limitMin_r[i]2  -56.9943
+currentJoint += Angle_limitMin_r[i]3  42.309
+currentJoint += Angle_limitMin_r[i]4  -0.00134308
+currentJoint += Angle_limitMin_r[i]5  -0.041514
+actual currentJoint0  -0.00820301
+actual currentJoint1  77.0048
+actual currentJoint2  -56.9943
+actual currentJoint3  42.309
+actual currentJoint4  -0.00134308
+actual currentJoint5  -0.041514
+
+
+********get current joint values successfully!**********
+
+Manipulator' current joint angle is
+-0.00820301
+    77.0048
+   -56.9943
+     42.309
+-0.00134308
+  -0.041514
+
+End position and attitude is
+     0.69525    -0.632095     0.342176     0.758063
+   -0.672693    -0.739922 -3.32102e-05 -0.000101431
+    0.253204    -0.230156    -0.939636    0.0558047
+           0            0            0            1
+
+Num4 IK send successfully!
+Joint_AngleSet_r0 -- -10.6582
+Joint_AngleSet_r1 -- 93.5403
+Joint_AngleSet_r2 -- -43.6577
+Joint_AngleSet_r3 -- 19.0542
+Joint_AngleSet_r4 -- -32.6555
+Joint_AngleSet_r5 -- -10.5388
+Joint_AngleSet_r 90 >= Angle_limitMax_r 90 i=1
+Joint_AngleSet_r -30 <= Angle_limitMin_r -30 i=4
+Joint_Angle[i] 270
+Joint_Angle[i] -12.993
+Joint_Angle[i] 64.647
+Joint_Angle[i] 23.2548
+Joint_Angle[i] 540
+Joint_Angle[i] 1020
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  1349
+mCmd.joint[i].pos  256
+mCmd.joint[i].pos  2416
+mCmd.joint[i].pos  2138
+mCmd.joint[i].pos  4080
+mCmd.joint[i].pos  4093
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 45 05 00 01 70 09 5a 08 f0 0f fd 0f 3b 1c 14 00 00 2a 00 32 0d 0a 
+writeToSerial successfully!
+1885 256 2897 1872 3402 2047 0 
+c0= 253.824
+1.31105
+currentJoint0  44.9918
+c1= 252
+0.429039
+currentJoint1  0.00225711
+c2= 317.262
+1.79007
+currentJoint2  77.9837
+currentJoint3  0
+c4= 283.758
+2.09657
+currentJoint4  89.9987
+currentJoint5  169.958
+currentJoint6  0
+currentJoint += Angle_limitMin_r[i]0  -0.00820301
+currentJoint += Angle_limitMin_r[i]1  77.0048
+currentJoint += Angle_limitMin_r[i]2  -56.9943
+currentJoint += Angle_limitMin_r[i]3  42.309
+currentJoint += Angle_limitMin_r[i]4  -0.00134308
+currentJoint += Angle_limitMin_r[i]5  -0.041514
+actual currentJoint0  -0.00820301
+actual currentJoint1  77.0048
+actual currentJoint2  -56.9943
+actual currentJoint3  42.309
+actual currentJoint4  -0.00134308
+actual currentJoint5  -0.041514
+
+
+********get current joint values successfully!**********
+
+Manipulator' current joint angle is
+-0.00820301
+    77.0048
+   -56.9943
+     42.309
+-0.00134308
+  -0.041514
+
+End position and attitude is
+     0.69525    -0.632095     0.342176     0.758063
+   -0.672693    -0.739922 -3.32102e-05 -0.000101431
+    0.253204    -0.230156    -0.939636    0.0558047
+           0            0            0            1
+
+Num5 IK send successfully!
+Joint_AngleSet_r0 -- -10.6582
+Joint_AngleSet_r1 -- 94.3989
+Joint_AngleSet_r2 -- -40.8805
+Joint_AngleSet_r3 -- 17.392
+Joint_AngleSet_r4 -- -36.1095
+Joint_AngleSet_r5 -- -8.52562
+Joint_AngleSet_r 90 >= Angle_limitMax_r 90 i=1
+Joint_AngleSet_r -30 <= Angle_limitMin_r -30 i=4
+Joint_Angle[i] 315
+Joint_Angle[i] -12.993
+Joint_Angle[i] 61.8698
+Joint_Angle[i] 24.9171
+Joint_Angle[i] 630
+Joint_Angle[i] 1190
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  512
+mCmd.joint[i].pos  256
+mCmd.joint[i].pos  2313
+mCmd.joint[i].pos  2157
+mCmd.joint[i].pos  1334
+mCmd.joint[i].pos  2044
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 00 02 00 01 09 09 6d 08 36 05 fc 07 3b 1c 14 00 00 2a cc 37 0d 0a 
+writeToSerial successfully!
+1885 256 2897 1872 3402 2047 0 
+c0= 253.824
+1.31105
+currentJoint0  44.9918
+c1= 252
+0.429039
+currentJoint1  0.00225711
+c2= 317.262
+1.79007
+currentJoint2  77.9837
+currentJoint3  0
+c4= 283.758
+2.09657
+currentJoint4  89.9987
+currentJoint5  169.958
+currentJoint6  0
+currentJoint += Angle_limitMin_r[i]0  -0.00820301
+currentJoint += Angle_limitMin_r[i]1  77.0048
+currentJoint += Angle_limitMin_r[i]2  -56.9943
+currentJoint += Angle_limitMin_r[i]3  42.309
+currentJoint += Angle_limitMin_r[i]4  -0.00134308
+currentJoint += Angle_limitMin_r[i]5  -0.041514
+actual currentJoint0  -0.00820301
+actual currentJoint1  77.0048
+actual currentJoint2  -56.9943
+actual currentJoint3  42.309
+actual currentJoint4  -0.00134308
+actual currentJoint5  -0.041514
+
+
+********get current joint values successfully!**********
+
+Manipulator' current joint angle is
+-0.00820301
+    77.0048
+   -56.9943
+     42.309
+-0.00134308
+  -0.041514
+
+End position and attitude is
+     0.69525    -0.632095     0.342176     0.758063
+   -0.672693    -0.739922 -3.32102e-05 -0.000101431
+    0.253204    -0.230156    -0.939636    0.0558047
+           0            0            0            1
+
+Num6 IK send successfully!
+Joint_AngleSet_r0 -- -10.6582
+Joint_AngleSet_r1 -- 95.1203
+Joint_AngleSet_r2 -- -38.0599
+Joint_AngleSet_r3 -- 16.077
+Joint_AngleSet_r4 -- -39.5018
+Joint_AngleSet_r5 -- -6.86206
+Joint_AngleSet_r 90 >= Angle_limitMax_r 90 i=1
+Joint_AngleSet_r -30 <= Angle_limitMin_r -30 i=4
+Joint_Angle[i] 360
+Joint_Angle[i] -12.993
+Joint_Angle[i] 59.0492
+Joint_Angle[i] 26.232
+Joint_Angle[i] 720
+Joint_Angle[i] 1360
+Joint_Angle[i] 179393
+mCmd.joint[i].pos  512
+mCmd.joint[i].pos  256
+mCmd.joint[i].pos  2208
+mCmd.joint[i].pos  2172
+mCmd.joint[i].pos  496
+mCmd.joint[i].pos  4091
+mCmd.joint[i].pos  3131
+AngleConvert successfully!
+
+4d 01 00 02 00 01 a0 08 7c 08 f0 01 fb 0f 3b 1c 14 00 00 2a b5 3a 0d 0a 
+writeToSerial successfully!
+1885 256 2897 1872 3402 2047 0 
+c0= 253.824
+1.31105
+currentJoint0  44.9918
+c1= 252
+0.429039
+currentJoint1  0.00225711
+c2= 317.262
+1.79007
+currentJoint2  77.9837
+currentJoint3  0
+c4= 283.758
+2.09657
+currentJoint4  89.9987
+currentJoint5  169.958
+currentJoint6  0
+currentJoint += Angle_limitMin_r[i]0  -0.00820301
+currentJoint += Angle_limitMin_r[i]1  77.0048
+currentJoint += Angle_limitMin_r[i]2  -56.9943
+currentJoint += Angle_limitMin_r[i]3  42.309
+currentJoint += Angle_limitMin_r[i]4  -0.00134308
+currentJoint += Angle_limitMin_r[i]5  -0.041514
+actual currentJoint0  -0.00820301
+actual currentJoint1  77.0048
+actual currentJoint2  -56.9943
+actual currentJoint3  42.309
+actual currentJoint4  -0.00134308
+actual currentJoint5  -0.041514
+
+
+********get current joint values successfully!**********
+
+Manipulator' current joint angle is
+-0.00820301
+    77.0048
+   -56.9943
+     42.309
+-0.00134308
+  -0.041514
+
+End position and attitude is
+     0.69525    -0.632095     0.342176     0.758063
+   -0.672693    -0.739922 -3.32102e-05 -0.000101431
+    0.253204    -0.230156    -0.939636    0.0558047
+           0            0            0            1
+
+
+

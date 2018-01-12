@@ -57,7 +57,7 @@ int main()
 
     printf("\n-----Start IK calculation...-----\n");
     //while(1){sleep(1);}
-    jointFromIK = IK(currentJoint, 0, 0, 0.3, 100);
+    jointFromIK = IK(currentJoint, 0, 0, 0.3, 10);
     cout << "Number of jointFromIK: " << jointFromIK.size() << endl;
     vector<double>::iterator iter;
     for( iter=jointFromIK.begin(); iter!=(jointFromIK.begin() + 6); iter++)
@@ -86,6 +86,8 @@ int main()
         memcpy(com0SendBuf,&mCmd,sizeof(MCMD));    //把新的关节控制信息传给串口数据数组
         writeToSerial(com0SendBuf,24);
         for(int i=0; i<5; i++)usleep(10000);
+
+        getCurrentJoint();
         //SendEN=1;     //发送数据
         printf("Num%d IK send successfully!\n", j);
     }
