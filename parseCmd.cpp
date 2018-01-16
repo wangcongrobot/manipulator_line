@@ -16,6 +16,11 @@ void parseCmd( )        //判断接收到一条完整的数据条
         {
             uart0_receive_ok=1;       //收到正确格式的24个字节标志位
 
+            if(com0RecvBuf[1]==0x01)   //反馈值是角度设定值
+            {
+                memcpy(&sPos,com0RecvBuf,sizeof(SPOS));
+                //      SPOS *spos=(SPOS*)&(com0RecvBuf[0]);//(char *)&a:含义就是先取a的首地址,然后强制转换为char指针类型,最后的意思是把数组a转换成char型
+            }
             if(com0RecvBuf[1]==0x00)   //反馈值是角度实际值，包含各种故障诊断信息
             {
                 spos=(SPOS*)&(com0RecvBuf[0]); //(char *)&a:含义就是先取a的首地址,然后强制转换为char指针类型,最后的意思是把数组a转换成char型
@@ -29,6 +34,7 @@ void parseCmd( )        //判断接收到一条完整的数据条
                 //getCurrentJoint();
                 //printf("getCurrentJoint() successfully!\n");
             }
+            dataRecord(); //把接收到的数据存到文件里面
         }
         else
         {

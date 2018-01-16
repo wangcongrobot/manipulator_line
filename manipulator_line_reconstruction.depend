@@ -865,7 +865,7 @@
 	"createFile.h"
 	"utilities.h"
 
-1515744167 source:/home/siarobot/manipulator_line_reconstruction/main.cpp
+1516071587 source:/home/siarobot/manipulator_line_reconstruction/main.cpp
 	"serial.h"
 	"timer.h"
 	"createFile.h"
@@ -873,6 +873,7 @@
 	"pthreadCreate.h"
 	"utilities.h"
 	<vector>
+	"ConvertAngle.h"
 
 1515137392 /home/siarobot/manipulator_line_reconstruction/include/serial.h
 	<termios.h>
@@ -921,7 +922,7 @@
 	<sys/time.h>
 	"utilities.h"
 
-1515592644 /home/siarobot/manipulator_line_reconstruction/include/motionControl.h
+1516071556 /home/siarobot/manipulator_line_reconstruction/include/motionControl.h
 
 1514983104 /home/siarobot/manipulator_line_reconstruction/include/pthreadCreate.h
 	<pthread.h>
@@ -1678,9 +1679,10 @@
 1515056756 source:/home/siarobot/manipulator_line_reconstruction/src/utilities.cpp
 	"utilities.h"
 
-1515589814 source:/home/siarobot/manipulator_line_reconstruction/createFile.cpp
+1516067107 source:/home/siarobot/manipulator_line_reconstruction/createFile.cpp
 	"createFile.h"
 	"utilities.h"
+	"data.h"
 
 1515055938 source:/home/siarobot/manipulator_line_reconstruction/data.cpp
 	"data.h"
@@ -1699,13 +1701,14 @@
 1514988368 /home/siarobot/manipulator_line_reconstruction/include/IK.h
 	"utilities.h"
 
-1515744567 source:/home/siarobot/manipulator_line_reconstruction/motionControl.cpp
+1516072758 source:/home/siarobot/manipulator_line_reconstruction/motionControl.cpp
 	"motionControl.h"
 	"data.h"
 	"serial.h"
 	"utilities.h"
+	"parameters.h"
 
-1515479161 source:/home/siarobot/manipulator_line_reconstruction/parseCmd.cpp
+1516067563 source:/home/siarobot/manipulator_line_reconstruction/parseCmd.cpp
 	"parseCmd.h"
 	"serial.h"
 	"createFile.h"
@@ -1727,4 +1730,20 @@
 
 1515589820 source:/home/siarobot/manipulator_line_reconstruction/parser.cpp
 	"parser.h"
+
+1516072577 source:/home/siarobot/manipulator_line_reconstruction/src/ConvertAngle.cpp
+	"ConvertAngle.h"
+	"motionControl.h"
+	"data.h"
+	"serial.h"
+	"utilities.h"
+	"parameters.h"
+
+1516071556 /home/siarobot/manipulator_line_reconstruction/include/ConvertAngle.h
+
+1516076695 /home/siarobot/manipulator_line_reconstruction/include/parameters.h
+	"utilities.h"
+
+1516072863 source:/home/siarobot/manipulator_line_reconstruction/parameters.cpp
+	"parameters.h"
 

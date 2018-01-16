@@ -5,6 +5,7 @@
 #include "pthreadCreate.h"
 #include "utilities.h"
 #include <vector>
+#include "ConvertAngle.h"
 
 const double Pi = 3.14159265358979;
 

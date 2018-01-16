@@ -1,6 +1,6 @@
 #include "createFile.h"
 #include "utilities.h"
-
+#include "data.h"
 
 void createFile ()
 {
@@ -11,7 +11,7 @@ void createFile ()
 //  ofstream fout ("text.txt", ios::out | ios::app) ;//打开文件写入数据，只追加
 }
 
-
+/*
 void dataRecord() //收到的数据记录数据整体
 {
     unsigned char *buff_fout;
@@ -29,8 +29,8 @@ void dataRecord() //收到的数据记录数据整体
     fout <<"\n";
     fout.flush();        //刷新内存,实时更新
 }
+*/
 
-/*
 void dataRecord()    //收到的数据只记录角度设定值和关节实际值
 {
     gettimeofday(&tv,NULL);   //获得相对1970年时间：分、秒
@@ -46,6 +46,6 @@ void dataRecord()    //收到的数据只记录角度设定值和关节实际值
     fout.flush();                                       //刷新内存,实时更新
     printf("Data record successfully!\n");
 }
-*/
+
 
 
