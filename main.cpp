@@ -8,7 +8,7 @@
 #include "ConvertAngle.h"
 #include "parameters.h"
 
-#define DEBUG 0
+///#define DEBUG
 
 //const double Pi = 3.14159265358979;
 
@@ -84,7 +84,12 @@ int main()
     printf("enter main\n");
 
     sInit();
-
+    unsigned short joint_from_slave[7];
+    for(int i=0; i<7; i++)
+    {
+        joint_from_slave[i] = spos->scmdPos[i];
+        cout << joint_from_slave[i] << endl;
+    }
     getCurrentJoint();
     for(int i=0; i<5; i++)sleep(3);
     //while(1){sleep(5);}

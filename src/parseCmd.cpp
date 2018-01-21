@@ -5,7 +5,7 @@
 
 
 
-void parseCmd( )        //判断接收到一条完整的数据条
+void parseCmd()        //判断接收到一条完整的数据条
 {
     unsigned char Checked_OK=0;
     receiveFromSerial(24);
@@ -43,7 +43,7 @@ void parseCmd( )        //判断接收到一条完整的数据条
         }
     }
 
-    //printf("ParseCmd successfully!\n");
+    printf("ParseCmd successfully!\n");
 }
 
 void parse()

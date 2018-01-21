@@ -1,3 +1,8 @@
+// *** ADDED BY HEADER FIXUP ***
+#include <istream>
+#include <string>
+#include <vector>
+// *** END ***
 #ifndef UTILITIES_H_INCLUDED
 #define UTILITIES_H_INCLUDED
 

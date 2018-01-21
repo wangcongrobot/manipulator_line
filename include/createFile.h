@@ -1,3 +1,7 @@
+// *** ADDED BY HEADER FIXUP ***
+#include <ctime>
+#include <istream>
+// *** END ***
 #ifndef CREATEFILE_H_INCLUDED
 #define CREATEFILE_H_INCLUDED
 

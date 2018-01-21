@@ -6,7 +6,7 @@ void createFile ()
 {
     time_t now_time= time(NULL);
     strftime(Timer, 20, "%F %H:%M:%S", localtime(&now_time)); //该函数可以设定时间的格式
-    FileName="/home/siarobot/manipulator_line/manipulator_line_reconstruction/data/"+(string)Timer+".txt";
+    FileName="/home/siarobot/manipulator_line_reconstruction/data/"+(string)Timer+".txt";
     fout.open(FileName.c_str(), ios::out | ios::app); //创建的对象关联到文件，文件只追加
 //  ofstream fout ("text.txt", ios::out | ios::app) ;//打开文件写入数据，只追加
 }
