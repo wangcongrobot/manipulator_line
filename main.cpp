@@ -6,16 +6,65 @@
 #include "utilities.h"
 #include <vector>
 #include "ConvertAngle.h"
+#include "parameters.h"
 
-const double Pi = 3.14159265358979;
+#define DEBUG 0
+
+//const double Pi = 3.14159265358979;
 
 unsigned char com0RecvBuf[64];
 unsigned char com0SendBuf[64];  //接收与发送缓冲区
 
 int main()
 {
-    //test_getCurrentJoint();
+#ifdef DEBUG
+    cout << acos(-1) * 180 / Pi << endl;
+    cout << acos(-0.5) * 180 / Pi << endl;
+    cout << acos(0) * 180 / Pi << endl;
+    cout << acos(0.5) * 180 / Pi << endl;
+    cout << acos(1) * 180 / Pi << endl;
+    //int qValue[7] = {1507, 103, 2897, 1867, 2932, 1613, 0};
+    unsigned short qValue[7] = {0x0200,0x0100,0x0150,0x0750,0x01f0,0x000,0x000};
+
+    double temp[7]={0};
+    //unsigned short input_value[7] = {1,2,3,4,5,6,7};
+    double output_value[7] = {0};
+    test_func(qValue,output_value);
+    for(int i=0; i<7; i++)
+    {
+        cout << "output: " << output_value[i];
+    }
+    //char temp = (char*)&(qValue[0]);
+    for(int i=0; i<7; i++)
+    {
+       //cout << hex << qValue[i] << endl;
+       cout << setw(5) << dec << qValue[i] << " ";
+    }
+    cout << endl;
+    for(int i=0; i<7; i++)
+    {
+       cout << setw(5) << hex << qValue[i] << " ";
+       //cout << oct << qValue[i] << endl;
+    }
+    cout << endl;
+    //temp[7] = getCurrentJoint1(qValue);
+    double test[100]={0};
+    for(int k=0; k<100; k++)
+    {
+        qValue[0] += 30;
+        //temp[7] = getCurrentJoint1(qValue);
+        cout << "temp[0] " << temp[0] << endl;
+        test[k] = temp[0];
+    }
+    //temp[7] = getCurrentJoint1(qValue);
+    for(int i=0; i<100; i++)
+    {
+       cout << test[i] << " ";
+       //cout << oct << qValue[i] << endl;
+    }
     //while(1){sleep(5);}
+#endif // DEBUG
+
     initSerial();
     initTimer();
     createFile();
