@@ -1,5 +1,6 @@
 #include "pthreadCreate.h"
 #include "parseCmd.h"
+#include "udp.h"
 
 /*
  是否熟悉POSIX多线程编程技术？如熟悉，编写程序完成如下功能：
@@ -19,6 +20,21 @@ typedef  void*  (*fun)(void*);   //指向函数的指针
 int g_Flag=0;
 static pthread_mutex_t mutex = PTHREAD_MUTEX_INITIALIZER;
 static pthread_cond_t cond = PTHREAD_COND_INITIALIZER;
+
+void initPthread()
+{
+    pthread_t tid1, tid2;
+    int rc1=0, rc2=0;
+    rc2=pthread_create(&tid2, NULL, thread2, NULL);
+    usleep(10000);
+    if(rc2 != 0)
+        printf("pthread_create thread2 error!\n");
+
+    rc1 = pthread_create(&tid1, NULL, thread1, &tid2);
+    usleep(10000);
+    if(rc1 != 0)
+        printf("pthread_create thread1 error!\n");
+}
 
 void* thread1(void* arg)
 {
@@ -51,11 +67,15 @@ void* thread2(void* arg)     //线程2暂时不用
 {
     printf("enter thread2\n");
     printf("this is thread2, g_Flag: %d, thread id is %u\n",g_Flag, (unsigned int)pthread_self());  //打印自己的线程ID
-    pthread_mutex_lock(&mutex);
-    if(g_Flag == 1)
-        pthread_cond_signal(&cond);
-    g_Flag = 2;
-    pthread_mutex_unlock(&mutex);
+    //pthread_mutex_lock(&mutex);
+    //if(g_Flag == 1)
+    //  pthread_cond_signal(&cond);
+    //g_Flag = 2;
+    //pthread_mutex_unlock(&mutex);
+    while(1)
+    {
+        receiveFromUdp();
+    }
     printf("leave thread2\n");
     pthread_exit(0);
 }

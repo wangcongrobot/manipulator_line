@@ -5,6 +5,7 @@
 
 #include "utilities.h"
 
+void initPthread();
 //thread1为指向函数thread1()的指针
 void* thread1(void*);
 

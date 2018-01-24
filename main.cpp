@@ -65,32 +65,18 @@ int main()
     //while(1){sleep(5);}
 #endif // DEBUG
 
+    //串口初始化
     initSerial();
+    //定时器初始化
     initTimer();
+    //创建文件记录数据
     createFile();
-
-    pthread_t tid1, tid2;
-    int rc1=0, rc2=0;
-    rc2=pthread_create(&tid2, NULL, thread2, NULL);
-    usleep(10000);
-    if(rc2 != 0)
-        printf("pthread_create thread2 error!\n");
-
-    rc1 = pthread_create(&tid1, NULL, thread1, &tid2);
-    usleep(10000);
-    if(rc1 != 0)
-        printf("pthread_create thread1 error!\n");
-
-    printf("enter main\n");
-
+    //创建线程，串口+UDP
+    initPthread();
+    //从手初始化，默认Home位置
     sInit();
-    unsigned short joint_from_slave[7];
-    for(int i=0; i<7; i++)
-    {
-        joint_from_slave[i] = spos->scmdPos[i];
-        cout << joint_from_slave[i] << endl;
-    }
-    getCurrentJoint();
+
+    //getCurrentJoint();
     for(int i=0; i<5; i++)sleep(3);
     //while(1){sleep(5);}
     //sleep(5);
@@ -98,6 +84,7 @@ int main()
     // call for getting current joint
     //getCurrentJoint();
     //while(1){sleep(1);}
+    //等待获得反馈值
     parse();
     //while(1){sleep(1);}
     while(get_current_joint_flag==0)  // wait for get current joint
@@ -107,7 +94,12 @@ int main()
         printf("-------------\n");
         continue;
     }
-
+    unsigned short joint_from_slave[7];
+    for(int i=0; i<7; i++)
+    {
+        joint_from_slave[i] = spos->scmdPos[i];
+        cout << joint_from_slave[i] << endl;
+    }
     printf("-----Start motion control!-----\n");
 
     printf("\n-----Start IK calculation...-----\n");

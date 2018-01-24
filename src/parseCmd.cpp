@@ -34,7 +34,8 @@ void parseCmd()        //判断接收到一条完整的数据条
                 //getCurrentJoint();
                 //printf("getCurrentJoint() successfully!\n");
             }
-            dataRecord(); //把接收到的数据存到文件里面
+            //校验成功后，将反馈数据保存到文件中
+            dataRecord();
         }
         else
         {
@@ -43,7 +44,7 @@ void parseCmd()        //判断接收到一条完整的数据条
         }
     }
 
-    printf("ParseCmd successfully!\n");
+    //printf("ParseCmd successfully!\n");
 }
 
 void parse()
@@ -63,9 +64,9 @@ void parse()
     if(com0RecvBuf[1]==0x00)   //反馈值是角度实际值，包含各种故障诊断信息
     {
         spos=(SPOS*)&(com0RecvBuf[0]);//(char *)&a:含义就是先取a的首地址,然后强制转换为char指针类型,最后的意思是把数组a转换成char型
-        dataRecord();                      //把接收到的数据存到文件里面
+        //dataRecord();                      //把接收到的数据存到文件里面
         getCurrentJoint();
-        //printf("getCurrentJoint() successfully!\n");
+        printf("getCurrentJoint() successfully!\n");
 
         //********************************
         unsigned char *p;
@@ -73,7 +74,7 @@ void parse()
         {
             printf("%x ",*p);
         }
-        cout << endl;
+        printf("\n");
     }
     uart0_receive_ok=0;
     Bit.com0Recved=0; //若校验成功，需要解析完之后允许串口接收允许再次接收数据
