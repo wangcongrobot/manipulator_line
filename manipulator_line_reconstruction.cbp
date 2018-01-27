@@ -44,11 +44,11 @@
 		</Compiler>
 		<Unit filename="include/ConvertAngle.h" />
 		<Unit filename="include/IK.h" />
+		<Unit filename="include/Test.h" />
 		<Unit filename="include/createFile.h" />
 		<Unit filename="include/data.h" />
 		<Unit filename="include/motionControl.h" />
 		<Unit filename="include/parameters.h" />
-		<Unit filename="include/parseCmd.h" />
 		<Unit filename="include/parser.h" />
 		<Unit filename="include/pthreadCreate.h" />
 		<Unit filename="include/serial.h" />
@@ -58,11 +58,11 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="src/ConvertAngle.cpp" />
 		<Unit filename="src/IK.cpp" />
+		<Unit filename="src/Test.cpp" />
 		<Unit filename="src/createFile.cpp" />
 		<Unit filename="src/data.cpp" />
 		<Unit filename="src/motionControl.cpp" />
 		<Unit filename="src/parameters.cpp" />
-		<Unit filename="src/parseCmd.cpp" />
 		<Unit filename="src/parser.cpp" />
 		<Unit filename="src/pthreadCreate.cpp" />
 		<Unit filename="src/serial.cpp" />
