@@ -40,11 +40,11 @@ void dataRecord()    //收到的数据只记录角度设定值和关节实际值
     {
         fout<<" "<<hex<<setfill('0')<<setw(4)<<sPos.scmdPos[i];     //向文件写入关节角度设定值
         fout<<" "<<hex<<setfill('0')<<setw(4)<<spos->scmdPos[i]; //向文件写入关节角度实际值
-        cout << "current actual joint" << "  " << hex << spos->scmdPos[i] << endl;
+        //cout << "current actual joint" << "  " << hex << spos->scmdPos[i] << endl;
     }
     fout <<"\n";
     fout.flush();                                       //刷新内存,实时更新
-    printf("Data record successfully!\n");
+    //printf("Data record successfully!\n");
 }
 
 

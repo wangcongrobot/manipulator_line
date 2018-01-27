@@ -40,7 +40,7 @@ void sInit()
     //getCurrentJoint();
 }
 */
-void sInit()//从手初始化，开始执行时被调用一次即可
+void sInit()   //从手初始化，开始执行时被调用一次即可
 {
 
     mCmd.head='M';
@@ -65,14 +65,14 @@ void sInit()//从手初始化，开始执行时被调用一次即可
     mCmd.joint[3].pos=0x0b00; //980
     mCmd.joint[4].pos=0x0f00; //e00
     mCmd.joint[5].pos=0x0800; //800
-    mCmd.joint[6].pos=0x0100;   //夹钳主手应该的位置c3b
+    mCmd.joint[6].pos=0x0100; //夹钳主手应该的位置c3b
 
     // sInit:{0x0870,0x00b0,0x0fe0,0x0b80,0x0f00,0x0800,0x0100}
     //shortest limitMin[7]= {0x00e0,0x00b0,0x0300,0x0800,0x01f0,0x000,0x000}; //从手的7个极限位置，相对小的一方
     //longest  limitMax[7]= {0x0f70,0x0f30,0x0fe0,0x0f60,0x0ff0,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2017.12.25
 
     memcpy(com0SendBuf,&mCmd,sizeof(MCMD));
-    writeToSerial(com0SendBuf,sizeof(MCMD)) ;
+    writeToSerial(com0SendBuf,sizeof(MCMD));
 
     sleep(10);                           //休眠2秒钟，保证机械手回归初始位置
 
@@ -155,6 +155,7 @@ void motionControl()
         }
     */
 }
+
 void sendCtrl()
 {
     /*
@@ -167,7 +168,7 @@ void sendCtrl()
     */
     if(SendEN==1)
     {
-        writeToSerial(com0SendBuf,24) ;
+        writeToSerial(com0SendBuf,24);
         printf("\nSendCtrl to serial successfully!\n");
     }
     //printf("\nSendCtrl successfully!\n");
@@ -175,9 +176,43 @@ void sendCtrl()
 }
 void Run()
 {
-
+    //if(receive_flag>0)Parse();
+    motionControl();
 }
 
+// 应该是调用一次该函数，返回当前关节值反馈
+// 得到当前的关节值   逻辑关系有问题？？
+void parse()
+{
+    // 接收正确数据，并且反馈值是角度实际值
+    // 阻塞函数
+    while(1)
+    {
+        if(uart0_receive_ok == 1) // 接收成功
+        {
+            if(com0RecvBuf[1] == 0x00) // 关节实际值
+            {
+                // (char *)&a:含义就是先取a的首地址,然后强制转换为char指针类型,最后的意思是把数组a转换成char型
+                // 关节值
+                spos=(SPOS*)&(com0RecvBuf[0]);
+                getCurrentJoint(); /// 关节反馈进行解析，得到关节角
+                printf("getCurrentJoint() successfully!\n");
+                //打印该关节值
+                unsigned char *p;
+                for(p=com0RecvBuf; p<(com0RecvBuf+24); p++)
+                {
+                    printf("%x ",*p);
+                }
+                printf("\n");
+
+                uart0_receive_ok=0;
+                Bit.com0Recved=0; //若校验成功，需要解析完之后允许串口接收允许再次接收数据
+                printf("\nparse() successfully!\n");
+                break;
+            }
+        }
+    }
+}
 
 
 // FK
@@ -239,7 +274,7 @@ void test_getCurrentJoint()
             currentJoint[i]=q0[i];
             cout << "currentJoint" << i << "  " << currentJoint[i] << endl;
         }
-        else // (i==5)
+        else     // (i==5)
         {
             //mCmd.joint[i].pos=(ushort)(Joint_Angle[i]*(limitMax[i]-limitMin[i])/(5.93411945678)+limitMin[i]);     //i=5时
             cout << ((double)(q0[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i])) << endl;

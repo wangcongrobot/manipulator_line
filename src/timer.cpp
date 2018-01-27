@@ -3,7 +3,8 @@
 
 void initTimer()
 {
-    signal(SIGALRM, signalHandler); 	//SIGALRM 信号:定时器产生的信号。sigaql(*,*)两个参数，一个代表信号类型，一个带个处理方式（函数）
+    // SIGALRM 信号:定时器产生的信号。sigaql(*,*)两个参数，一个代表信号类型，一个带个处理方式（函数）
+    signal(SIGALRM, signalHandler);
 
     struct itimerval new_value, old_value;
     new_value.it_value.tv_sec = 0;
@@ -14,6 +15,7 @@ void initTimer()
     printf("Timer initial successfully!\n");
 }
 
+// 串口定時发送函数，接收定时器信号
 void signalHandler(int signo)
 {
     switch (signo)

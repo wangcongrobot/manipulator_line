@@ -193,9 +193,10 @@ void receiveFromSerial( unsigned char length) //接收数据函数
     nread=0;
     unsigned char buff_receive[1024];
     unsigned char Data_temp[1024];
-    while((nread = read(fd,buff_receive,length))>0 )  //每次接受数据不一定全部接收，有可能由于发的慢，ubuntu接受数据较快，只接收了一部分数据，需要循环读取
+    //每次接受数据不一定全部接收，有可能由于发的慢，ubuntu接受数据较快，只接收了一部分数据，需要循环读取
+    while((nread = read(fd,buff_receive,length))>0 )
     {
-        //       printf("nread = %d\n", nread);
+        // printf("nread = %d\n", nread);
         for(unsigned char i = len_receive; i < (len_receive + nread); i++)
         {
             Data_temp[i] = buff_receive[i-len_receive];
@@ -203,19 +204,19 @@ void receiveFromSerial( unsigned char length) //接收数据函数
         len_receive+=nread;
         if( len_receive>=1024)
         {
-            printf("Data received overfow !\n");
+            printf("Data received overflow !\n");
             len_receive=0;
             continue;
         }
     }
-    for (int i =0; i<len_receive; i++)   //从接受缓冲数组里面截取有用的数据
+    for (int i =0; i<len_receive; i++)  // 从接受缓冲数组里面截取有用的数据
     {
-
-        if((Data_temp[i]=='S')&&(Data_temp[i+23]=='\n')&&(Bit.com0Recved==0)&&(len_receive>=length))   //24个字节解析完成之后再重新存数据
+        // 24个字节解析完成之后再重新存数据
+        if((Data_temp[i]=='S')&&(Data_temp[i+23]=='\n')&&(Bit.com0Recved==0)&&(len_receive>=length))
         {
             memcpy(com0RecvBuf,&Data_temp[i],24);
             Bit.com0Recved=1;       //接收到完整24个数据完成标志位
-            len_receive=0;               //重新从头存数据
+            len_receive=0;          //重新从头存数据
             printf("Receive 24 bytes OK!\n");
         }
         unsigned char *p;
@@ -229,6 +230,7 @@ void receiveFromSerial( unsigned char length) //接收数据函数
 
     //printf("receiveSerial successfully!\n");
 }
+
 unsigned char CheckRecvData()           //校验接收数据函数
 {
     unsigned char check_h=0;    //校验和高位
@@ -241,7 +243,73 @@ unsigned char CheckRecvData()           //校验接收数据函数
         return 1;
     }
     else
-        //      printf("check receive error!\n");
+        // printf("check receive error!\n");
         return 0;
     printf("CheckRecvData successfully!\n");
 }
+
+void ParseCmd()  //判断接收到一条完整的数据条
+{
+    unsigned char Checked_OK=0;
+    receiveFromSerial(24);
+    if (Bit.com0Recved==1)
+    {
+        Checked_OK=CheckRecvData();
+        if (Checked_OK==1)
+        {
+            uart0_receive_ok=1; //收到正确格式的24个字节标志位
+        }
+        else
+        {
+            Bit.com0Recved=0;    //若校验不成功，再次允许接收数据
+            printf("check receive error!\n");
+        }
+    }
+}
+
+/*
+//TODO 此函数一直被调用，spos一直在高速刷新
+void parseCmd() //判断接收到一条完整的数据条
+{
+    unsigned char Checked_OK=0;
+    receiveFromSerial(24); //从串口接收一包24字节的数据
+    if (Bit.com0Recved==1)
+    {
+        Checked_OK=CheckRecvData(); //对数据进行校验
+        if (Checked_OK==1)
+        {
+            if(com0RecvBuf[1]==0x01)   // 反馈值是角度设定值
+            {
+                memcpy(&sPos,com0RecvBuf,sizeof(SPOS));
+                // SPOS *spos=(SPOS*)&(com0RecvBuf[0]);//(char *)&a:含义就是先取a的首地址,然后强制转换为char指针类型,最后的意思是把数组a转换成char型
+            }
+            if(com0RecvBuf[1]==0x00)   // 反馈值是角度实际值，包含各种故障诊断信息
+            {
+                uart0_receive_ok=1;  // 收到正确格式的24个字节标志位，并且是关节实际值
+
+                spos=(SPOS*)&(com0RecvBuf[0]); // (char *)&a:含义就是先取a的首地址,然后强制转换为char指针类型,最后的意思是把数组a转换成char型
+                //cout << "feedback joint: ";
+                for(int i=0; i<7; i++)
+                {
+                    //cout << spos->scmdPos[i] << " ";
+                }
+                //cout << endl;
+                //dataRecord(); //把接收到的数据存到文件里面
+                //printf("Data_Record() successfully!\n");
+
+                //getCurrentJoint();
+                //printf("getCurrentJoint() successfully!\n");
+            }
+            //校验成功后，将反馈数据保存到文件中
+            dataRecord();
+        }
+        else
+        {
+            Bit.com0Recved=0;    //若校验不成功，再次允许接收数据
+            printf("check receive error!\n");
+        }
+    }
+
+    //printf("ParseCmd successfully!\n");
+}
+*/

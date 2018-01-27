@@ -1,10 +1,10 @@
 #include "parameters.h"
 
-//signed short limitMin[7]= {0x0000,0x0000,0x0000,0x0000,0x0000,0x000,0x010}; //从手的7个极限位置，相对小的一方
-//signed short limitMax[7]= {0x0fff,0x0fff,0x0fff,0x0fff,0x0fff,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2018.01.04 for test in lab
+signed short limitMin[7]= {0x0000,0x0000,0x0000,0x0000,0x0000,0x000,0x010}; //从手的7个极限位置，相对小的一方
+signed short limitMax[7]= {0x0fff,0x0fff,0x0fff,0x0fff,0x0fff,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2018.01.04 for test in lab
 
-signed short limitMin[7]= {0x0200,0x0100,0x0150,0x0750,0x01f0,0x000,0x000}; //从手的7个极限位置，相对小的一方
-signed short limitMax[7]= {0x0fff,0x0ff0,0x0fe0,0x0f60,0x0ff0,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2018.01.09
+///signed short limitMin[7]= {0x0200,0x0100,0x0150,0x0750,0x01f0,0x000,0x000}; //从手的7个极限位置，相对小的一方
+///signed short limitMax[7]= {0x0fff,0x0ff0,0x0fe0,0x0f60,0x0ff0,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2018.01.09
 //shortest limitMin[7]= {0x00e0,0x00b0,0x0150,0x0800,0x01f0,0x000,0x000}; //从手的7个极限位置，相对小的一方
 //longest  limitMax[7]= {0x0f70,0x0f30,0x0fe0,0x0f60,0x0ff0,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2017.12.25
 
@@ -13,6 +13,7 @@ signed short limitMax[7]= {0x0fff,0x0ff0,0x0fe0,0x0f60,0x0ff0,0x0fff,0x0fff}; //
 double Frame[7]= {40.6, 54.8, 54.8, 39.4, 40.6, 56.1, 56.1}; //定义固定连杆长度,单位：毫米 (a)
 double L0[7]= {227, 252, 252, 252.1, 227, 227.1, 227.1 }; //直线缸形成为0时的长度
 //Theta 3,5,6 ???
+//                  30du       24.5     24.5          30
 double Theta[7]= {0.525774, 0.429039, 0.429039, 0, 0.525774, 0, 0}; //定义固定杆和直线缸最小极限夹角（theta）
 double Conect_rod[7]= {261.2, 300.8, 300.8, 305.5, 261.2, 305.5, 305.5}; //定点至直线缸顶点距离（b）
 double Trip[7]= {70, 95,95,95,70,95,95}; //活塞杆行程（L）

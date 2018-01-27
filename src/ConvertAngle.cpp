@@ -160,9 +160,9 @@ void getCurrentJoint()
             //cout << ((double)(spos->scmdPos[i]-limitMin[i])/(double)(limitMax[i]-limitMin[i])) << endl;
             //cout << (double)((spos->scmdPos[i]-limitMin[i])/(double)(limitMax[i]-limitMin[i]))*Trip[i] << endl;
             // by zyx
-            //c = Trip[i] + L0[i] - ((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Trip[i];
+            c = Trip[i] + L0[i] - ((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Trip[i];
             // by wangcong
-            c = L0[i]+((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Trip[i];
+            //c = L0[i]+((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Trip[i];
 
             cout << "c" << i << "= " << c << endl;
             //cout << pow(c,2) << endl;
@@ -203,6 +203,7 @@ void getCurrentJoint()
             cout << "currentJoint" << i << "  " << currentJoint[i]*180.0/Pi << endl;
         }
     }
+    /*
     // convert -Pi/3+0.276954082, Pi/2,-Pi/2,-Pi/2,-Pi/2,-Pi*170.0/180.0
     currentJoint[0] += -Pi/4;
     currentJoint[1]  =  Pi/2-currentJoint[1]-0.22677;
@@ -210,7 +211,15 @@ void getCurrentJoint()
     currentJoint[3]  = 0.738432056-currentJoint[3]; //50
     currentJoint[4] += -Pi/2; //Pi/6 ???
     currentJoint[5] += Angle_limitMin_r[5]; //第六个关节340连续旋转
-    currentJoint[6]  = currentJoint[6];
+    //currentJoint[6]  = currentJoint[6];
+    */
+    currentJoint[0] += -Pi/3;
+    currentJoint[1] += -Pi/6;
+    currentJoint[2] += -Pi/2;
+    currentJoint[3] += -Pi/2;
+    currentJoint[4] += -Pi/2;
+    currentJoint[5] += -Pi*170.0/180.0; //第六个关节340连续旋转
+
     for(int i=0; i<6; i++)
     {
         cout << "currentJoint += Angle_limitMin_r[i]" << i << "  " << currentJoint[i]*180.0/Pi << endl;
@@ -271,6 +280,7 @@ void AngleConvert()     // 关节角度更新函数
         cout << "(Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i])" << (Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i]) << endl;
         cout << "(Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i])" << (Joint_AngleSet_r[i] * DM[i] - Angle_limitMin_r[i]) << endl;
     }
+
     /*
     Joint_Angle[0] +=  Pi/4;
     Joint_Angle[1]  =  Pi/2-Joint_AngleSet_r[1]-0.22677;
@@ -279,7 +289,7 @@ void AngleConvert()     // 关节角度更新函数
     Joint_Angle[4] += Pi/2; //Pi/6 ???
     Joint_Angle[5] -= Angle_limitMin_r[5]; //第六个关节340连续旋转
     Joint_Angle[6]  = Joint_AngleSet_r[6];
-*/
+    */
     //currentJoint[0]  = currentJoint[0]-Pi/4;
     //currentJoint[1]  =  Pi/2-currentJoint[1];
     //currentJoint[2]  =  -currentJoint[2] + 0.366333333; // 21du
@@ -287,13 +297,14 @@ void AngleConvert()     // 关节角度更新函数
     //currentJoint[4]  = currentJoint[4]-Pi/2; //Pi/6 ???
     //currentJoint[5]  = currentJoint[5]+Angle_limitMin_r[5]; //第六个关节340连续旋转
     //currentJoint[6]  = currentJoint[6];
-    //Joint_Angle[0]=Joint_AngleSet_r[0]*DM[0]+Pi /3;
-    //Joint_Angle[1]=Joint_AngleSet_r[1]*DM[1]+Pi /6;
-    //Joint_Angle[2]=Joint_AngleSet_r[2]*DM[2]+Pi /2;
-    //Joint_Angle[3]=Joint_AngleSet_r[3]*DM[3]+Pi /2;
-    //Joint_Angle[4]=Joint_AngleSet_r[4]*DM[4]+Pi /2;
-    //Joint_Angle[5]=Joint_AngleSet_r[5]*DM[5]+Pi * 170 /180.0; //   170               //第六个关节340连续旋转
-    //Joint_Angle[6]=Joint_AngleSet_r[6];      //Joint_AngleSet[6]以0x0c3b为基准，小于这个值张开，大于于闭合
+
+    Joint_Angle[0]=Joint_AngleSet_r[0]*DM[0]+Pi/3;
+    Joint_Angle[1]=Joint_AngleSet_r[1]*DM[1]+Pi/6;
+    Joint_Angle[2]=Joint_AngleSet_r[2]*DM[2]+Pi/2;
+    Joint_Angle[3]=Joint_AngleSet_r[3]*DM[3]+Pi/2;
+    Joint_Angle[4]=Joint_AngleSet_r[4]*DM[4]+Pi/2;
+    Joint_Angle[5]=Joint_AngleSet_r[5]*DM[5]+Pi * 170 /180.0; //   170               //第六个关节340连续旋转
+    Joint_Angle[6]=Joint_AngleSet_r[6];      //Joint_AngleSet[6]以0x0c3b为基准，小于这个值张开，大于于闭合
 
     //double c;
     for(int i=0; i<7; i++)
@@ -314,9 +325,9 @@ void AngleConvert()     // 关节角度更新函数
             //cout << (sqrt(Delte[i])-L0[i])*(limitMax[i]-limitMin[i])/Trip[i] << endl;
             //cout << (ushort) ((sqrt(Delte[i])-L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) << endl;
             // by wangcong
-            mCmd.joint[i].pos=(ushort) ((sqrt(Delte[i])-L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) ;
-            //by zyx
-            //mCmd.joint[i].pos=(ushort) ((Trip[i]-sqrt( Delte[i])+L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) ;
+            //mCmd.joint[i].pos=(ushort) ((sqrt(Delte[i])-L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) ;
+            ///李玲珑硕士论文P15～17,直线缸的伸长量与传感器电压值成反比
+            mCmd.joint[i].pos=(ushort)((Trip[i]-(sqrt(Delte[i])-L0[i]))*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) ;
             //cout << "mCmd.joint" << i << "  " << ((Trip[i]-sqrt( Delte[i])+L0[i])*(limitMax[i]-limitMin[i])/Trip[i]+limitMin[i]) << endl;
             //cout << mCmd.joint[i].pos << endl;
 

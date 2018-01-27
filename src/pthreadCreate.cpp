@@ -1,6 +1,7 @@
 #include "pthreadCreate.h"
-#include "parseCmd.h"
+
 #include "udp.h"
+#include "serial.h"
 
 /*
  是否熟悉POSIX多线程编程技术？如熟悉，编写程序完成如下功能：
@@ -50,7 +51,7 @@ void* thread1(void* arg)
     while(1)
     {
         //       pthread_mutex_lock(&mutex);    //对多线程更改的数据要进行互斥访问，因串口数据只会在本线程中修改，不需加锁
-        parseCmd( );
+        ParseCmd();
         //       pthread_mutex_unlock(&mutex);  //
 
     }

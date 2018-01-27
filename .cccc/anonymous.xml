@@ -1,0 +1,562 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Detailed report on module anonymous-->
+<CCCC_Project>
+<module_summary>
+<lines_of_code value="807" level="1" />
+<lines_of_code_per_member_function value="******" level="0" />
+<McCabes_cyclomatic_complexity value="130" level="0" />
+<McCabes_cyclomatic_complexity_per_member_function value="******" level="2" />
+<lines_of_code value="555" level="0" />
+<lines_of_code_per_member_function value="********" level="2" />
+<lines_of_code_per_line_of_comment value="1.454" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.234" level="0" />
+<weighted_methods_per_class_unity value="33" level="0" />
+<weighted_methods_per_class_visibility value="0" level="0" />
+<depth_of_inheritance_tree value="0" level="0" />
+<number_of_children value="0" level="0" />
+<coupling_between_objects value="0" level="0" />
+<IF4 value="0" level="0" />
+<IF4_per_member_function value="********" level="0" />
+<IF4_visible value="0" level="0" />
+<IF4_visible_per_member_function value="********" level="0" />
+<IF4_concrete value="0" level="0" />
+<IF4_concrete_per_member_function value="********" level="0" />
+</module_summary>
+<module_detail>
+</module_detail>
+<procedural_detail>
+<member_function>
+<name>AngleConvert()</name>
+<extent>
+<description>definition</description>
+<source_reference file="src/ConvertAngle.cpp" line="241" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/ConvertAngle.h" line="7" />
+</extent>
+<lines_of_code value="64" level="1" />
+<McCabes_cyclomatic_complexity value="15" level="1" />
+<lines_of_comment value="60" level="0" />
+<lines_of_code_per_line_of_comment value="1.067" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.250" level="0" />
+</member_function>
+<member_function>
+<name>CheckRecvData()</name>
+<extent>
+<description>definition</description>
+<source_reference file="src/serial.cpp" line="232" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/serial.h" line="37" />
+</extent>
+<lines_of_code value="15" level="0" />
+<McCabes_cyclomatic_complexity value="7" level="0" />
+<lines_of_comment value="8" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.875" level="0" />
+</member_function>
+<member_function>
+<name>IK(...)</name>
+<extent>
+<description>definition</description>
+<source_reference file="src/IK.cpp" line="4" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/utilities.h" line="44" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/IK.h" line="5" />
+</extent>
+<lines_of_code value="33" level="1" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="6" level="0" />
+<lines_of_code_per_line_of_comment value="5.500" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.833" level="0" />
+</member_function>
+<member_function>
+<name>MoveCtrl()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/utilities.h" line="37" />
+</extent>
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>Parse()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/utilities.h" line="32" />
+</extent>
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>ParseCmd()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/utilities.h" line="36" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/serial.h" line="40" />
+</extent>
+<lines_of_code value="2" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>Read_from_IK()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/utilities.h" line="41" />
+</extent>
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>Run()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/motionControl.h" line="5" />
+</extent>
+<extent>
+<description>definition</description>
+<source_reference file="src/motionControl.cpp" line="177" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/utilities.h" line="35" />
+</extent>
+<lines_of_code value="5" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>SendCtrl()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/utilities.h" line="39" />
+</extent>
+<lines_of_code value="1" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>createFile()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/createFile.h" line="28" />
+</extent>
+<extent>
+<description>definition</description>
+<source_reference file="src/createFile.cpp" line="5" />
+</extent>
+<lines_of_code value="8" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="4" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>dataRecord()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/createFile.h" line="29" />
+</extent>
+<extent>
+<description>definition</description>
+<source_reference file="src/createFile.cpp" line="34" />
+</extent>
+<lines_of_code value="16" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="25" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>getCurrentJoint()</name>
+<extent>
+<description>definition</description>
+<source_reference file="src/ConvertAngle.cpp" line="137" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/utilities.h" line="43" />
+</extent>
+<lines_of_code value="64" level="1" />
+<McCabes_cyclomatic_complexity value="12" level="1" />
+<lines_of_comment value="40" level="0" />
+<lines_of_code_per_line_of_comment value="1.600" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.300" level="0" />
+</member_function>
+<member_function>
+<name>getCurrentJoint1(short const*,double *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="src/ConvertAngle.cpp" line="20" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/ConvertAngle.h" line="6" />
+</extent>
+<lines_of_code value="68" level="1" />
+<McCabes_cyclomatic_complexity value="12" level="1" />
+<lines_of_comment value="51" level="0" />
+<lines_of_code_per_line_of_comment value="1.333" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.235" level="0" />
+</member_function>
+<member_function>
+<name>initPthread()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/pthreadCreate.h" line="8" />
+</extent>
+<extent>
+<description>definition</description>
+<source_reference file="src/pthreadCreate.cpp" line="24" />
+</extent>
+<lines_of_code value="14" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="0" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>initSerial()</name>
+<extent>
+<description>definition</description>
+<source_reference file="src/serial.cpp" line="144" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/serial.h" line="28" />
+</extent>
+<lines_of_code value="25" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="8.333" level="1" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>initTimer()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/timer.h" line="12" />
+</extent>
+<extent>
+<description>definition</description>
+<source_reference file="src/timer.cpp" line="4" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="4" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>main()</name>
+<extent>
+<description>definition</description>
+<source_reference file="main.cpp" line="18" />
+</extent>
+<lines_of_code value="94" level="1" />
+<McCabes_cyclomatic_complexity value="13" level="1" />
+<lines_of_comment value="34" level="0" />
+<lines_of_code_per_line_of_comment value="2.765" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.382" level="0" />
+</member_function>
+<member_function>
+<name>motionControl()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/motionControl.h" line="9" />
+</extent>
+<extent>
+<description>definition</description>
+<source_reference file="src/motionControl.cpp" line="83" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="72" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>parse()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/motionControl.h" line="11" />
+</extent>
+<extent>
+<description>definition</description>
+<source_reference file="src/parseCmd.cpp" line="57" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/parseCmd.h" line="5" />
+</extent>
+<lines_of_code value="25" level="0" />
+<McCabes_cyclomatic_complexity value="3" level="0" />
+<lines_of_comment value="14" level="0" />
+<lines_of_code_per_line_of_comment value="1.786" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>parseCmd()</name>
+<extent>
+<description>definition</description>
+<source_reference file="src/parseCmd.cpp" line="12" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/parseCmd.h" line="4" />
+</extent>
+<lines_of_code value="31" level="1" />
+<McCabes_cyclomatic_complexity value="5" level="0" />
+<lines_of_comment value="20" level="0" />
+<lines_of_code_per_line_of_comment value="1.550" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.250" level="0" />
+</member_function>
+<member_function>
+<name>receiveFromSerial(char)</name>
+<extent>
+<description>definition</description>
+<source_reference file="src/serial.cpp" line="191" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/serial.h" line="34" />
+</extent>
+<lines_of_code value="35" level="1" />
+<McCabes_cyclomatic_complexity value="9" level="0" />
+<lines_of_comment value="12" level="0" />
+<lines_of_code_per_line_of_comment value="2.917" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.750" level="0" />
+</member_function>
+<member_function>
+<name>receiveFromUdp()</name>
+<extent>
+<description>definition</description>
+<source_reference file="src/udp.cpp" line="3" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/udp.h" line="5" />
+</extent>
+<lines_of_code value="4" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="2" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>sInit()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/motionControl.h" line="6" />
+</extent>
+<extent>
+<description>definition</description>
+<source_reference file="src/motionControl.cpp" line="43" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/utilities.h" line="34" />
+</extent>
+<lines_of_code value="31" level="1" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="62" level="0" />
+<lines_of_code_per_line_of_comment value="0.500" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>sendCtrl()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/motionControl.h" line="4" />
+</extent>
+<extent>
+<description>definition</description>
+<source_reference file="src/motionControl.cpp" line="159" />
+</extent>
+<lines_of_code value="9" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="10" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>setParity(int,int,int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="src/serial.cpp" line="62" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/serial.h" line="26" />
+</extent>
+<lines_of_code value="77" level="1" />
+<McCabes_cyclomatic_complexity value="20" level="1" />
+<lines_of_comment value="41" level="0" />
+<lines_of_code_per_line_of_comment value="1.878" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.488" level="0" />
+</member_function>
+<member_function>
+<name>setSpeed(int,int)</name>
+<extent>
+<description>definition</description>
+<source_reference file="src/serial.cpp" line="26" />
+</extent>
+<lines_of_code value="23" level="0" />
+<McCabes_cyclomatic_complexity value="4" level="0" />
+<lines_of_comment value="17" level="0" />
+<lines_of_code_per_line_of_comment value="1.353" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>signalHandler(int)</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/timer.h" line="15" />
+</extent>
+<extent>
+<description>definition</description>
+<source_reference file="src/timer.cpp" line="17" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="3" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>test(...)</name>
+<extent>
+<description>definition</description>
+<source_reference file="src/IK.cpp" line="46" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/utilities.h" line="45" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/IK.h" line="6" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="0" level="0" />
+<lines_of_comment value="7" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>test_func(short const*,double *)</name>
+<extent>
+<description>definition</description>
+<source_reference file="src/ConvertAngle.cpp" line="11" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/ConvertAngle.h" line="5" />
+</extent>
+<lines_of_code value="6" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="1" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>test_getCurrentJoint()</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/motionControl.h" line="8" />
+</extent>
+<extent>
+<description>definition</description>
+<source_reference file="src/motionControl.cpp" line="185" />
+</extent>
+<lines_of_code value="72" level="1" />
+<McCabes_cyclomatic_complexity value="11" level="1" />
+<lines_of_comment value="27" level="0" />
+<lines_of_code_per_line_of_comment value="2.667" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="0.407" level="0" />
+</member_function>
+<member_function>
+<name>thread1(void *)</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/pthreadCreate.h" line="10" />
+</extent>
+<extent>
+<description>definition</description>
+<source_reference file="src/pthreadCreate.cpp" line="39" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="10" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>thread2(void *)</name>
+<extent>
+<description>declaration</description>
+<source_reference file="include/pthreadCreate.h" line="17" />
+</extent>
+<extent>
+<description>definition</description>
+<source_reference file="src/pthreadCreate.cpp" line="66" />
+</extent>
+<lines_of_code value="12" level="0" />
+<McCabes_cyclomatic_complexity value="1" level="0" />
+<lines_of_comment value="16" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+<member_function>
+<name>writeToSerial(char *,char)</name>
+<extent>
+<description>definition</description>
+<source_reference file="src/serial.cpp" line="171" />
+</extent>
+<extent>
+<description>declaration</description>
+<source_reference file="include/serial.h" line="31" />
+</extent>
+<lines_of_code value="18" level="0" />
+<McCabes_cyclomatic_complexity value="2" level="0" />
+<lines_of_comment value="4" level="0" />
+<lines_of_code_per_line_of_comment value="------" level="0" />
+<McCabes_cyclomatic_complexity_per_line_of_comment value="------" level="0" />
+</member_function>
+</procedural_detail>
+<structural_detail>
+<module>
+<name>anonymous</name>
+<client_module>
+</client_module>
+<supplier_module>
+</supplier_module>
+</module>
+</structural_detail>
+</CCCC_Project>
