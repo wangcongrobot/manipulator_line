@@ -50,6 +50,7 @@ void test(double q_current[])
 	Eigen::VectorXd q_sia7f(6);
 	q_sia7f << q_current[0],q_current[1],q_current[2],q_current[3],q_current[4],q_current[5];
 	cout << "Manipulator' current joint angle is\n" << q_sia7f*180/Pi << "\n\n";
+	//cout << "Manipulator' current joint angle is\n" << q_sia7f << "\n\n";
 
 	Eigen::Matrix4d t1 = parser.Foward(q_sia7f);
 	cout << "End position and attitude is\n" << t1 << "\n\n";
