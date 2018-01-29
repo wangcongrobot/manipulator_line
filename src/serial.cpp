@@ -258,6 +258,7 @@ void ParseCmd()  //判断接收到一条完整的数据条
         if (Checked_OK==1)
         {
             uart0_receive_ok=1; //收到正确格式的24个字节标志位
+            //printf("ParseCmd() successfully!\n");
         }
         else
         {

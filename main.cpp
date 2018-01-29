@@ -94,8 +94,8 @@ int main()
 void mainRun()
 {
     //等待获得反馈值
-    parse();
-
+    parse(); // getCurrentJoint --> currentJoint
+    //while(1){}
     while(get_current_joint_flag==0)  // wait for get current joint
     {
         sleep(1);
@@ -108,7 +108,7 @@ void mainRun()
 
     printf("\n-----Start IK calculation...-----\n");
 
-    jointFromIK = IK(currentJoint, 0, 0, 0.1, 20);
+    jointFromIK = IK(currentJoint, 0.2, 0, 0, 20);
 
     cout << "Number of jointFromIK: " << (jointFromIK.size() / 6) << endl;
     vector<double>::iterator iter;
@@ -118,7 +118,7 @@ void mainRun()
     }
     cout << endl;
     sleep(5);
-    int IK_num=jointFromIK.size()/6; //10
+    int IK_num=jointFromIK.size()/6; //逆解数量
     cout << IK_num << endl;
 
     for(int j=0; j<IK_num; j++)
@@ -137,7 +137,7 @@ void mainRun()
         //NewEnd_Pose=0; //禁止更新关节信息，直到新的逆解结果更新
         memcpy(com0SendBuf,&mCmd,sizeof(MCMD));    //把新的关节控制信息传给串口数据数组
         writeToSerial(com0SendBuf,24);
-        for(int i=0; i<5; i++)usleep(10000);
+        for(int i=0; i<5; i++)usleep(50000);
 
         getCurrentJoint();
         //SendEN=1;     //发送数据

@@ -63,7 +63,7 @@ void sInit()   //从手初始化，开始执行时被调用一次即可
     mCmd.joint[1].pos=0x01b0; //0b0
     mCmd.joint[2].pos=0x0ff0; //fe0
     mCmd.joint[3].pos=0x0b00; //980
-    mCmd.joint[4].pos=0x0f00; //e00
+    mCmd.joint[4].pos=0x0800; //e00
     mCmd.joint[5].pos=0x0800; //800
     mCmd.joint[6].pos=0x0100; //夹钳主手应该的位置c3b
 
@@ -77,7 +77,7 @@ void sInit()   //从手初始化，开始执行时被调用一次即可
     sleep(10);                           //休眠2秒钟，保证机械手回归初始位置
 
     mCmd.Frz=1;    //冻结
-
+    cout << "sInit successfully!" << endl;
 }
 
 void motionControl()
@@ -190,8 +190,11 @@ void parse()
     {
         if(uart0_receive_ok == 1) // 接收成功
         {
+            //printf("\nuart0_receive_ok == 1\n");
             if(com0RecvBuf[1] == 0x00) // 关节实际值
             {
+                SendEN=0;
+                printf("\ncom0RecvBuf[1] == 0x00\n");
                 // (char *)&a:含义就是先取a的首地址,然后强制转换为char指针类型,最后的意思是把数组a转换成char型
                 // 关节值
                 spos=(SPOS*)&(com0RecvBuf[0]);
@@ -210,6 +213,7 @@ void parse()
                 printf("\nparse() successfully!\n");
                 break;
             }
+            SendEN=1;
         }
     }
 }

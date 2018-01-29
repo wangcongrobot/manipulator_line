@@ -37,4 +37,4 @@ char currentJoint_hex[7] = {0};  // get current joint values
 std::vector<double> jointFromIK;
 
 volatile unsigned char NewEnd_Pose=0;
-signed char DM[7]= {1,1,1,1,1,1,1};   //表征驱动器,为-1时，传感器与关节正方向安装相反
+signed char DM[7]= {1,1,1,1,-1,1,1};   //表征驱动器,为-1时，传感器与关节正方向安装相反

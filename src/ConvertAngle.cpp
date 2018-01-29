@@ -137,6 +137,7 @@ void getCurrentJoint1(unsigned short const *joint_input, double *joint_output)
 void getCurrentJoint()
 {
     double c;
+    cout << "spos->scmdPos[i] ";
     for(int i=0; i<7; i++)
     {
         cout << spos->scmdPos[i] << " ";
@@ -159,7 +160,7 @@ void getCurrentJoint()
             //cout << (double)(limitMax[i]-limitMin[i]) << endl;
             //cout << ((double)(spos->scmdPos[i]-limitMin[i])/(double)(limitMax[i]-limitMin[i])) << endl;
             //cout << (double)((spos->scmdPos[i]-limitMin[i])/(double)(limitMax[i]-limitMin[i]))*Trip[i] << endl;
-            // by zyx
+            // by zyx 传感器电压值与直线缸伸长量成反比
             c = Trip[i] + L0[i] - ((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Trip[i];
             // by wangcong
             //c = L0[i]+((double)(spos->scmdPos[i]-limitMin[i]))/((double)(limitMax[i]-limitMin[i]))*Trip[i];
@@ -213,13 +214,20 @@ void getCurrentJoint()
     currentJoint[5] += Angle_limitMin_r[5]; //第六个关节340连续旋转
     //currentJoint[6]  = currentJoint[6];
     */
-    currentJoint[0] += -Pi/3;
-    currentJoint[1] += -Pi/6;
-    currentJoint[2] += -Pi/2;
-    currentJoint[3] += -Pi/2;
-    currentJoint[4] += -Pi/2;
-    currentJoint[5] += -Pi*170.0/180.0; //第六个关节340连续旋转
-
+    for(int i=0; i<7; i++)
+    {
+        cout << "currentJoint-0" << i << "  " << currentJoint[i]*180.0/Pi << endl;
+    }
+    currentJoint[0] = (currentJoint[0] - Pi/3) * DM[0];
+    currentJoint[1] = (currentJoint[1] - Pi/6) * DM[1];
+    currentJoint[2] = (currentJoint[2] - Pi/2) * DM[2];
+    currentJoint[3] = (currentJoint[3] - Pi/2) * DM[3];
+    currentJoint[4] = (currentJoint[4] - Pi/2) * DM[4];
+    currentJoint[5] = (currentJoint[5] - Pi*170.0/180.0) * DM[5]; //第六个关节340连续旋转
+    for(int i=0; i<7; i++)
+    {
+        cout << "currentJoint-1" << i << "  " << currentJoint[i]*180.0/Pi << endl;
+    }
     for(int i=0; i<6; i++)
     {
         //cout << "currentJoint += Angle_limitMin_r[i]" << i << "  " << currentJoint[i]*180.0/Pi << endl;
@@ -261,13 +269,13 @@ void AngleConvert()     // 关节角度更新函数
         {
             Joint_AngleSet_r[i]=Angle_limitMin_r[i];
             //cout << "Joint_AngleSet_r " << Joint_AngleSet_r[i]*180.0/Pi << " <= "
-               //  << "Angle_limitMin_r " << Angle_limitMin_r[i]*180.0/Pi << " i=" << i << endl;
+            //  << "Angle_limitMin_r " << Angle_limitMin_r[i]*180.0/Pi << " i=" << i << endl;
         }
         if (Joint_AngleSet_r[i]-Angle_limitMax_r[i]>=EPSINON)
         {
             Joint_AngleSet_r[i]=Angle_limitMax_r[i];
             //cout << "Joint_AngleSet_r " << Joint_AngleSet_r[i]*180.0/Pi << " >= "
-                // << "Angle_limitMax_r " << Angle_limitMax_r[i]*180.0/Pi << " i=" << i << endl;
+            // << "Angle_limitMax_r " << Angle_limitMax_r[i]*180.0/Pi << " i=" << i << endl;
         }
         //cout << "Joint_AngleSet_r:" << Joint_AngleSet_r[i] << endl; // read from the data trajectory file
     }
