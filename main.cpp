@@ -35,8 +35,9 @@ int main()
 
     sInit();
 
-    getCurrentJoint();
+
     for(int i=0; i<5; i++)sleep(3);
+    //getCurrentJoint();
     //while(1){sleep(5);}
     //sleep(5);
 
@@ -57,7 +58,7 @@ int main()
 
     printf("\n-----Start IK calculation...-----\n");
     //while(1){sleep(1);}
-    jointFromIK = IK(currentJoint, 0, -0.2, 0.6, 100);
+    jointFromIK = IK(currentJoint, 0, 0, 0.2, 10);
     cout << "Number of jointFromIK: " << jointFromIK.size() << endl;
     vector<double>::iterator iter;
     for( iter=jointFromIK.begin(); iter!=(jointFromIK.begin() + 6); iter++)
@@ -87,9 +88,11 @@ int main()
         writeToSerial(com0SendBuf,24);
         for(int i=0; i<5; i++)usleep(10000);
         //SendEN=1;     //发送数据
+        parse();
         printf("Num%d IK send successfully!\n", j);
-    }
 
+    }
+    getCurrentJoint();
     printf("motion control successfully!\n");
     parse();
     sleep(10);
