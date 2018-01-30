@@ -3,6 +3,8 @@
 unsigned short  DIF[6]= {0};
 unsigned char Angle_En=1;
 
+unsigned char data_record_flag=0;
+
 char Timer[20] = {0};
 unsigned int sum = 0;
 

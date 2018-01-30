@@ -63,5 +63,6 @@ extern char get_current_joint_flag;
 
 extern std::vector<double> jointFromIK;
 
+extern unsigned char data_record_flag;
 
 #endif // TUTILITIES_H_INCLUDED

@@ -105,4 +105,5 @@ extern SFEED sFeed;
 extern SPOS  sPos;
 extern SFEED  *sfeed;
 extern SPOS  *spos;
+
 #endif // DATA_H_INCLUDED

@@ -46,7 +46,6 @@
 		<Unit filename="include/createFile.h" />
 		<Unit filename="include/data.h" />
 		<Unit filename="include/global.h" />
-		<Unit filename="include/handle.h" />
 		<Unit filename="include/motionControl.h" />
 		<Unit filename="include/parseCmd.h" />
 		<Unit filename="include/parser.h" />

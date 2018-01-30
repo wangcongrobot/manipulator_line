@@ -35,13 +35,12 @@ int main()
 
     sInit();
 
-    for(int i=0; i<5; i++)sleep(3);
+    for(int i=0; i<9; i++)sleep(5);
 
-    moveControl(0.5, 0, 0, 100);
-    moveControl(0, 0.3, 0, 100);
-    moveControl(0, 0.3, 0, 100);
-    moveControl(0, 0, 0.5, 100);
-    moveControl(-0.5, 0, 0, 100);
+    moveControl(0.3, 0, 0, 100);
+    //moveControl(0, 0, 0.5, 100);
+    //moveControl(0, -0.5, 0, 100);
+
     parse();
     sleep(10);
 
@@ -62,6 +61,7 @@ void moveControl(double x, double y, double z, int num)
     printf("-----Start motion control!-----\n");
 
     printf("\n-----Start IK calculation...-----\n");
+
     //while(1){sleep(1);}
     jointFromIK = IK(currentJoint, x, y, z, num);
     cout << "Number of jointFromIK: " << jointFromIK.size() << endl;
@@ -78,6 +78,7 @@ void moveControl(double x, double y, double z, int num)
     for(int j=0; j<IK_num; j++)
     {
         SendEN=0;     //正在设定新的关节控制信息，禁止发送数据
+
         int k=0;
         for(iter=(jointFromIK.begin()+j*6); iter!=(jointFromIK.begin()+j*6 +6); iter++)
         {
@@ -85,13 +86,16 @@ void moveControl(double x, double y, double z, int num)
             cout << "Joint_AngleSet_r" << k << " -- " << Joint_AngleSet_r[k] *180/Pi<< endl;
             k++;
         }
-        usleep(50000);
+        usleep(10000); // 调节发送时间间隔
+        //mCmd.id=0x01;
         mCmd.Frz=0;
         AngleConvert();
         //NewEnd_Pose=0; //禁止更新关节信息，直到新的逆解结果更新
         memcpy(com0SendBuf,&mCmd,sizeof(MCMD));    //把新的关节控制信息传给串口数据数组
+
         writeToSerial(com0SendBuf,24);
         for(int i=0; i<5; i++)usleep(10000);
+        dataRecord(); //把接收到的数据存到文件里面
         //SendEN=1;     //发送数据
         parse();
         printf("Num%d IK send successfully!\n", j);

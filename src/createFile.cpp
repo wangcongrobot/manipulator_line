@@ -1,17 +1,17 @@
 #include "createFile.h"
 #include "utilities.h"
-
+#include "data.h"
 
 void createFile ()
 {
     time_t now_time= time(NULL);
     strftime(Timer, 20, "%F %H:%M:%S", localtime(&now_time)); //该函数可以设定时间的格式
-    FileName="/home/siarobot/manipulator_line/manipulator_line_reconstruction/data/"+(string)Timer+".txt";
+    FileName="/home/siarobot/manipulator_line_reconstruction/data/"+(string)Timer+".txt";
     fout.open(FileName.c_str(), ios::out | ios::app); //创建的对象关联到文件，文件只追加
 //  ofstream fout ("text.txt", ios::out | ios::app) ;//打开文件写入数据，只追加
 }
 
-
+/*
 void dataRecord() //收到的数据记录数据整体
 {
     unsigned char *buff_fout;
@@ -29,8 +29,9 @@ void dataRecord() //收到的数据记录数据整体
     fout <<"\n";
     fout.flush();        //刷新内存,实时更新
 }
+*/
 
-/*
+
 void dataRecord()    //收到的数据只记录角度设定值和关节实际值
 {
     gettimeofday(&tv,NULL);   //获得相对1970年时间：分、秒
@@ -38,14 +39,14 @@ void dataRecord()    //收到的数据只记录角度设定值和关节实际值
     fout <<": ";
     for (int i=0; i<7; i++) //向文件写7次，共有28个字节
     {
-        fout<<" "<<hex<<setfill('0')<<setw(4)<<sPos.scmdPos[i];     //向文件写入关节角度设定值
-        fout<<" "<<hex<<setfill('0')<<setw(4)<<spos->scmdPos[i]; //向文件写入关节角度实际值
+        fout<<" "<<dec<<setfill('0')<<setw(4)<<sPos.scmdPos[i];  //向文件写入关节角度设定值
+        fout<<" "<<dec<<setfill('0')<<setw(6)<<spos->scmdPos[i]; //向文件写入关节角度实际值
         cout << "current actual joint" << "  " << hex << spos->scmdPos[i] << endl;
     }
     fout <<"\n";
-    fout.flush();                                       //刷新内存,实时更新
+    fout.flush();    //刷新内存,实时更新
     printf("Data record successfully!\n");
 }
-*/
+
 
 
