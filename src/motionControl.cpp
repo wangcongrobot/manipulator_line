@@ -85,9 +85,12 @@ void sInit()
     //getCurrentJoint();
 }
 */
+signed short home[7]= {0x0870,0x00b0,0x0fe0,0x0c00,0x0f00,0x0800,0x100};
+signed short home1[7]= {0x06f3,0x00e3,0x0da2,0x09f8,0x0d39,0x072f,0x100};
+signed short home2[7]= {0x06f3,0x01b0,0x0da2,0x08a8,0x0d39,0x072f,0x100};
+
 void sInit()//从手初始化，开始执行时被调用一次即可
 {
-
     mCmd.head='M';
     mCmd.END=0x0A0D;   //"\r\n"回车换行
     mCmd.asterisk='*';
@@ -105,19 +108,10 @@ void sInit()//从手初始化，开始执行时被调用一次即可
     mCmd.joint[6].mode=1;   //夹钳只有速度模式
     /**使机械手回归每次动作的初始点,进行解冻冻结，使下位机自动生成零漂***/
     // 6f3 e3 da2 9f8 d39 72f 0
-    mCmd.joint[0].pos=0x06f3; //870
-    mCmd.joint[1].pos=0x00e3; //0b0
-    mCmd.joint[2].pos=0x0da2; //fe0
-    mCmd.joint[3].pos=0x09f8; //c00
-    mCmd.joint[4].pos=0x0d39; //f00
-    mCmd.joint[5].pos=0x072f; //800
-    mCmd.joint[6].pos=0x0100;   //夹钳主手应该的位置c3b
-
-    // sInit:{0x0870,0x00b0,0x0fe0,0x0b80,0x0f00,0x0800,0x0100}
-    //shortest limitMin[7]= {0x00e0,0x00b0,0x0150,0x0800,0x01f0,0x000,0x000}; //从手的7个极限位置，相对小的一方
-    //longest  limitMax[7]= {0x0f70,0x0f30,0x0fe0,0x0f60,0x0ff0,0x0fff,0x0fff}; //从手的7个极限位置，相对大的一方 wangcong2017.12.25
-
-
+    for(int i=0;i<7;i++)
+    {
+        mCmd.joint[i].pos = home2[i];
+    }
 
     memcpy(com0SendBuf,&mCmd,sizeof(MCMD));
     writeToSerial(com0SendBuf,sizeof(MCMD)) ;

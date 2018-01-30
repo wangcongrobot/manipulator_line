@@ -11,10 +11,10 @@ const double Pi = 3.14159265358979;
 unsigned char com0RecvBuf[64];
 unsigned char com0SendBuf[64];  //接收与发送缓冲区
 
+void moveControl(double x, double y, double z, int num);
+
 int main()
 {
-    //test_getCurrentJoint();
-    //while(1){sleep(5);}
     initSerial();
     initTimer();
     createFile();
@@ -35,30 +35,35 @@ int main()
 
     sInit();
 
-
     for(int i=0; i<5; i++)sleep(3);
-    //getCurrentJoint();
-    //while(1){sleep(5);}
-    //sleep(5);
 
-    // call for getting current joint
-    //getCurrentJoint();
-    //while(1){sleep(1);}
+    moveControl(0.5, 0, 0, 100);
+    moveControl(0, 0.3, 0, 100);
+    moveControl(0, 0.3, 0, 100);
+    moveControl(0, 0, 0.5, 100);
+    moveControl(-0.5, 0, 0, 100);
     parse();
-    //while(1){sleep(1);}
+    sleep(10);
+
+    printf("leave main\n");
+    return 0;
+}
+
+void moveControl(double x, double y, double z, int num)
+{
+    parse();
+
     while(get_current_joint_flag==0)  // wait for get current joint
     {
         sleep(1);
-
-        printf("-------------\n");
+        printf("--get_current_joint_flag-----------\n");
         continue;
     }
-
     printf("-----Start motion control!-----\n");
 
     printf("\n-----Start IK calculation...-----\n");
     //while(1){sleep(1);}
-    jointFromIK = IK(currentJoint, 0, 0, 0.2, 10);
+    jointFromIK = IK(currentJoint, x, y, z, num);
     cout << "Number of jointFromIK: " << jointFromIK.size() << endl;
     vector<double>::iterator iter;
     for( iter=jointFromIK.begin(); iter!=(jointFromIK.begin() + 6); iter++)
@@ -90,15 +95,9 @@ int main()
         //SendEN=1;     //发送数据
         parse();
         printf("Num%d IK send successfully!\n", j);
-
     }
     getCurrentJoint();
     printf("motion control successfully!\n");
-    parse();
-    sleep(10);
-
-    printf("leave main\n");
-    return 0;
 }
 
 

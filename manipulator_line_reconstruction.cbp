@@ -55,8 +55,11 @@
 		<Unit filename="include/timer.h" />
 		<Unit filename="include/utilities.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/IK.cpp" />
 		<Unit filename="src/createFile.cpp" />
 		<Unit filename="src/data.cpp" />
+		<Unit filename="src/motionControl.cpp" />
+		<Unit filename="src/parseCmd.cpp" />
 		<Unit filename="src/parser.cpp" />
 		<Unit filename="src/pthreadCreate.cpp" />
 		<Unit filename="src/serial.cpp" />

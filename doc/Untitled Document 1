@@ -1,0 +1,57 @@
+warning: GDB: Failed to set controlling terminal: Operation not permitted open /dev/ttyUSB0 succesfully Timer initial successfully! enter thread2 this is thread2, g_Flag: 0, thread id is 4143245056 leave thread2 enter thread1 this is thread1, g_Flag: 2, thread id is 4134852352 enter main
+
+4d 01 70 08 b0 00 e0 0f 00 0c 00 0f 00 08 00 11 14 00 00 2a 79 36 0d 0a 
+writeToSerial successfully! 
+Receive 24 bytes OK! 
+206 1d6 680 569 7a8 471 0 
+c0= 291.48 
+2.36216 
+currentJoint0 105.216 
+currentJoint 0 :1.83636 
+c1= 339.476 
+2.29167 
+currentJoint1 106.723 
+currentJoint 1 :1.86267 
+c2= 313.159 1.71032 
+currentJoint2 73.414 
+currentJoint 2 :1.28132 
+currentJoint3 -0.0285825 
+currentJoint3 -1.63766 
+c4= 268.406 
+1.6732 
+currentJoint4 65.7411 currentJoint 4 :1.1474 currentJoint5 1.64764 currentJoint5 94.4029 
+currentJoint-0-0 105.216 
+currentJoint-0-1 106.723 
+currentJoint-0-2 73.414 
+currentJoint-0-3 -1.63766 
+currentJoint-0-4 65.7411 
+currentJoint-0-5 94.4029 
+currentJoint-0-6 0 
+currentJoint-1-0 -45.2158 
+currentJoint-1-1 76.7233 
+currentJoint-1-2 -16.586 
+currentJoint-1-3 91.6377 
+currentJoint-1-4 24.2589 
+currentJoint-1-5 -75.5971 
+currentJoint-1-6 0 
+currentJoint > Angle_limitMax_r i=3 currentJoint < Angle_limitMin_r i=6 actual currentJoint0 -45.2158 actual currentJoint1 76.7233 actual currentJoint2 -16.586 actual currentJoint3 90 actual currentJoint4 24.2589 actual currentJoint5 -75.5971
+
+get current joint values successfully!**
+
+Manipulator' current joint angle is -45.2158 76.7233 -16.586 90 24.2589 -75.5971
+
+End position and attitude is 0.116342 -0.957108 0.265347 0.701693 -0.439145 -0.289199 -0.850597 -0.969458 0.890851 -0.0175655 -0.453955 0.57055 0 0 0 1
+
+206 1d6 680 569 7a8 471 0 c0= 291.48 2.36216 currentJoint0 105.216 currentJoint 0 :1.83636 c1= 339.476 2.29167 currentJoint1 106.723 currentJoint 1 :1.86267 c2= 313.159 1.71032 currentJoint2 73.414 currentJoint 2 :1.28132 currentJoint3 -0.0285825 currentJoint3 -1.63766 c4= 268.406 1.6732 currentJoint4 65.7411 currentJoint 4 :1.1474 currentJoint5 1.64764 currentJoint5 94.4029 currentJoint-0-0 105.216 currentJoint-0-1 106.723 currentJoint-0-2 73.414 currentJoint-0-3 -1.63766 currentJoint-0-4 65.7411 currentJoint-0-5 94.4029 currentJoint-0-6 0 currentJoint-1-0 -45.2158 currentJoint-1-1 76.7233 currentJoint-1-2 -16.586 currentJoint-1-3 91.6377 currentJoint-1-4 24.2589 currentJoint-1-5 -75.5971 currentJoint-1-6 0 currentJoint > Angle_limitMax_r i=3 currentJoint < Angle_limitMin_r i=6 actual currentJoint0 -45.2158 actual currentJoint1 76.7233 actual currentJoint2 -16.586 actual currentJoint3 90 actual currentJoint4 24.2589 actual currentJoint5 -75.5971
+
+get current joint values successfully!**
+
+Manipulator' current joint angle is -45.2158 76.7233 -16.586 90 24.2589 -75.5971
+
+End position and attitude is 0.116342 -0.957108 0.265347 0.701693 -0.439145 -0.289199 -0.850597 -0.969458 0.890851 -0.0175655 -0.453955 0.57055 0 0 0 1
+
+53 0 6 2 d6 1 80 6 69 5 a8 7 71 4 0 0 0 0 0 2a b3 29 d a -----Start motion control!-----
+
+-----Start IK calculation...----- q: -45.2158 77.0387 -14.8226 94.6019 24.3424 -80.6457 q: -45.2158 77.3115 -13.0155 99.1417 24.5915 -85.6329 q: -45.2158 77.5415 -11.1627 103.563 25.0018 -90.5031 q: -45.2158 77.7285 -9.26225 107.819 25.5668 -95.2094 q: -45.2158 77.8723 -7.31176 111.873 26.2783 -99.7163 q: -45.2158 77.9722 -5.30844 115.701 27.1272 -104 q: -45.2158 78.0278 -3.2491 119.288 28.1041 -108.048 q: -45.2158 78.0381 -1.13005 122.631 29.2001 -111.857 q: -45.2158 78.0023 1.05302 125.732 30.407 -115.431 q: -45.2158 77.9189 3.30514 128.602 31.7177 -118.781 Number of jointFromIK: 3c -45.2158 76.7233 -16.586 90 24.2589 -75.5971 a Joint_AngleSet_r0 -- -45.2158 Joint_AngleSet_r1 -- 76.7233 Joint_AngleSet_r2 -- -16.586 Joint_AngleSet_r3 -- 90 Joint_AngleSet_r4 -- 24.2589 Joint_AngleSet_r5 -- -75.5971 Joint_Angle[i] 105.216 Joint_Angle[i] 106.723 Joint_Angle[i] 73.414 Joint_Angle[i] 0 Joint_Angle[i] 65.7411 Joint_Angle[i] 94.4029 Joint_Angle[i] 179393 Delte[]0 84960.4 mCmd.joint0 518 mCmd.joint[i].pos 206 Delte[]1 115244 mCmd.joint1 470 mCmd.joint[i].pos 1d6 Delte[]2 98068.4 mCmd.joint2 1664 mCmd.joint[i].pos 67f mCmd.joint[i].pos 580 Delte[]4 72041.9 mCmd.joint4 1960 mCmd.joint[i].pos 7a8 mCmd.joint[i].pos 471 mCmd.joint[i].pos c3b AngleConvert successfully!
+
+4d 01 06 02 d6 01 7f 06 80 05 a8 07 71 04 3b 1c 14 00 00 2a 94 34 0d 0a writeToSerial successfully! Receive 24 bytes OK!
