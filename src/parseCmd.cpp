@@ -70,7 +70,7 @@ void parse()
     if(com0RecvBuf[1]==0x00)   //反馈值是角度实际值，包含各种故障诊断信息
     {
         spos=(SPOS*)&(com0RecvBuf[0]);//(char *)&a:含义就是先取a的首地址,然后强制转换为char指针类型,最后的意思是把数组a转换成char型
-        dataRecord();                      //把接收到的数据存到文件里面
+        //dataRecord();                      //把接收到的数据存到文件里面
         getCurrentJoint();
         //printf("getCurrentJoint() successfully!\n");
 

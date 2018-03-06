@@ -11,7 +11,7 @@ void createFile ()
 //  ofstream fout ("text.txt", ios::out | ios::app) ;//打开文件写入数据，只追加
 }
 
-/*
+
 void dataRecord() //收到的数据记录数据整体
 {
     unsigned char *buff_fout;
@@ -23,15 +23,16 @@ void dataRecord() //收到的数据记录数据整体
     {
         sprintf(str, "%02X ", *buff_fout);
         fout  << str;
-//        fout << " 0x"<<hex <<setfill('0')<<setw(2)<< (unsigned short) *buff_fout ; //cout自己可以知道要输出的是整数还是字符串（根据要打印的内容判断出）。字符的话，原样输出
+//        fout << " 0x"<<hex <<setfill('0')<<setw(2)<< (unsigned short) *buff_fout ;
+//cout自己可以知道要输出的是整数还是字符串（根据要打印的内容判断出）。字符的话，原样输出
         //整数的话自己把数据转换为字符串的形式（0x34----“0x34”），printf需要根据内容，再设定输出格式（输出内容跟设定格式要一一对应）
     }
     fout <<"\n";
     fout.flush();        //刷新内存,实时更新
 }
-*/
 
 
+/*
 void dataRecord()    //收到的数据只记录角度设定值和关节实际值
 {
     gettimeofday(&tv,NULL);   //获得相对1970年时间：分、秒
@@ -47,6 +48,6 @@ void dataRecord()    //收到的数据只记录角度设定值和关节实际值
     fout.flush();    //刷新内存,实时更新
     printf("Data record successfully!\n");
 }
-
+*/
 
 

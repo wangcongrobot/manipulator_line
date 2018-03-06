@@ -35,9 +35,9 @@ int main()
 
     sInit();
 
-    for(int i=0; i<9; i++)sleep(5);
+    for(int i=0; i<9; i++)sleep(1);
 
-    moveControl(0.3, 0, 0, 100);
+    moveControl(0.2, 0, 0, 100);
     //moveControl(0, 0, 0.5, 100);
     //moveControl(0, -0.5, 0, 100);
 
@@ -95,6 +95,7 @@ void moveControl(double x, double y, double z, int num)
 
         writeToSerial(com0SendBuf,24);
         for(int i=0; i<5; i++)usleep(10000);
+        // 上位机每发送一次数据，下位机返回一次数据，4次一个循环
         dataRecord(); //把接收到的数据存到文件里面
         //SendEN=1;     //发送数据
         parse();

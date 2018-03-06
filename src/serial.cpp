@@ -219,12 +219,12 @@ void receiveFromSerial( unsigned char length) //接收数据函数
             printf("Receive 24 bytes OK!\n");
         }
         unsigned char *p;
-        //printf("\n");
+        printf("\n");
         for(p=com0RecvBuf; p<(com0RecvBuf+24); p++)
         {
-            //printf("%02x ",*p);
+            printf("%02x ",*p);
         }
-        //printf("\n");
+        printf("\n");
     }
 
     //printf("receiveSerial successfully!\n");

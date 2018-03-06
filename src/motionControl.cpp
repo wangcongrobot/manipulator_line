@@ -47,7 +47,7 @@ char currentJoint_hex[7] = {0};  // get current joint values
 std::vector<double> jointFromIK;
 
 volatile unsigned char NewEnd_Pose=0;
-signed char DM[7]= {-1,1,1,-1,-1,1,1};   //表征驱动器,为-1时，传感器与关节正方向安装相反
+signed char DM[7]= {-1,1,1,-1,-1,1,-1};   //表征驱动器,为-1时，传感器与关节正方向安装相反
 /*
 void sInit()
 {
@@ -85,10 +85,12 @@ void sInit()
     //getCurrentJoint();
 }
 */
-signed short home[7] = {0x0870,0x00b0,0x0fe0,0x0c00,0x0f00,0x0800,0x100};
-signed short home1[7]= {0x06f3,0x00e3,0x0da2,0x09f8,0x0d39,0x072f,0x100}; // Home
-signed short home2[7]= {0x06f3,0x01b0,0x08a2,0x08a8,0x0d39,0x072f,0x100}; //向前
-signed short home3[7]= {0x06f3,0x08b0,0x05a2,0x08a8,0x0600,0x072f,0x100}; //向下
+signed short home[7] = {0x0870,0x00b0,0x0fe0,0x0c00,0x0f00,0x0800,0x0100};
+signed short home1[7]= {0x06f3,0x00e3,0x0da2,0x09f8,0x0d39,0x072f,0x0100}; // Home
+signed short home2[7]= {0x06f3,0x01b0,0x08a2,0x0aa8,0x0d39,0x072f,0x0100}; //向前
+signed short home3[7]= {0x06f3,0x08b0,0x05a2,0x08a8,0x0600,0x072f,0x0100}; //向下
+signed short home4[7]= {0x0103,0x00b0,0x0fff,0x08a8,0x0600,0x072f,0x0100}; //侧面回收
+signed short home5[7]= {0x06f3,0x00e3,0x0da2,0x09f8,0x0d39,0x042f,0x0200}; // Home -test
 
 void sInit()//从手初始化，开始执行时被调用一次即可
 {
@@ -97,7 +99,7 @@ void sInit()//从手初始化，开始执行时被调用一次即可
     mCmd.asterisk='*';
     mCmd.Frz=0;   //0:从手激活，1：从手冻结，2：从手锁定，从手关节冻结所有关节都冻结
     mCmd.Hydro=1;       //0：液压关断，1：液压开启
-    mCmd.joint[6].pos=0x0c3b;//夹钳主手应该的位置
+    mCmd.joint[6].pos=0x0100;//夹钳主手应该的位置 0x0c3b
     mCmd.MoveRatio=1;	  //这个可以改为一个最小的比例系数 beixu
     mCmd.id=0x01;           //正常发送数据
     for(int i=0; i<6; i++)
@@ -105,13 +107,13 @@ void sInit()//从手初始化，开始执行时被调用一次即可
         mCmd.joint[i].frz=0;        //每个关节解冻
         mCmd.joint[i].mode=0;   //位置模式
     }
-    mCmd.joint[0].frz=0;        //每个关节解冻
+    mCmd.joint[6].frz=0;        //每个关节解冻
     mCmd.joint[6].mode=1;   //夹钳只有速度模式
     /**使机械手回归每次动作的初始点,进行解冻冻结，使下位机自动生成零漂***/
     // 6f3 e3 da2 9f8 d39 72f 0
     for(int i=0;i<7;i++)
     {
-        mCmd.joint[i].pos = home3[i];
+        mCmd.joint[i].pos = home1[i];
     }
 
     memcpy(com0SendBuf,&mCmd,sizeof(MCMD));
